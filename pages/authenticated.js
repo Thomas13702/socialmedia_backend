@@ -27,8 +27,11 @@ export default function authenticated({ session }) {
 
 export async function getServerSideProps(context) {
   try {
+    console.log("1");
     const cookies = nookies.get(context);
+    console.log("2");
     const token = await verifyIdToken(cookies.token);
+    console.log("3");
     const { uid, email } = token;
     return {
       props: { session: `Your email is ${email} and your UID is ${uid}.` },
