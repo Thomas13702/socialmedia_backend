@@ -8,6 +8,7 @@ const FIREBASE_CONFIG = {
   messagingSenderId: process.env.messagingSenderId,
   appId: process.env.appId,
   measurementId: process.env.measurementId,
+  databaseURL: process.env.databaseURL
 };
 
 export default function firebaseClient() {

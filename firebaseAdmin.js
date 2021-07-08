@@ -4,7 +4,7 @@ const serviceAccount = require("./socialmedia-auth.json");
 export const verifyIdToken = (token) => {
   if (!admin.apps.length) {
     admin.initializeApp({
-      credentials: admin.credentials.cert(serviceAccount),
+      credentials: admin.credential.cert(serviceAccount),
       databaseURL: process.env.databaseURL,
     });
   }
