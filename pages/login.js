@@ -20,7 +20,7 @@ export default function Login() {
       })
       .catch((error) => {
         const message = error.message;
-        toast.error({ message });
+        toast.error(message);
       });
   };
 
@@ -33,7 +33,7 @@ export default function Login() {
       })
       .catch((error) => {
         const message = error.message;
-        toast.error({ message });
+        toast.error(message);
       });
   };
 
