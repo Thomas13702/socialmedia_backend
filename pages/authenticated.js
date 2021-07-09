@@ -2,6 +2,7 @@ import nookies from "nookies";
 import { verifyIdToken } from "../firebaseAdmin";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
+import Layout from "@/components/Layout"
 
 export default function authenticated({ session }) {
   firebaseClient();
@@ -13,15 +14,15 @@ export default function authenticated({ session }) {
 
   if (session) {
     return (
-      <div>
+      <Layout>
         <h1>Authenticated</h1>
         <h2>{session}</h2>
         <h6>You can do anything you want</h6>
         <button onClick={signOut}>Sign Out</button>
-      </div>
+      </Layout>
     );
   } else {
-    return <div>Loading ... </div>;
+    return <Layout>Loading ... </Layout>;
   }
 }
 

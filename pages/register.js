@@ -12,12 +12,10 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
-
-  const userLogin = async () => {
+  const register = async () => {
     await firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password)
       .then(() => {
         window.location.href = "/";
       })
@@ -27,11 +25,13 @@ export default function Login() {
       });
   };
 
+
+
   return (
     <Layout>
       <ToastContainer />
       <div className={styles.body}>
-        <div className={styles.title}>Login</div>
+        <div className={styles.title}>Register</div>
         <div className={styles.card}>
           <form action="">
             <label htmlFor="email">Enter email...</label>
@@ -53,8 +53,8 @@ export default function Login() {
               id="password"
             />
           </form>
+          <button onClick={register}>Create Account</button>
           
-          <button onClick={userLogin}>Login</button>
         </div>
       </div>
     </Layout>
