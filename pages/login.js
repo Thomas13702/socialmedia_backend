@@ -1,20 +1,19 @@
 import { useState } from "react";
-import Layout from "@/components/Layout"
+import Layout from "@/components/Layout";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import styles from "../styles/Login.module.css";
+import styles from "../styles/AuthForm.module.css";
 
 export default function Login() {
   firebaseClient();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-
-
-  const userLogin = async () => {
+  const userLogin = async (e) => {
+    e.preventDefault();
     await firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -28,12 +27,12 @@ export default function Login() {
   };
 
   return (
-    <Layout>
+    <Layout title="Login">
       <ToastContainer />
-      <div className={styles.body}>
-        <div className={styles.title}>Login</div>
+      <div className={styles.auth}>
+        <h1>Login</h1>
         <div className={styles.card}>
-          <form action="">
+          <form onSubmit={userLogin}>
             <label htmlFor="email">Enter email...</label>
             <input
               type="email"
@@ -52,9 +51,8 @@ export default function Login() {
               value={password}
               id="password"
             />
+            <input className="btn" type="submit" value="Login" />
           </form>
-          
-          <button onClick={userLogin}>Login</button>
         </div>
       </div>
     </Layout>

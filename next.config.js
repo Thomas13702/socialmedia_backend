@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   reactStrictMode: true,
   env: {
@@ -8,6 +10,9 @@ module.exports = {
     messagingSenderId: process.env.messagingSenderId,
     appId: process.env.appId,
     measurementId: process.env.measurementId,
-    databaseURL: process.env.databaseURL
+    databaseURL: process.env.databaseURL,
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
   },
 };
