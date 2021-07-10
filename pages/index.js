@@ -1,30 +1,50 @@
 import Layout from "@/components/Layout.js";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { useAuth } from "../auth";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
   const { user } = useAuth();
+
+  useEffect((user) => {
+    if (user) {
+      router.push("/home");
+    }
+  }, []);
+
   return (
-    <Layout className={styles.container}>
-      <h1 className={styles.title}>Welcome to the home page</h1>
-      <h2 className={styles.description}>{`user ID: ${
-        user ? user.uid : "No user signed in"
-      }`}</h2>
-      {user ? (
-        <Link href="/authenticated">
-          <a>Go to authenticated route</a>
-        </Link>
-      ) : (
-        <div>
-          <Link href="/login">
-            <a>Login</a>
-          </Link>
-          <Link href="/login">
-            <a>Register</a>
-          </Link>
+    <Layout>
+      <div className={styles.container}>
+        <div className={styles.image}>
+          <Image
+            src={"/images/pexels-oliver-sjöström-1098365.jpg"}
+            layout="fill"
+          />
         </div>
-      )}
+        <div className={styles.action}>
+          <div>
+            <h2>Find Out whats happening today</h2>
+          </div>
+          <div>
+            <Link href="/login">
+              <button className={`btn ${styles.button}`}>
+                <a className={styles.link}>Login</a>
+              </button>
+            </Link>
+          </div>
+          <div>
+            <Link href="/register">
+              <button className={`btn-secondary ${styles.button}`}>
+                <a className={styles.link}>Register</a>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }
