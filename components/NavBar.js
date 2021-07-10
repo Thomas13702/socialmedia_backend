@@ -3,9 +3,9 @@ import styles from "../styles/NavBar.module.scss";
 export default function NavBar() {
   return (
     <nav className={styles.nav}>
-      {/* <input type="checkbox" id="nav__checkbox" className="nav__checkbox" />
-      <label for="nav__checkbox" className="nav__toggle">
-        <svg className="menu" viewBox="0 0 448 512" width="100" title="bars">
+      <input type="checkbox" id="nav__checkbox" className={nav__checkbox} />
+      <label for="nav__checkbox" className={nav__toggle}>
+        <svg className={menu} viewBox="0 0 448 512" width="100" title="bars">
           <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
         </svg>
         <svg className="close" viewBox="0 0 384 512" width="100" title="times">
@@ -29,7 +29,7 @@ export default function NavBar() {
         <li>
           <a href="#">Contact</a>
         </li>
-      </ul> */}
+      </ul>
     </nav>
   );
 }
