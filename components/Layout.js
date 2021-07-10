@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Navbar from "./Navbar";
+import Navbar from "./NavBar";
 // import Footer from "./Footer";
 import styles from "@/styles/Layout.module.css";
 
