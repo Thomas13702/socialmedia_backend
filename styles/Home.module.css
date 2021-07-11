@@ -33,3 +33,21 @@
 .link {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .image {
+    width: 90%;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+  .image {
+    display: none;
+  }
+}

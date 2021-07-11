@@ -3,11 +3,24 @@ import { useRouter } from "next/router";
 import Navbar from "./NavBar";
 import Footer from "./Footer";
 import styles from "@/styles/Layout.module.css";
+import { useEffect } from "react";
 
 export default function Layout({ title, keywords, description, children }) {
   //layout will wrap content, what ever is wrapped will be the children
 
   const router = useRouter();
+
+  const hasLoggedIn = () => {
+    if (
+      router.pathname !== "/" ||
+      router.pathname !== "/login" ||
+      router.pathname !== "/register"
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   return (
     <div>
@@ -16,9 +29,7 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
-      {router.pathname !== "/" ||
-        router.pathname !== "/login" ||
-        (router.pathname !== "/register" && <Navbar />)}
+      {hasLoggedIn() && <Navbar />}
 
       <div className={styles.container}>{children}</div>
       <Footer />
