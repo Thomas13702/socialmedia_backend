@@ -1,6 +1,6 @@
 import nookies from "nookies";
-import { verifyIdToken } from "../firebaseAdmin";
-import firebaseClient from "../firebaseClient";
+import { verifyIdToken } from "../../firebaseAdmin";
+import firebaseClient from "../../firebaseClient";
 import firebase from "firebase/app";
 import Layout from "@/components/Layout";
 
