@@ -10,17 +10,19 @@ export default function Layout({ title, keywords, description, children }) {
 
   const router = useRouter();
 
-  const hasLoggedIn = () => {
-    if (
-      router.pathname !== "/" ||
-      router.pathname !== "/login" ||
-      router.pathname !== "/register"
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const hasLoggedIn = () => {
+  //   if (
+  //     router.pathname !== "/" ||
+  //     router.pathname !== "/login" ||
+  //     router.pathname !== "/register"
+  //   ) {
+  //     return true;
+  //     console.log("true");
+  //   } else {
+  //     return false;
+  //     console.log("fas");
+  //   }
+  // };
 
   return (
     <div>
@@ -29,7 +31,9 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
-      {hasLoggedIn() && <Navbar />}
+      {router.pathname !== "/" &&
+        router.pathname !== "/login" &&
+        router.pathname !== "/register" && <Navbar />}
 
       <div className={styles.container}>{children}</div>
       <Footer />

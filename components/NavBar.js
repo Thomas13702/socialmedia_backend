@@ -52,9 +52,7 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#">
-              <DropDownMenu heading={<FaUser />} />
-            </a>
+            <DropDownMenu heading={<FaUser />} />
           </li>
         </ul>
       </div>
