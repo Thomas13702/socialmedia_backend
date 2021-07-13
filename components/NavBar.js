@@ -2,6 +2,8 @@ import styles from "@/styles/Navbar.module.scss";
 import { FaHome } from "react-icons/fa";
 import { FaCompass } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
+import DropDownMenu from "./DropDownMenu";
+const headings = { prop1: "account", prop2: "Logout" };
 
 export default function NavBar() {
   return (
@@ -51,7 +53,7 @@ export default function NavBar() {
           </li>
           <li>
             <a href="#">
-              <FaUser />
+              <DropDownMenu heading={<FaUser />} />
             </a>
           </li>
         </ul>
