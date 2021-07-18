@@ -18,7 +18,7 @@ export default function Login() {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
-        window.location.href = "/authenticated/profile/setUp";
+        window.location.href = "/authenticated/home";
       })
       .catch((error) => {
         const message = error.message;

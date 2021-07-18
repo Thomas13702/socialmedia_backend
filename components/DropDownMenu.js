@@ -13,7 +13,7 @@ export default function DropDownMenu({ heading }) {
     <div className={styles.dropdown}>
       <button className={styles.dropbtn}>{heading}</button>
       <div className={styles.dropdownContent}>
-        <a href="#">My Account</a>
+        <a href="/authenticated/profile/account">My Account</a>
         <div onClick={signOut}>
           <a href="#">Logout</a>
         </div>
