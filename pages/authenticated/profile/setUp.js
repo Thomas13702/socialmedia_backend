@@ -5,6 +5,7 @@ import { API_URL } from "@/config/index";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "@/styles/AuthForm.module.css";
 
 import Layout from "@/components/Layout";
 
@@ -52,42 +53,46 @@ export default function setUp({ token, tokenForUID }) {
   };
 
   return (
-    <Layout>
+    <Layout title="Account Set Up">
       <ToastContainer />
-      <h1>Tell us about yourself</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Your Name: </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={values.name}
-            onChange={handleInputChange}
-          />
+      <div className={styles.auth}>
+        <h1>Tell us about yourself</h1>
+        <div className={styles.card}>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="name">Your Name: </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={values.name}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="username">Username: </label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                value={values.username}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="dob">Date of Birth: </label>
+              <input
+                type="date"
+                id="dob"
+                name="dob"
+                value={values.dob}
+                onChange={handleInputChange}
+              />
+            </div>
+            <input type="submit" value="Submit" className="btn" />
+          </form>
         </div>
-        <div>
-          <label htmlFor="username">Username: </label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={values.username}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="dob">Date of Birth: </label>
-          <input
-            type="date"
-            id="dob"
-            name="dob"
-            value={values.dob}
-            onChange={handleInputChange}
-          />
-        </div>
-        <input type="submit" value="Submit" className="btn" />
-      </form>
+      </div>
     </Layout>
   );
 }
