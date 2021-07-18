@@ -22,7 +22,7 @@ export default function Login() {
           .auth()
           .createUserWithEmailAndPassword(email, password)
           .then(() => {
-            window.location.href = "/authenticated";
+            window.location.href = "/profile/setUp";
           })
           .catch((error) => {
             const message = error.message;

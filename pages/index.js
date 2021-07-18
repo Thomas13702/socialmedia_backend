@@ -6,15 +6,9 @@ import { useAuth } from "../auth";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-export default function Home() {
+export default function Home({}) {
   const router = useRouter();
   const { user } = useAuth();
-
-  useEffect((user) => {
-    if (user) {
-      router.push("/home");
-    }
-  }, []);
 
   return (
     <Layout>
@@ -30,14 +24,14 @@ export default function Home() {
             <h2>Find Out whats happening today</h2>
           </div>
           <div>
-            <Link href="/login">
+            <Link href={user ? "/authenticated/home" : "/login"}>
               <button className={`btn ${styles.button}`}>
                 <a className={styles.link}>Login</a>
               </button>
             </Link>
           </div>
           <div>
-            <Link href="/register">
+            <Link href={user ? "/authenticated/home" : "/register"}>
               <button className={`btn-secondary ${styles.button}`}>
                 <a className={styles.link}>Register</a>
               </button>
