@@ -5,7 +5,6 @@ import firebase from "firebase/app";
 import Layout from "@/components/Layout";
 
 export default function home({ session }) {
-  firebaseClient();
   if (session) {
     return (
       <Layout>
