@@ -47,7 +47,7 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="/authenticated/explore">
               <FaCompass />
             </a>
           </li>
