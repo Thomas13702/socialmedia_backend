@@ -5,16 +5,19 @@ import firebaseClient from "../../../firebaseClient";
 import { API_URL } from "@/config/index";
 import PostItem from "@/components/PostItem";
 import styles from "@/styles/Account.module.css";
+import Link from "next/link";
 
 export default function Account({ session, account, posts }) {
   firebaseClient();
-  console.log(posts);
 
   if (session) {
     return (
       <Layout title="Your Account">
         <div className={styles.header}>
           <h1>{account.username}</h1>
+          <Link href="/authenticated/profile/createPost">
+            <button className="btn">Create a Post</button>
+          </Link>
         </div>
 
         {posts.map((post, index) => (
