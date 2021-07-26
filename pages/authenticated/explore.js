@@ -4,7 +4,7 @@ import nookies from "nookies";
 import { verifyIdToken } from "../../firebaseAdmin";
 import firebaseClient from "../../firebaseClient";
 import { API_URL } from "@/config/index";
-import PostItem from "@/components/PostItem";
+import SquarePostItem from "@/components/SquarePostItem";
 
 export default function explore({ session, posts }) {
   firebaseClient();
@@ -12,7 +12,7 @@ export default function explore({ session, posts }) {
     return (
       <Layout title="Explore">
         {posts.map((post, index) => (
-          <PostItem key={index} post={post} />
+          <SquarePostItem key={index} post={post} />
         ))}
       </Layout>
     );
