@@ -15,6 +15,8 @@ export default function Account({ session, account, posts }) {
       <Layout title="Your Account">
         <div className={styles.header}>
           <h1>{account.username}</h1>
+          <h2>Followers: {account.followers.length}</h2>
+          <h2>Following: {account.following.length}</h2>
           <Link href="/authenticated/profile/createPost">
             <button className="btn">Create a Post</button>
           </Link>
@@ -58,7 +60,7 @@ export async function getServerSideProps(context) {
     const posts = await res1.json();
 
     return {
-      props: { session: "Authenticated", account, posts },
+      props: { session: "Authenticated", account, posts, cookies },
     };
   } catch (err) {
     console.log(err);
