@@ -91,16 +91,16 @@ $radius: 0.2rem;
 }
 
 // Toggle the hamburger menu in mobile view
-#nav__checkbox:checked ~ ul.nav__menu li {
+.nav__checkbox:checked ~ ul.nav__menu li {
   display: block;
 }
 
 //Change from menu to close icon on tap
-#nav__checkbox:checked ~ label.nav__toggle .close {
+.nav__checkbox:checked ~ label.nav__toggle .close {
   display: block;
 }
 
-#nav__checkbox:checked ~ label.nav__toggle .menu {
+.nav__checkbox:checked ~ label.nav__toggle .menu {
   display: none;
 }
 
