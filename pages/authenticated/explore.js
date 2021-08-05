@@ -11,9 +11,11 @@ export default function explore({ session, posts }) {
   if (session) {
     return (
       <Layout title="Explore">
-        {posts.map((post, index) => (
-          <SquarePostItem key={index} post={post} />
-        ))}
+        <div className={styles.feed}>
+          {posts.map((post, index) => (
+            <SquarePostItem key={index} post={post} />
+          ))}
+        </div>
       </Layout>
     );
   } else {

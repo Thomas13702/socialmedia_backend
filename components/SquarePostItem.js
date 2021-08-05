@@ -1,17 +1,20 @@
-import styles from "@/styles/PostItem.module.css";
+import styles from "@/styles/SquarePostItem.module.css";
 import Link from "next/link";
+import { FaRegHeart } from "react-icons/fa";
 
 export default function PosttItem({ post }) {
   return (
-    <Link href={`/authenticated/profile/${post.slug}`}>
-      <a className={styles.post}>
-        <div className={styles.info}>
-          <span>
-            {new Date(post.date).toLocaleDateString("en-US")} {post.name}
-          </span>
-          <p>{post.text}</p>
-        </div>
-      </a>
-    </Link>
+    <a className={styles.post}>
+      <div className={styles.info}>
+        <Link href={`/authenticated/profile/${post.slug}`}>
+          <div className={styles.span}>
+            {new Date(post.date).toLocaleDateString("en-UK")}
+            <h6>{post.username}</h6>
+          </div>
+        </Link>
+        <p>{post.text}</p>
+        <FaRegHeart />
+      </div>
+    </a>
   );
 }

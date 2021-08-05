@@ -21,6 +21,7 @@ export default function Login() {
         window.location.href = "/authenticated/home";
       })
       .catch((error) => {
+        console.log(error);
         const message = error.message;
         toast.error(message);
       });

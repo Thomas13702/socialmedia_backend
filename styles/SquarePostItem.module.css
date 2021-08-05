@@ -1,17 +1,25 @@
 .post {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
   padding: 13px;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
-  flex-basis: 300px;
+  /* flex-basis: 300px; */
+  width: 300px;
   cursor: pointer;
   color: black;
 }
 
 .info {
-  flex: 2;
+  flex: 1;
+}
+
+.span {
+  cursor: pointer;
+  background-color: lightblue;
+  width: content;
 }
 
 @media (max-width: 600px) {
