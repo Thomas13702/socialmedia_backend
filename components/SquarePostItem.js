@@ -1,6 +1,7 @@
 import styles from "@/styles/SquarePostItem.module.css";
 import Link from "next/link";
 import { FaRegHeart } from "react-icons/fa";
+import { FaCommentAlt } from "react-icons/fa";
 
 export default function PosttItem({ post }) {
   return (
@@ -13,7 +14,14 @@ export default function PosttItem({ post }) {
           </div>
         </Link>
         <p>{post.text}</p>
-        <FaRegHeart />
+        <div className={styles.icons}>
+          <FaRegHeart className={styles.heart} />
+          <Link href={`/authenticated/post/${post._id}`}>
+            <div>
+              <FaCommentAlt className={styles.comment} />
+            </div>
+          </Link>
+        </div>
       </div>
     </a>
   );
