@@ -4,11 +4,14 @@ import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 import { API_URL } from "@/config/index";
 import PostItem from "@/components/PostItem";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
-export default function SlugProfile({ session, posts, cookies, profile }) {
+export default function SlugProfile({ session, posts, cookies, slugProfile }) {
   firebaseClient();
+
   const follow = async () => {
-    const res = await fetch(`${API_URL}/user/follow/${posts[0].username}`, {
+    const res = await fetch(`${API_URL}/user/follow/${slugProfile.username}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -16,16 +19,20 @@ export default function SlugProfile({ session, posts, cookies, profile }) {
       },
     });
 
-    const { profile, user } = await res.json();
-    console.log(profile.followers.length);
+    const profile = await res.json();
+
+    if (!res.ok) {
+      toast.error(profile.msg);
+    }
   };
 
   if (session) {
     return (
       <Layout>
+        <ToastContainer />
         <h1>{posts[0].username}</h1>
-        <h2>Followers: {profile.followers.length}</h2>
-        <h2>Following: {profile.following.length}</h2>
+        <h2>Followers: {slugProfile.followers.length}</h2>
+        <h2>Following: {slugProfile.following.length}</h2>
         <button className="btn" onClick={follow}>
           Follow
         </button>
@@ -66,14 +73,14 @@ export async function getServerSideProps(context) {
       },
     });
 
-    const profile = await res1.json();
+    const slugProfile = await res1.json();
 
     return {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
         posts,
         cookies,
-        profile,
+        slugProfile,
       },
     };
   } catch (err) {
