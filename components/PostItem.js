@@ -5,7 +5,7 @@ export default function PosttItem({ post }) {
     <div className={styles.post}>
       <div className={styles.info}>
         <span>
-          {new Date(post.date).toLocaleDateString("en-US")} {post.name}
+          {new Date(post.date).toLocaleDateString("en-US")} {post.username}
         </span>
         <p>{post.text}</p>
       </div>
