@@ -5,38 +5,71 @@ import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 import { API_URL } from "@/config/index";
 import PostItem from "@/components/PostItem";
+import Comment from "@/components/Comment";
+import styles from "@/styles/CommentPage.module.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
-export default function SlugProfile({ session, post }) {
+export default function SlugProfile({ session, post, token }) {
   firebaseClient();
   const [text, setText] = useState("");
+  console.log(post._id);
+
+  const onSubmit = async (e) => {
+    //e.preventDefault();
+    if (text === "") {
+      toast.error("Please enter your post");
+    }
+
+    const res = await fetch(`${API_URL}/posts/comment/${post._id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ text: text }),
+    });
+
+    console.log(res);
+
+    if (!res.ok) {
+      if (res.status === 403 || res.status === 401) {
+        toast.error("No Token included");
+        return;
+      }
+
+      toast.error("Something Went Wrong");
+    } else {
+      const resText = await res.json(); //get data
+      toast.success("Added Comment");
+      setText("");
+    }
+  };
 
   if (session) {
     return (
       <Layout>
+        <ToastContainer />
         <PostItem post={post} />
-        <div className="post-form">
-          <div className="bg-primary p">
+        <div className={styles.postForm}>
+          <div className={styles.bgPrimary}>
             <h3>Leave a Comment...</h3>
           </div>
-          <form
-            className="form my-1"
-            onSubmit={(e) => {
-              e.preventDefault();
-              addComment(postId, { text });
-              setText("");
-            }}
-          >
+          <form className={styles.form} onSubmit={onSubmit}>
             <textarea
               name="text"
               cols="30"
               rows="5"
-              placeholder="Create a post"
+              placeholder="Comment..."
               value={text}
               onChange={(e) => setText(e.target.value)}
               required
             />
-            <input type="submit" className="btn btn-dark my-1" value="Submit" />
+            <input type="submit" className={styles.btn} value="Submit" />
           </form>
+          {post.comments.map((comment) => (
+            <Comment comment={comment} />
+          ))}
         </div>
       </Layout>
     );
@@ -68,6 +101,7 @@ export async function getServerSideProps(context) {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
         post,
+        token: cookies.token,
       },
     };
   } catch (err) {
