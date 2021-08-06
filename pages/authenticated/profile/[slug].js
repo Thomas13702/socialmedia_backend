@@ -6,6 +6,7 @@ import { API_URL } from "@/config/index";
 import PostItem from "@/components/PostItem";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import styles from "@/styles/SlugProfile.module.css";
 
 export default function SlugProfile({ session, posts, cookies, slugProfile }) {
   firebaseClient();
@@ -30,12 +31,20 @@ export default function SlugProfile({ session, posts, cookies, slugProfile }) {
     return (
       <Layout>
         <ToastContainer />
-        <h1>{posts[0].username}</h1>
-        <h2>Followers: {slugProfile.followers.length}</h2>
-        <h2>Following: {slugProfile.following.length}</h2>
-        <button className="btn" onClick={follow}>
-          Follow
-        </button>
+        <div className={styles.profile}>
+          <h1>{slugProfile.username}</h1>
+          <div className={styles.right}>
+            <div className={styles.follow}>
+              <h2>Followers: {slugProfile.followers.length}</h2>
+              <h2>Following: {slugProfile.following.length}</h2>
+            </div>
+
+            <button className="btn" onClick={follow}>
+              Follow
+            </button>
+          </div>
+        </div>
+
         {posts.map((post, index) => (
           <PostItem key={index} post={post} />
         ))}
