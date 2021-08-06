@@ -19,7 +19,7 @@
 .span {
   cursor: pointer;
   background-color: lightblue;
-  width: content;
+  width: 90%;
 }
 
 @media (max-width: 600px) {
@@ -31,6 +31,10 @@
   .info {
     margin-bottom: 20px;
   }
+
+  .icons {
+    width: 100%;
+  }
 }
 
 .icons {
@@ -41,6 +45,7 @@
 
 .heart {
   cursor: pointer;
+  width: 16px;
 }
 
 .comment {
