@@ -13,13 +13,17 @@ export default function Account({ session, account, posts }) {
   if (session) {
     return (
       <Layout title="Your Account">
-        <div className={styles.header}>
+        <div className={styles.profile}>
           <h1>{account.username}</h1>
-          <h2>Followers: {account.followers.length}</h2>
-          <h2>Following: {account.following.length}</h2>
-          <Link href="/authenticated/profile/createPost">
-            <button className="btn">Create a Post</button>
-          </Link>
+          <div className={styles.right}>
+            <div className={styles.follow}>
+              <h2>Followers: {account.followers.length}</h2>
+              <h2>Following: {account.following.length}</h2>
+            </div>
+            <Link href="/authenticated/profile/createPost">
+              <button className="btn">Create a Post</button>
+            </Link>
+          </div>
         </div>
 
         {posts.map((post, index) => (

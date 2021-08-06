@@ -6,3 +6,28 @@
 .posts {
   border: 1px solid;
 }
+
+.profile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile h1 {
+  font-size: 3rem;
+}
+
+.follow {
+  display: flex;
+}
+
+.follow h2 {
+  margin-right: 1rem;
+}
+
+.right {
+  text-align: center;
+}
+
+.right button {
+  width: 90%;
+}
