@@ -7,9 +7,11 @@ import { API_URL } from "@/config/index";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
+import { useRouter } from "next/router";
 
 export default function CreatePost({ token }) {
   firebaseClient();
+  const router = useRouter();
   const [text, setText] = useState("");
 
   const handleSubmit = async (e) => {
@@ -42,6 +44,7 @@ export default function CreatePost({ token }) {
       toast.error("Something Went Wrong");
     } else {
       const resPost = await res.json(); //get data
+      router.push("/authenticated/profile/account");
       toast.success("All Posted");
     }
   };
