@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
@@ -13,10 +13,14 @@ import "react-toastify/dist/ReactToastify.min.css";
 export default function SlugProfile({ session, post, token }) {
   firebaseClient();
   const [text, setText] = useState("");
-  console.log(post._id);
+  const [comment, setComment] = useState([]);
+
+  useEffect(() => {
+    setComment(post.comments);
+  }, []);
 
   const onSubmit = async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     if (text === "") {
       toast.error("Please enter your post");
     }
@@ -30,7 +34,7 @@ export default function SlugProfile({ session, post, token }) {
       body: JSON.stringify({ text: text }),
     });
 
-    console.log(res);
+    //console.log(res);
 
     if (!res.ok) {
       if (res.status === 403 || res.status === 401) {
@@ -43,6 +47,8 @@ export default function SlugProfile({ session, post, token }) {
       const resText = await res.json(); //get data
       toast.success("Added Comment");
       setText("");
+      setComment(resText);
+      //comment.unshift(resText);
     }
   };
 
@@ -67,8 +73,12 @@ export default function SlugProfile({ session, post, token }) {
             />
             <input type="submit" className={styles.btn} value="Submit" />
           </form>
-          {post.comments.map((comment, index) => (
+          {/* {post.comments.map((comment, index) => (
             <Comment key={index} comment={comment} />
+          ))} */}
+
+          {comment.map((com, index) => (
+            <Comment key={index} comment={com} />
           ))}
         </div>
       </Layout>
