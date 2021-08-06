@@ -8,7 +8,7 @@ import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 
-export default function createPost({ token }) {
+export default function CreatePost({ token }) {
   firebaseClient();
   const [text, setText] = useState("");
 

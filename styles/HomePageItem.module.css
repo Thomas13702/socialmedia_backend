@@ -1,0 +1,25 @@
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 13px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+
+  color: black;
+}
+
+.heart {
+  cursor: pointer;
+}
+
+.comment {
+  cursor: pointer;
+}
+
+.span {
+  cursor: pointer;
+}

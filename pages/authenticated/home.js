@@ -3,12 +3,19 @@ import { verifyIdToken } from "../../firebaseAdmin";
 import firebaseClient from "../../firebaseClient";
 import firebase from "firebase/app";
 import Layout from "@/components/Layout";
+import { API_URL } from "@/config/index";
+import HomePageItem from "@/components/HomePageItem";
 
-export default function home({ session }) {
+export default function home({ session, posts }) {
+  firebaseClient();
+  console.log(posts);
   if (session) {
     return (
       <Layout>
         <h1>Home Feed</h1>
+        {posts.map((post, index) => (
+          <HomePageItem post={post} key={index} />
+        ))}
       </Layout>
     );
   } else {
@@ -19,11 +26,27 @@ export default function home({ session }) {
 export async function getServerSideProps(context) {
   try {
     const cookies = nookies.get(context);
-    console.log(cookies.token);
+    console.log("Cookie" + cookies.token);
+    //nookies isnt getting token
     const token = await verifyIdToken(cookies.token);
+    console.log(token);
     const { uid, email } = token;
+
+    const res = await fetch(`${API_URL}/posts/following`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+
+    const posts = await res.json();
+
     return {
-      props: { session: `Your email is ${email} and your UID is ${uid}.` },
+      props: {
+        session: `Your email is ${email} and your UID is ${uid}.`,
+        posts,
+      },
     };
   } catch (err) {
     console.log(err);
