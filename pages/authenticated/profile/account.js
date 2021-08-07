@@ -3,7 +3,7 @@ import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 import { API_URL } from "@/config/index";
-import PostItem from "@/components/PostItem";
+import AccountItem from "@/components/AccountItem";
 import styles from "@/styles/Account.module.css";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ export default function Account({ session, account, posts }) {
         </div>
 
         {posts.map((post, index) => (
-          <PostItem key={index} post={post} />
+          <AccountItem key={index} post={post} />
         ))}
       </Layout>
     );

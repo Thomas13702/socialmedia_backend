@@ -1,0 +1,47 @@
+.post {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  /* border: 1px #ddd solid; */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+  flex: 2;
+  margin-left: 1rem;
+}
+
+.icons {
+  display: flex;
+
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .post {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info {
+    margin-bottom: 20px;
+  }
+}
+
+.post h4 {
+  margin-bottom: 10px;
+  flex: 2;
+}
+
+.edit,
+.delete {
+  margin: 10px;
+}
+
+.delete {
+  color: red;
+}
