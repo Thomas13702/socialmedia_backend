@@ -10,38 +10,6 @@ import Link from "next/link";
 
 export default function Account({ session, account, posts, cookies }) {
   firebaseClient();
-  const [userPosts, setUserPosts] = useState([]);
-
-  useEffect(() => {
-    setUserPosts(posts);
-  }, []);
-
-  const handleDelete = async () => {
-    const postIndex = userPosts;
-    const res = await fetch(`${API_URL}/posts/${postid}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${cookies.token}`,
-      },
-    });
-
-    if (!res.ok) {
-      if (res.status === 403 || res.status === 401) {
-        toast.error("No Token included");
-        return;
-      }
-
-      toast.error("Something Went Wrong");
-    } else {
-      const resText = await res.json(); //get data
-      toast.success(resText);
-
-      setUserPosts(userPosts.splice());
-      //comment.unshift(resText);
-    }
-    const responseMSG = await res.json();
-  };
 
   if (session) {
     return (
@@ -60,13 +28,7 @@ export default function Account({ session, account, posts, cookies }) {
         </div>
 
         {posts.map((post, index) => (
-          <AccountItem
-            key={index}
-            post={post}
-            cookies={cookies}
-            handleDelete={handleDelete}
-            postid={postid}
-          />
+          <AccountItem key={index} post={post} cookies={cookies} />
         ))}
       </Layout>
     );
