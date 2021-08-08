@@ -41,9 +41,9 @@ export default function PostItem({ post, cookies, res }) {
       </div>
 
       <div className={styles.icons}>
-        <Link href={`/events/edit/${post.id}`}>
+        <Link href={`/authenticated/post/edit/${post._id}`}>
           <a className={styles.edit}>
-            <FaPencilAlt /> <span>Edit Event</span>
+            <FaPencilAlt /> <span>Edit Post</span>
           </a>
         </Link>
         <a href="#" className={styles.delete} onClick={handleDelete}>

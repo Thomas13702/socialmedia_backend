@@ -1,3 +1,5 @@
+//Comment On a post
+
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
 import nookies from "nookies";
