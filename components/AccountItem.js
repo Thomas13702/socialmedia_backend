@@ -1,11 +1,19 @@
 import styles from "@/styles/AccountItem.module.css";
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
+import { API_URL } from "@/config/index";
 import Link from "next/link";
 
-export default function PosttItem({ post }) {
-  const handleDelete = () => {
-    console.log("Delete");
-  };
+export default function PostItem({ post, cookies, handleDelete, post1 }) {
+  //   const handleDelete = async () => {
+  //     const res = await fetch(`${API_URL}/posts/${post._id}`, {
+  //       method: "DELETE",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         Authorization: `Bearer ${cookies.token}`,
+  //       },
+  //     });
+  //     const responseMSG = await res.json();
+  //   };
   return (
     <div className={styles.post}>
       <div className={styles.info}>

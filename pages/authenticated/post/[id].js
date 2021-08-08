@@ -73,9 +73,6 @@ export default function SlugProfile({ session, post, token }) {
             />
             <input type="submit" className={styles.btn} value="Submit" />
           </form>
-          {/* {post.comments.map((comment, index) => (
-            <Comment key={index} comment={comment} />
-          ))} */}
 
           {comment.map((com, index) => (
             <Comment key={index} comment={com} />
