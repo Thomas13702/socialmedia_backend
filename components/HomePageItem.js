@@ -3,10 +3,16 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaCommentAlt } from "react-icons/fa";
 import Link from "next/link";
 
-export default function HomePageItem({ post }) {
+export default function HomePageItem({ post, token }) {
   return (
     <div className={styles.post}>
-      <Link href={`/authenticated/profile/${post.slug}`}>
+      <Link
+        href={
+          token.uid.toString() !== post.firebaseUID.toString()
+            ? `/authenticated/profile/${post.slug}`
+            : `/authenticated/profile/account`
+        }
+      >
         <div className={styles.span}>
           {new Date(post.date).toLocaleDateString("en-UK")}
           <h6>{post.username}</h6>

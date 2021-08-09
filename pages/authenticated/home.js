@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import HomePageItem from "@/components/HomePageItem";
 
-export default function home({ session, posts }) {
+export default function home({ session, posts, token }) {
   firebaseClient();
   console.log(posts);
   if (session) {
@@ -14,7 +14,7 @@ export default function home({ session, posts }) {
       <Layout>
         <h1>Home Feed</h1>
         {posts.map((post, index) => (
-          <HomePageItem post={post} key={index} />
+          <HomePageItem post={post} key={index} token={token} />
         ))}
       </Layout>
     );
@@ -46,6 +46,7 @@ export async function getServerSideProps(context) {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
         posts,
+        token,
       },
     };
   } catch (err) {
