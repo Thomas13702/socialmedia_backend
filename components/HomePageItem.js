@@ -2,9 +2,44 @@ import styles from "@/styles/HomePageItem.module.css";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCommentAlt } from "react-icons/fa";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useRouter } from "next/router";
+import { API_URL } from "@/config/index";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 
-export default function HomePageItem({ post, token, user }) {
+export default function HomePageItem({ post, token, user, cookies }) {
+  const router = useRouter();
+  const handleLike = async () => {
+    const res = await fetch(
+      `${API_URL}/posts/${
+        post.likes.map((like) => {
+          like.user.toString() === user._id.toString();
+        }).length === 0
+          ? "like"
+          : "unlike"
+      }/${post._id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+
+    if (!res.ok) {
+      if (res.status === 403 || res.status === 401) {
+        toast.error("No Token included");
+        return;
+      }
+
+      toast.error("Something Went Wrong");
+    } else {
+      const like = await res.json(); //get data
+      router.reload();
+    }
+  };
+
   return (
     <div className={styles.post}>
       <Link
@@ -30,6 +65,7 @@ export default function HomePageItem({ post, token, user }) {
               ? styles.heartRed
               : styles.heartBlack
           }
+          onClick={handleLike}
         />
         <Link href={`/authenticated/post/${post._id}`}>
           <div>
