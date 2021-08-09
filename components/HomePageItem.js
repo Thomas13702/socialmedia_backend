@@ -2,8 +2,9 @@ import styles from "@/styles/HomePageItem.module.css";
 import { FaRegHeart } from "react-icons/fa";
 import { FaCommentAlt } from "react-icons/fa";
 import Link from "next/link";
+import { useEffect } from "react";
 
-export default function HomePageItem({ post, token }) {
+export default function HomePageItem({ post, token, user }) {
   return (
     <div className={styles.post}>
       <Link
@@ -21,7 +22,15 @@ export default function HomePageItem({ post, token }) {
 
       <p>{post.text}</p>
       <div className={styles.icons}>
-        <FaRegHeart className={styles.heart} />
+        <FaRegHeart
+          className={
+            post.likes.map((like) => {
+              like.user.toString() === user._id.toString();
+            }).length > 0
+              ? styles.heartRed
+              : styles.heartBlack
+          }
+        />
         <Link href={`/authenticated/post/${post._id}`}>
           <div>
             <FaCommentAlt className={styles.comment} />

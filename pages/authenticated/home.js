@@ -6,15 +6,15 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import HomePageItem from "@/components/HomePageItem";
 
-export default function home({ session, posts, token }) {
+export default function home({ session, posts, token, user }) {
   firebaseClient();
-  console.log(posts);
+  //console.log(posts);
   if (session) {
     return (
       <Layout>
         <h1>Home Feed</h1>
         {posts.map((post, index) => (
-          <HomePageItem post={post} key={index} token={token} />
+          <HomePageItem post={post} key={index} token={token} user={user} />
         ))}
       </Layout>
     );
@@ -42,11 +42,22 @@ export async function getServerSideProps(context) {
 
     const posts = await res.json();
 
+    const res1 = await fetch(`${API_URL}/profile/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+
+    const user = await res1.json();
+
     return {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
         posts,
         token,
+        user,
       },
     };
   } catch (err) {
