@@ -6,14 +6,14 @@ import firebaseClient from "../../firebaseClient";
 import { API_URL } from "@/config/index";
 import SquarePostItem from "@/components/SquarePostItem";
 
-export default function explore({ session, posts }) {
+export default function explore({ session, posts, token }) {
   firebaseClient();
   if (session) {
     return (
       <Layout title="Explore">
         <div className={styles.feed}>
           {posts.map((post, index) => (
-            <SquarePostItem key={index} post={post} />
+            <SquarePostItem key={index} post={post} token={token} />
           ))}
         </div>
       </Layout>
@@ -41,7 +41,7 @@ export async function getServerSideProps(context) {
     const posts = await res.json();
 
     return {
-      props: { session: uid, posts },
+      props: { session: uid, posts, token },
     };
   } catch (err) {
     console.log(err);
