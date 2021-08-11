@@ -6,14 +6,20 @@ import firebaseClient from "../../firebaseClient";
 import { API_URL } from "@/config/index";
 import SquarePostItem from "@/components/SquarePostItem";
 
-export default function explore({ session, posts, token }) {
+export default function explore({ session, posts, token, user, cookies }) {
   firebaseClient();
   if (session) {
     return (
       <Layout title="Explore">
         <div className={styles.feed}>
           {posts.map((post, index) => (
-            <SquarePostItem key={index} post={post} token={token} />
+            <SquarePostItem
+              key={index}
+              post={post}
+              token={token}
+              user={user}
+              cookies={cookies}
+            />
           ))}
         </div>
       </Layout>
@@ -39,9 +45,18 @@ export async function getServerSideProps(context) {
     });
 
     const posts = await res.json();
+    const res1 = await fetch(`${API_URL}/profile/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+
+    const user = await res1.json();
 
     return {
-      props: { session: uid, posts, token },
+      props: { session: uid, posts, token, user, cookies },
     };
   } catch (err) {
     console.log(err);

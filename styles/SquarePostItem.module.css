@@ -51,3 +51,13 @@
 .comment {
   cursor: pointer;
 }
+
+.heartRed {
+  cursor: pointer;
+  color: red;
+}
+
+.heartBlack {
+  cursor: pointer;
+  color: black;
+}

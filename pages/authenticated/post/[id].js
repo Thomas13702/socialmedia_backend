@@ -12,7 +12,7 @@ import styles from "@/styles/CommentPage.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
-export default function SlugProfile({ session, post, token }) {
+export default function SlugProfile({ session, post, cookie, token }) {
   firebaseClient();
   const [text, setText] = useState("");
   const [comment, setComment] = useState([]);
@@ -31,7 +31,7 @@ export default function SlugProfile({ session, post, token }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${cookie}`,
       },
       body: JSON.stringify({ text: text }),
     });
@@ -77,7 +77,13 @@ export default function SlugProfile({ session, post, token }) {
           </form>
 
           {comment.map((com, index) => (
-            <Comment key={index} comment={com} />
+            <Comment
+              key={index}
+              comment={com}
+              token={token}
+              postID={post._id}
+              cookie={cookie}
+            />
           ))}
         </div>
       </Layout>
@@ -110,7 +116,8 @@ export async function getServerSideProps(context) {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
         post,
-        token: cookies.token,
+        cookie: cookies.token,
+        token,
       },
     };
   } catch (err) {
