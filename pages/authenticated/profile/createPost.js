@@ -12,17 +12,29 @@ import { useRouter } from "next/router";
 export default function CreatePost({ token }) {
   firebaseClient();
   const router = useRouter();
-  const [text, setText] = useState("");
+  const [post, setPost] = useState({
+    text: "",
+    ageRating: "",
+  });
+  const handleInputChange = (e) => {
+    //console.log(post);
+    const { name, value } = e.target;
+    setPost({ ...post, [name]: value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     //console.log(post);
 
-    if (text === "") {
-      toast.error("Please enter your post");
-    }
+    const hasEmptyFields = Object.values(post).some(
+      (element) => element === ""
+    ); //checks each part of values to see if its empty
+    //some checks each item in object and will return treu or false whether it passes test (here is whether its equal to "")
 
-    const post = { text: text };
+    if (hasEmptyFields) {
+      toast.error("Please fill in all fields"); //toastify for error messages
+      return;
+    }
 
     const res = await fetch(`${API_URL}/posts/text`, {
       method: "POST",
@@ -33,7 +45,7 @@ export default function CreatePost({ token }) {
       body: JSON.stringify(post),
     });
 
-    console.log(res);
+    //console.log(res);
 
     if (!res.ok) {
       if (res.status === 403 || res.status === 401) {
@@ -56,18 +68,37 @@ export default function CreatePost({ token }) {
         <h1 className={styles.header}>Create a Post</h1>
         <div>
           <form action="" className={styles.form} onSubmit={handleSubmit}>
-            <textarea
-              type="text"
-              name="post"
-              id="post"
-              cols="100"
-              rows="20"
-              autoFocus
-              maxLength="240"
-              placeholder="Post Text..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            ></textarea>
+            <div>
+              <label htmlFor="ageRating">Age Rating</label>
+              <select
+                name="ageRating"
+                id="ageRating"
+                onChange={handleInputChange}
+              >
+                <option value="0"></option>
+                <option value="0">0+</option>
+                <option value="7">7+</option>
+                <option value="12">12+</option>
+                <option value="15">15+</option>
+                <option value="18">18+</option>
+                <option value="21">21+</option>
+              </select>
+            </div>
+            <div>
+              <textarea
+                type="text"
+                name="text"
+                id="post"
+                cols="100"
+                rows="20"
+                autoFocus
+                maxLength="240"
+                placeholder="Post Text..."
+                value={post.text}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+
             <input type="submit" value="Post" className="btn" />
           </form>
         </div>

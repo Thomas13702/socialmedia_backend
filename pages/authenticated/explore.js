@@ -8,20 +8,25 @@ import SquarePostItem from "@/components/SquarePostItem";
 
 export default function explore({ session, posts, token, user, cookies }) {
   firebaseClient();
+
   if (session) {
     return (
       <Layout title="Explore">
-        <div className={styles.feed}>
-          {posts.map((post, index) => (
-            <SquarePostItem
-              key={index}
-              post={post}
-              token={token}
-              user={user}
-              cookies={cookies}
-            />
-          ))}
-        </div>
+        {posts.msg ? (
+          <h1>{posts.msg}</h1>
+        ) : (
+          <div className={styles.feed}>
+            {posts.map((post, index) => (
+              <SquarePostItem
+                key={index}
+                post={post}
+                token={token}
+                user={user}
+                cookies={cookies}
+              />
+            ))}
+          </div>
+        )}
       </Layout>
     );
   } else {
@@ -36,7 +41,7 @@ export async function getServerSideProps(context) {
 
     const { uid, email } = token;
 
-    const res = await fetch(`${API_URL}/posts/getAllTextPosts`, {
+    const res = await fetch(`${API_URL}/posts/getAllPosts`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,6 +50,8 @@ export async function getServerSideProps(context) {
     });
 
     const posts = await res.json();
+    //console.log(posts);
+
     const res1 = await fetch(`${API_URL}/profile/me`, {
       method: "GET",
       headers: {
@@ -56,12 +63,12 @@ export async function getServerSideProps(context) {
     const user = await res1.json();
 
     return {
-      props: { session: uid, posts, token, user, cookies },
+      props: { session: uid, token, user, cookies, posts },
     };
   } catch (err) {
     console.log(err);
     context.res.writeHead(302, { Location: "/login" });
-    context.res.end();
+    //context.res.end();
     return { props: {} };
   }
 }
