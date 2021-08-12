@@ -10,6 +10,7 @@ import styles from "@/styles/AuthForm.module.css";
 import Layout from "@/components/Layout";
 
 export default function setUp({ token, tokenForUID }) {
+  firebaseClient();
   const router = useRouter();
   const [values, setValues] = useState({
     name: "",
@@ -106,7 +107,7 @@ export async function getServerSideProps(context) {
     const token = cookies.token;
     console.log(token);
     return {
-      props: { token },
+      props: { token, tokenForUID },
     };
   } catch (err) {
     console.log(err);

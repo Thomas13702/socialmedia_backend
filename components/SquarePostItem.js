@@ -12,8 +12,8 @@ export default function PosttItem({ post, token, user, cookies }) {
   const handleLike = async () => {
     const res = await fetch(
       `${API_URL}/posts/${
-        post.likes.map((like) => {
-          like.user.toString() === user._id.toString();
+        post.likes.filter((like) => {
+          return like.user.toString() === user._id.toString();
         }).length === 0
           ? "like"
           : "unlike"
@@ -62,8 +62,8 @@ export default function PosttItem({ post, token, user, cookies }) {
             className={styles.heart}
             onClick={handleLike}
             className={
-              post.likes.map((like) => {
-                like.user.toString() === user._id.toString();
+              post.likes.filter((like) => {
+                return like.user.toString() === user._id.toString();
               }).length > 0
                 ? styles.heartRed
                 : styles.heartBlack
