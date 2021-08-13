@@ -13,15 +13,19 @@ export default function home({ session, posts, token, user, cookies }) {
     return (
       <Layout>
         <h1>Home Feed</h1>
-        {posts.map((post, index) => (
-          <HomePageItem
-            post={post}
-            key={index}
-            token={token}
-            user={user}
-            cookies={cookies}
-          />
-        ))}
+        {posts.msg ? (
+          <h1>{posts.msg}</h1>
+        ) : (
+          posts.map((post, index) => (
+            <HomePageItem
+              post={post}
+              key={index}
+              token={token}
+              user={user}
+              cookies={cookies}
+            />
+          ))
+        )}
       </Layout>
     );
   } else {
