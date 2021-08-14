@@ -85,7 +85,7 @@ export default function SlugProfile({
           <h1>{slugProfile.username}</h1>
           <div className={styles.right}>
             <div className={styles.follow}>
-              <h2>Followersyeah: {slugProfile.followers.length}</h2>
+              <h2>Followers: {slugProfile.followers.length}</h2>
               <h2>Following: {slugProfile.following.length}</h2>
             </div>
 
