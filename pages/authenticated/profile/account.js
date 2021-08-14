@@ -21,9 +21,14 @@ export default function Account({ session, account, posts, cookies }) {
               <h2>Followers: {account.followers.length}</h2>
               <h2>Following: {account.following.length}</h2>
             </div>
-            <Link href="/authenticated/profile/createPost">
-              <button className="btn">Create a Post</button>
-            </Link>
+            <div className={styles.button}>
+              <Link href="/authenticated/profile/createPost">
+                <button className="btn">Create a Post</button>
+              </Link>
+              <Link href="/authenticated/profile/editProfile">
+                <button className="btn">Edit Profile</button>
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -31,3 +31,10 @@
 .right button {
   width: 90%;
 }
+.button {
+  display: flex;
+}
+
+.button button {
+  margin-right: 1rem;
+}

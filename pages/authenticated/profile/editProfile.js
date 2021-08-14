@@ -10,20 +10,20 @@ import styles from "@/styles/AuthForm.module.css";
 
 import Layout from "@/components/Layout";
 
-export default function setUp({ token, tokenForUID }) {
+export default function setUp({ token, tokenForUID, account }) {
   firebaseClient();
   const router = useRouter();
   const [values, setValues] = useState({
-    name: "",
-    dob: "",
-    username: "",
+    name: account.name,
+    dob: account.dob,
+    username: account.username,
   });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${API_URL}/user`, {
-      method: "POST",
+    const res = await fetch(`${API_URL}/user/update`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
@@ -55,10 +55,10 @@ export default function setUp({ token, tokenForUID }) {
   };
 
   return (
-    <Layout title="Account Set Up">
+    <Layout title="Edit Account">
       <ToastContainer />
       <div className={styles.auth}>
-        <h1>Tell us about yourself</h1>
+        <h1>Change your info...</h1>
         <div className={styles.card}>
           <form onSubmit={handleSubmit}>
             <div>
@@ -106,9 +106,19 @@ export async function getServerSideProps(context) {
     //const token = await auth.currentUser.getIdToken();
     //const { uid, email } = tokenForUID;
     const token = cookies.token;
-    console.log(token);
+
+    const res = await fetch(`${API_URL}/profile/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+
+    const account = await res.json();
+
     return {
-      props: { token, tokenForUID },
+      props: { token, tokenForUID, account },
     };
   } catch (err) {
     console.log(err);
