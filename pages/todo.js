@@ -11,6 +11,7 @@ export default function todo() {
             <li>Make - image/text, age rating, tier</li>
             <li>Delete</li>
             <li>Show on profile</li>
+            <li>When Clicking on image opens page with text and comment</li>
           </ul>
         </li>
         <li>

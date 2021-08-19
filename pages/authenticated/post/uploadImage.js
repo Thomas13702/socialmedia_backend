@@ -8,9 +8,11 @@ import { API_URL } from "@/config/index";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
+import { useRouter } from "next/router";
 
 export default function Home({ session, cookies }) {
   firebaseClient();
+  const router = useRouter();
   const [selectedImage, setSelectedImage] = useState();
   const [text, setText] = useState();
   const [images, setImages] = useState([]);
@@ -53,6 +55,7 @@ export default function Home({ session, cookies }) {
       setUploadPercentage(0);
       setText("");
       setSelectedImage();
+      router.push(`/authenticated/profile/account`);
     }
   };
   if (session) {
