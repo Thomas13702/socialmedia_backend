@@ -37,7 +37,11 @@ export default function PostItem({ post, cookies, res }) {
         <span>
           {new Date(post.date).toLocaleDateString("en-US")} {post.username}
         </span>
-        <h4>{post.text}</h4>
+        {post.url ? (
+          <img src={post.url} className={styles.img} />
+        ) : (
+          <h4>{post.text}</h4>
+        )}
       </div>
 
       <div className={styles.icons}>

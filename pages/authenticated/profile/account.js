@@ -23,7 +23,10 @@ export default function Account({ session, account, posts, cookies }) {
             </div>
             <div className={styles.button}>
               <Link href="/authenticated/profile/createPost">
-                <button className="btn">Create a Post</button>
+                <button className="btn">Create a Text Post</button>
+              </Link>
+              <Link href="/authenticated/post/uploadImage">
+                <button className="btn">Upload an Image</button>
               </Link>
               <Link href="/authenticated/profile/editProfile">
                 <button className="btn">Edit Profile</button>
