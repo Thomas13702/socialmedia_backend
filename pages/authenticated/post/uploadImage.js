@@ -1,4 +1,4 @@
-// /import styles from "../styles/uploadImage.module.css";
+import styles from "@/styles/UploadImage.module.css";
 
 import { useState } from "react";
 import axios from "axios";
@@ -15,6 +15,7 @@ export default function Home({ session, cookies }) {
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState();
   const [text, setText] = useState();
+  const [age, setAge] = useState();
   const [images, setImages] = useState([]);
   const [uploadPercentage, setUploadPercentage] = useState(0);
 
@@ -31,6 +32,7 @@ export default function Home({ session, cookies }) {
     const formData = new FormData(); //backend expects data in form type
     formData.append("image", selectedImage);
     formData.append("text", text);
+    formData.append("age", age);
 
     const res = await axios.post(`${API_URL}/posts/image-upload`, formData, {
       headers: {
@@ -61,15 +63,37 @@ export default function Home({ session, cookies }) {
   if (session) {
     return (
       <Layout>
-        <Progress percentage={uploadPercentage} />
+        <Progress percentage={uploadPercentage} className={styles.progress} />
 
-        <form action="" onSubmit={handleImageUpload}>
-          <input
-            onChange={handleChange}
-            accept=".jpg, .png, .jpeg"
-            type="file"
-            className="fileInput mb-2"
-          ></input>
+        <form action="" onSubmit={handleImageUpload} className={styles.form}>
+          <div>
+            <label htmlFor="fileInput">Image Upload</label>
+            <input
+              onChange={handleChange}
+              accept=".jpg, .png, .jpeg"
+              type="file"
+              name="fileInput"
+              id="fileInput"
+              // className="fileInput mb-2"
+            ></input>
+          </div>
+
+          <div>
+            <label htmlFor="ageRating">Age Rating</label>
+            <select
+              name="ageRating"
+              id="ageRating"
+              onChange={(e) => setAge(e.target.value)}
+            >
+              <option value="0">Select an Age</option>
+              <option value="0">0+</option>
+              <option value="7">7+</option>
+              <option value="12">12+</option>
+              <option value="15">15+</option>
+              <option value="18">18+</option>
+              <option value="21">21+</option>
+            </select>
+          </div>
           <textarea
             type="text"
             name="text"
