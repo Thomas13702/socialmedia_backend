@@ -5,7 +5,7 @@ import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 import { API_URL } from "@/config/index";
 import AccountItem from "@/components/AccountItem";
-import styles from "@/styles/Account.module.css";
+import styles from "@/styles/Account.module.scss";
 import Link from "next/link";
 
 export default function Account({ session, account, posts, cookies }) {

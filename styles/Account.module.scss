@@ -38,3 +38,26 @@
 .button button {
   margin-right: 1rem;
 }
+
+@media (max-width: 713px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      width: 50%;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .follow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

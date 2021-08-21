@@ -21,7 +21,7 @@
   flex-direction: column;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .post {
     flex-direction: column;
     text-align: center;
@@ -46,5 +46,17 @@
   color: red;
 }
 .img {
-  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* position: absolute; */
+  /* clip-path: inset(10px 40px 10px 10px); */
+}
+
+@media (max-width: 600px) {
+  .img {
+    width: 50%;
+    height: auto;
+  }
 }
