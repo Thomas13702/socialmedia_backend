@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { API_URL } from "@/config/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import Image from "next/image";
 
 export default function PosttItem({ post, token, user, cookies }) {
   const router = useRouter();
@@ -40,44 +41,151 @@ export default function PosttItem({ post, token, user, cookies }) {
     }
   };
 
-  return (
-    <a className={styles.post}>
-      <ToastContainer />
-      <div className={styles.info}>
-        <Link
-          href={
-            token.uid.toString() !== post.firebaseUID.toString()
-              ? `/authenticated/profile/${post.slug}`
-              : `/authenticated/profile/account`
-          }
-        >
-          <div className={styles.span}>
-            {new Date(post.date).toLocaleDateString("en-UK")}
-            <h6>{post.username}</h6>
-          </div>
-        </Link>
-        <p>{post.text}</p>
-        <div className={styles.icons}>
-          <div className={styles.heart}>
-            <FaRegHeart
-              onClick={handleLike}
-              className={
-                post.likes.filter((like) => {
-                  return like.user.toString() === user._id.toString();
-                }).length > 0
-                  ? styles.heartRed
-                  : styles.heartBlack
-              }
-            />
-          </div>
+  // const textPost = () => {
+  //   return (
+  //     <div className={styles.info}>
+  //       <Link
+  //         href={
+  //           token.uid.toString() !== post.firebaseUID.toString()
+  //             ? `/authenticated/profile/${post.slug}`
+  //             : `/authenticated/profile/account`
+  //         }
+  //       >
+  //         <div className={styles.span}>
+  //           {new Date(post.date).toLocaleDateString("en-UK")}
+  //           <h6>{post.username}</h6>
+  //         </div>
+  //       </Link>
+  //       <p>{post.text}</p>
+  //       <div className={styles.icons}>
+  //         <div className={styles.heart}>
+  //           <FaRegHeart
+  //             onClick={handleLike}
+  //             className={
+  //               post.likes.filter((like) => {
+  //                 return like.user.toString() === user._id.toString();
+  //               }).length > 0
+  //                 ? styles.heartRed
+  //                 : styles.heartBlack
+  //             }
+  //           />
+  //         </div>
 
+  //         <Link href={`/authenticated/post/${post._id}`}>
+  //           <div>
+  //             <FaCommentAlt className={styles.comment} />
+  //           </div>
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // };
+
+  const imagePost = () => {
+    return (
+      <div className={styles.imgPost}>
+        <div className={styles.profileImage}>
           <Link href={`/authenticated/post/${post._id}`}>
-            <div>
-              <FaCommentAlt className={styles.comment} />
-            </div>
+            <Image
+              src={post.url}
+              layout="fill"
+              objectFit="cover"
+              className={styles.image}
+            />
           </Link>
         </div>
+        <div className={styles.imgInfo}>
+          <div>
+            <Link
+              href={
+                token.uid.toString() !== post.firebaseUID.toString()
+                  ? `/authenticated/profile/${post.slug}`
+                  : `/authenticated/profile/account`
+              }
+            >
+              <div className={styles.span}>
+                {new Date(post.date).toLocaleDateString("en-UK")}
+                <h6>{post.username}</h6>
+              </div>
+            </Link>
+          </div>
+          <div>
+            <div className={styles.icons}>
+              <div className={styles.heart}>
+                <FaRegHeart
+                  onClick={handleLike}
+                  className={
+                    post.likes.filter((like) => {
+                      return like.user.toString() === user._id.toString();
+                    }).length > 0
+                      ? styles.heartRed
+                      : styles.heartBlack
+                  }
+                />
+              </div>
+
+              <Link href={`/authenticated/post/${post._id}`}>
+                <div>
+                  <FaCommentAlt className={styles.comment} />
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </a>
+    );
+  };
+
+  const textPost2 = () => {
+    return (
+      <div className={styles.body}>
+        <div className={styles.bodyText}>
+          <h6>{post.text}</h6>
+        </div>
+        <div className={styles.data}>
+          <div>
+            <Link
+              href={
+                token.uid.toString() !== post.firebaseUID.toString()
+                  ? `/authenticated/profile/${post.slug}`
+                  : `/authenticated/profile/account`
+              }
+            >
+              <div>
+                {post.username}{" "}
+                {new Date(post.date).toLocaleDateString("en-UK")}
+              </div>
+            </Link>
+          </div>
+          <div className={styles.icons}>
+            <div className={styles.heart}>
+              <FaRegHeart
+                onClick={handleLike}
+                className={
+                  post.likes.filter((like) => {
+                    return like.user.toString() === user._id.toString();
+                  }).length > 0
+                    ? styles.heartRed
+                    : styles.heartBlack
+                }
+              />
+            </div>
+
+            <Link href={`/authenticated/post/${post._id}`}>
+              <div>
+                <FaCommentAlt className={styles.comment} />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <div className={styles.post}>
+      <ToastContainer />
+      {post.url ? imagePost() : textPost2()}
+    </div>
   );
 }

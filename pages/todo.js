@@ -12,6 +12,7 @@ export default function todo() {
             <li>Delete</li>
             <li>Show on profile</li>
             <li>When Clicking on image opens page with text and comment</li>
+            <li>long text posts are broken across lines</li>
           </ul>
         </li>
         <li>
