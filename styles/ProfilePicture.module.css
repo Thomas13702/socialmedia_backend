@@ -1,0 +1,10 @@
+.profileImage {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  margin: 1rem;
+}
+
+.image {
+  border-radius: 100%;
+}

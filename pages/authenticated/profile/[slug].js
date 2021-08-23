@@ -8,6 +8,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import styles from "@/styles/SlugProfile.module.css";
 import router from "next/router";
+import ProfilePicture from "@/components/ProfilePicture";
 
 export default function SlugProfile({
   session,
@@ -82,6 +83,7 @@ export default function SlugProfile({
       <Layout>
         <ToastContainer />
         <div className={styles.profile}>
+          <ProfilePicture account={slugProfile} />
           <h1>{slugProfile.username}</h1>
           <div className={styles.right}>
             <div className={styles.follow}>
