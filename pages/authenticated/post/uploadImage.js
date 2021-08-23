@@ -25,7 +25,7 @@ export default function Home({ session, cookies }) {
 
   const handleImageUpload = async (e) => {
     e.preventDefault();
-    if (!selectedImage || !text) {
+    if (!selectedImage) {
       return;
     }
 

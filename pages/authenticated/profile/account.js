@@ -12,13 +12,14 @@ import defaultProfile from "../../..//public/images/default_profile_picture.jpg"
 
 export default function Account({ session, account, posts, cookies }) {
   firebaseClient();
+  console.log(account.avatar);
 
   if (session) {
     return (
       <Layout title="Your Account">
         <div className={styles.profile}>
           <div className={styles.profileImage}>
-            {!account.avatar === "" ? (
+            {account.avatar === undefined ? (
               <Image
                 src={defaultProfile}
                 alt="Default Profile Picture"
