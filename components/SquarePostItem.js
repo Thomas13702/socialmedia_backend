@@ -58,17 +58,19 @@ export default function PosttItem({ post, token, user, cookies }) {
         </Link>
         <p>{post.text}</p>
         <div className={styles.icons}>
-          <FaRegHeart
-            className={styles.heart}
-            onClick={handleLike}
-            className={
-              post.likes.filter((like) => {
-                return like.user.toString() === user._id.toString();
-              }).length > 0
-                ? styles.heartRed
-                : styles.heartBlack
-            }
-          />
+          <div className={styles.heart}>
+            <FaRegHeart
+              onClick={handleLike}
+              className={
+                post.likes.filter((like) => {
+                  return like.user.toString() === user._id.toString();
+                }).length > 0
+                  ? styles.heartRed
+                  : styles.heartBlack
+              }
+            />
+          </div>
+
           <Link href={`/authenticated/post/${post._id}`}>
             <div>
               <FaCommentAlt className={styles.comment} />

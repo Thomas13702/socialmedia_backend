@@ -31,14 +31,10 @@
   .info {
     margin-bottom: 20px;
   }
-
-  .icons {
-    width: 100%;
-  }
 }
 
 .icons {
-  width: 15%;
+  width: 40px;
   display: flex;
   justify-content: space-between;
 }
