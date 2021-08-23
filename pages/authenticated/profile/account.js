@@ -7,6 +7,8 @@ import { API_URL } from "@/config/index";
 import AccountItem from "@/components/AccountItem";
 import styles from "@/styles/Account.module.scss";
 import Link from "next/link";
+import Image from "next/image";
+import defaultProfile from "../../..//public/images/default_profile_picture.jpg";
 
 export default function Account({ session, account, posts, cookies }) {
   firebaseClient();
@@ -15,6 +17,26 @@ export default function Account({ session, account, posts, cookies }) {
     return (
       <Layout title="Your Account">
         <div className={styles.profile}>
+          <div className={styles.profileImage}>
+            {!account.avatar === "" ? (
+              <Image
+                src={defaultProfile}
+                alt="Default Profile Picture"
+                layout="fill"
+                objectFit="cover"
+                className={styles.image}
+              />
+            ) : (
+              <Image
+                src={account.avatar}
+                alt="Profile Picture"
+                layout="fill"
+                objectFit="cover"
+                className={styles.image}
+              />
+            )}
+          </div>
+
           <h1>{account.username}</h1>
           <div className={styles.right}>
             <div className={styles.follow}>

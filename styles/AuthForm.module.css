@@ -31,3 +31,8 @@
 .auth div {
   margin-bottom: 20px;
 }
+
+.loading {
+  position: relative;
+  margin-left: 47%;
+}

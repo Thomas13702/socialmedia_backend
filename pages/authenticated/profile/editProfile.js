@@ -7,57 +7,86 @@ import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "@/styles/AuthForm.module.css";
+import axios from "axios";
+import { PropagateLoader } from "react-spinners";
+import { css } from "@emotion/react";
 
 import Layout from "@/components/Layout";
 
 export default function setUp({ token, tokenForUID, account }) {
   firebaseClient();
   const router = useRouter();
-  const [values, setValues] = useState({
-    name: account.name,
-    dob: account.dob,
-    username: account.username,
-  });
+
+  const [name, setName] = useState(account.name);
+  const [dob, setDob] = useState(account.dob);
+  const [username, setUsername] = useState(account.username);
+  const [avatar, setAvatar] = useState();
+
+  //React Spinner
+
+  const [loading, setLoading] = useState(false);
+
+  const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+  `;
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
+    //console.log(values);
 
-    const res = await fetch(`${API_URL}/user/update`, {
-      method: "PUT",
+    const formData = new FormData(); //backend expects data in form type
+    console.log(avatar);
+    formData.append("image", avatar);
+    formData.append("name", name);
+    formData.append("dob", dob);
+    formData.append("username", username);
+
+    const res = await axios.put(`${API_URL}/user/update`, formData, {
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(values),
     });
 
-    if (!res.ok) {
-      const errors = await res.json();
-      console.log(errors.message.name);
+    if (!res.statusText === "OK") {
+      const errors = await res;
+      console.log(errors);
 
       if (Array.isArray(errors)) {
         errors.errors.map((error) => toast.error(error.msg));
       } else {
-        toast.error(errors.message.name);
+        toast.error(errors);
       }
 
-      toast.error(errors);
+      // toast.error(errors);
     } else {
-      const data = await res.json(); //get data
-      router.push(`/authenticated/home`);
+      setLoading(false);
+      const data = await res; //get data
+      router.push(`/authenticated/profile/account`);
       toast.success("Your Account has been updated");
     }
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
+  const handleChange = (e) => {
+    setAvatar(e.target.files[0]);
   };
 
   return (
     <Layout title="Edit Account">
       <ToastContainer />
+
       <div className={styles.auth}>
+        <div className={styles.loading}>
+          <PropagateLoader
+            //  color={color}
+            css={override}
+            loading={loading}
+            size={15}
+          />
+        </div>
         <h1>Change your info...</h1>
         <div className={styles.card}>
           <form onSubmit={handleSubmit}>
@@ -67,8 +96,8 @@ export default function setUp({ token, tokenForUID, account }) {
                 type="text"
                 id="name"
                 name="name"
-                value={values.name}
-                onChange={handleInputChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div>
@@ -77,9 +106,19 @@ export default function setUp({ token, tokenForUID, account }) {
                 type="text"
                 id="username"
                 name="username"
-                value={values.username}
-                onChange={handleInputChange}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
+            </div>
+            <div>
+              <label htmlFor="fileInput">Profile Picture:</label>
+              <input
+                onChange={handleChange}
+                accept=".jpg, .png, .jpeg"
+                type="file"
+                name="fileInput"
+                id="fileInput"
+              ></input>
             </div>
             <div>
               <label htmlFor="dob">Date of Birth: </label>
@@ -87,8 +126,8 @@ export default function setUp({ token, tokenForUID, account }) {
                 type="date"
                 id="dob"
                 name="dob"
-                value={values.dob}
-                onChange={handleInputChange}
+                value={dob}
+                onChange={(e) => setDob(e.target.value)}
               />
             </div>
             <input type="submit" value="Submit" className="btn" />

@@ -17,6 +17,7 @@ export default function setUp({ token, tokenForUID }) {
     name: "",
     dob: "",
     username: "",
+    avatar: "",
   });
 
   const handleSubmit = async (e) => {
