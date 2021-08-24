@@ -19,9 +19,11 @@ export default function PosttItem({ post }) {
                 className={styles.image}
               />
             </div>
-            <div className={styles.text}>
-              <h6>{post.text}</h6>
-            </div>
+            {!post.text === undefined && (
+              <div className={styles.text}>
+                <h6>{post.text}</h6>
+              </div>
+            )}
           </>
         ) : (
           <>
