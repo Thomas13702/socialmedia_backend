@@ -6,7 +6,7 @@ import firebaseClient from "../../firebaseClient";
 import { API_URL } from "@/config/index";
 import SquarePostItem from "@/components/SquarePostItem";
 
-export default function explore({ session, posts, token, user, cookies }) {
+export default function Explore({ session, posts, token, user, cookies }) {
   firebaseClient();
 
   if (session) {

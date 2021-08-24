@@ -2,9 +2,9 @@ import nookies from "nookies";
 import { verifyIdToken } from "../firebaseAdmin";
 import firebaseClient from "../firebaseClient";
 import firebase from "firebase/app";
-import Layout from "@/components/Layout"
+import Layout from "@/components/Layout";
 
-export default function authenticated({ session }) {
+export default function Authenticated({ session }) {
   firebaseClient();
 
   const signOut = async () => {

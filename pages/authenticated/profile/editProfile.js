@@ -13,7 +13,7 @@ import { css } from "@emotion/react";
 
 import Layout from "@/components/Layout";
 
-export default function setUp({ token, tokenForUID, account }) {
+export default function EditProfile({ token, tokenForUID, account }) {
   firebaseClient();
   const router = useRouter();
 

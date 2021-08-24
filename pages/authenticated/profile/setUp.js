@@ -10,7 +10,7 @@ import styles from "@/styles/AuthForm.module.css";
 
 import Layout from "@/components/Layout";
 
-export default function setUp({ token, tokenForUID }) {
+export default function SetUp({ token, tokenForUID }) {
   firebaseClient();
   const router = useRouter();
   const [values, setValues] = useState({

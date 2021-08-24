@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 
-export default function todo() {
+export default function Todo() {
   return (
     <Layout>
       <h1>Backend Tasks</h1>
