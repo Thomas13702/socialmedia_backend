@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import Image from "next/image";
 
 export default function PostItem({ post, cookies, res }) {
   const router = useRouter();
@@ -38,7 +39,17 @@ export default function PostItem({ post, cookies, res }) {
           {new Date(post.date).toLocaleDateString("en-US")} {post.username}
         </span>
         {post.url ? (
-          <img src={post.url} className={styles.img} />
+          <div className={styles.imageHolder}>
+            <Link href={`/authenticated/post/${post._id}`}>
+              <Image
+                src={post.url}
+                alt="Post Image"
+                layout="fill"
+                objectFit="cover"
+                className={styles.image}
+              />
+            </Link>
+          </div>
         ) : (
           <h4>{post.text}</h4>
         )}

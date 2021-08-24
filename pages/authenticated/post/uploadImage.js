@@ -119,30 +119,6 @@ export default function Home({ session, cookies }) {
             />
           </div>
         </form>
-
-        <div className="row text-center tex-lg-left">
-          {images
-            ? images.map((image) => (
-                <div
-                  className="col-lg-3 col-md-4 col-6"
-                  key={image.cloudinaryId}
-                >
-                  <a
-                    href={image.url}
-                    target="_blank"
-                    className="d-block mb-4 h-100"
-                  >
-                    <img
-                      className="img-fluid img-thumbnail"
-                      src={image.url}
-                      alt=""
-                    />
-                    <p>{image.comment}</p>
-                  </a>
-                </div>
-              ))
-            : "No Images"}
-        </div>
       </Layout>
     );
   } else {
