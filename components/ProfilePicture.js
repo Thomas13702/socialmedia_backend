@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ProfilePicture({ account }) {
   return (
     <div className={styles.profileImage}>
-      {account.avatar === undefined ? (
+      {account.avatar === undefined || account.avatar === "" ? (
         <Image
           src={defaultProfile}
           alt="Default Profile Picture"
