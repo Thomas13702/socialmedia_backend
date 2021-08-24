@@ -29,3 +29,10 @@
 .span {
   cursor: pointer;
 }
+
+.imageHolder {
+  position: relative;
+  height: 350px;
+  width: 95%;
+  cursor: pointer;
+}

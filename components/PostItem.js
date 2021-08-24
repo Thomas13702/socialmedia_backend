@@ -8,26 +8,28 @@ export default function PosttItem({ post }) {
         <span>
           {new Date(post.date).toLocaleDateString("en-US")} {post.username}
         </span>
-        {post.url ? (
+        {post.url === undefined ? (
+          <>
+            <p>{post.text}</p>
+          </>
+        ) : (
           <>
             <div className={styles.imageHolder}>
               <Image
                 src={post.url}
-                alt="Default Profile Picture"
+                alt="Post Image"
                 layout="fill"
                 objectFit="contain"
                 className={styles.image}
               />
             </div>
-            {!post.text === undefined && (
+            {post.text === "undefined" ? (
+              <div></div>
+            ) : (
               <div className={styles.text}>
                 <h6>{post.text}</h6>
               </div>
             )}
-          </>
-        ) : (
-          <>
-            <p>{post.text}</p>
           </>
         )}
       </div>

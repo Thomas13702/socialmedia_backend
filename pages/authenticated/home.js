@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 import { API_URL } from "@/config/index";
 import HomePageItem from "@/components/HomePageItem";
 
-export default function home({ session, posts, token, user, cookies }) {
+export default function Home({ session, posts, token, user, cookies }) {
   firebaseClient();
   //console.log(posts);
   if (session) {

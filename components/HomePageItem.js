@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { API_URL } from "@/config/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import Image from "next/image";
 
 export default function HomePageItem({ post, token, user, cookies }) {
   const router = useRouter();
@@ -56,8 +57,26 @@ export default function HomePageItem({ post, token, user, cookies }) {
             <h6>{post.username}</h6>
           </div>
         </Link>
+        {post.url === undefined ? (
+          <>
+            <p>{post.text}</p>
+          </>
+        ) : (
+          <>
+            <div className={styles.imageHolder}>
+              <Link href={`/authenticated/post/${post._id}`}>
+                <Image
+                  src={post.url}
+                  alt="Post Image"
+                  layout="fill"
+                  objectFit="cover"
+                  className={styles.image}
+                />
+              </Link>
+            </div>
+          </>
+        )}
 
-        <p>{post.text}</p>
         <div className={styles.icons}>
           <FaRegHeart
             className={

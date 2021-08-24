@@ -9,12 +9,14 @@ import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
 import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Home({ session, cookies }) {
   firebaseClient();
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState();
-  const [text, setText] = useState();
+  const [text, setText] = useState(undefined);
   const [age, setAge] = useState();
   const [images, setImages] = useState([]);
   const [uploadPercentage, setUploadPercentage] = useState(0);
@@ -25,9 +27,11 @@ export default function Home({ session, cookies }) {
 
   const handleImageUpload = async (e) => {
     e.preventDefault();
-    if (!selectedImage) {
+    if (!selectedImage || !age) {
+      toast.error("Please Fill in all Fields");
       return;
     }
+    console.log(text);
 
     const formData = new FormData(); //backend expects data in form type
     formData.append("image", selectedImage);
@@ -45,12 +49,12 @@ export default function Home({ session, cookies }) {
             Math.round((progressEvent.loaded * 100) / progressEvent.total)
           )
         );
-        console.log(uploadPercentage);
+        // console.log(uploadPercentage);
       },
     });
 
     setTimeout(() => setUploadPercentage(0), 10000);
-    console.log(res);
+    // console.log(res);
 
     if (res.statusText === "OK") {
       setImages([...images, res.data]);
@@ -63,6 +67,7 @@ export default function Home({ session, cookies }) {
   if (session) {
     return (
       <Layout>
+        <ToastContainer />
         <Progress percentage={uploadPercentage} className={styles.progress} />
 
         <form action="" onSubmit={handleImageUpload} className={styles.form}>
