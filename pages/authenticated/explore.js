@@ -38,8 +38,8 @@ export default function Explore({
   };
 
   useEffect(() => {
-    console.log(numberOfPosts);
-    console.log(posts.length);
+    // console.log(numberOfPosts);
+    // console.log(posts.length);
     setHasMore(numberOfPosts > posts.length ? true : false);
   }, [posts]); //everytime posts changes this will trigger
 

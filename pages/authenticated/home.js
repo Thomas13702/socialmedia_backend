@@ -3,28 +3,76 @@ import { verifyIdToken } from "../../firebaseAdmin";
 import firebaseClient from "../../firebaseClient";
 import firebase from "firebase/app";
 import Layout from "@/components/Layout";
-import { API_URL } from "@/config/index";
+import { API_URL, PAGINATION_NUMBER } from "@/config/index";
 import HomePageItem from "@/components/HomePageItem";
+import { useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-export default function Home({ session, posts, token, user, cookies }) {
+export default function Home({
+  session,
+  data,
+  token,
+  user,
+  cookies,
+  numberOfPosts,
+}) {
   firebaseClient();
-  //console.log(posts);
+
+  const [posts, setPosts] = useState(data);
+  const [hasMore, setHasMore] = useState(true);
+  // console.log(posts);
+
+  const getMorePosts = async () => {
+    const res = await fetch(
+      `${API_URL}/posts/getNextFollowing/${posts.length}/${PAGINATION_NUMBER}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+
+    const newPosts = await res.json();
+    setPosts((posts) => [...posts, ...newPosts]);
+  };
+
+  useEffect(() => {
+    // console.log(numberOfPosts);
+    // console.log(posts.length);
+    setHasMore(numberOfPosts > posts.length ? true : false);
+  }, [posts]); //everytime posts changes this will trigger
+
   if (session) {
     return (
       <Layout>
         <h1>Home Feed</h1>
+
         {posts.msg ? (
           <h1>{posts.msg}</h1>
         ) : (
-          posts.map((post, index) => (
-            <HomePageItem
-              post={post}
-              key={index}
-              token={token}
-              user={user}
-              cookies={cookies}
-            />
-          ))
+          <InfiniteScroll
+            dataLength={posts.length}
+            next={getMorePosts}
+            hasMore={hasMore}
+            loader={<h4>Loading...</h4>}
+            endMessage={
+              <p style={{ textAlign: "centre" }}>
+                <strong>You have reached the end!</strong>
+              </p>
+            }
+          >
+            {posts.map((post, index) => (
+              <HomePageItem
+                post={post}
+                key={index}
+                token={token}
+                user={user}
+                cookies={cookies}
+              />
+            ))}
+          </InfiniteScroll>
         )}
       </Layout>
     );
@@ -42,15 +90,19 @@ export async function getServerSideProps(context) {
     console.log(token);
     const { uid, email } = token;
 
-    const res = await fetch(`${API_URL}/posts/following`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${cookies.token}`,
-      },
-    });
+    const res = await fetch(
+      `${API_URL}/posts/getFirstFollowing/${PAGINATION_NUMBER}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
 
-    const posts = await res.json();
+    const data = await res.json();
+    // console.log(data);
 
     const res1 = await fetch(`${API_URL}/profile/me`, {
       method: "GET",
@@ -62,13 +114,23 @@ export async function getServerSideProps(context) {
 
     const user = await res1.json();
 
+    const getNumberOfPosts = await fetch(`${API_URL}/posts/following/count`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+    const numberOfPosts = await getNumberOfPosts.json();
+
     return {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
-        posts,
+        data,
         token,
         user,
         cookies,
+        numberOfPosts,
       },
     };
   } catch (err) {
