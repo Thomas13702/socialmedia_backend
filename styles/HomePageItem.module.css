@@ -36,3 +36,12 @@
   width: 95%;
   cursor: pointer;
 }
+
+.postText {
+  width: 95%;
+}
+
+.postText p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

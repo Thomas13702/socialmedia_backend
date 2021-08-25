@@ -9,9 +9,9 @@ export default function PosttItem({ post }) {
           {new Date(post.date).toLocaleDateString("en-US")} {post.username}
         </span>
         {post.url === undefined ? (
-          <>
+          <div className={styles.text}>
             <p>{post.text}</p>
-          </>
+          </div>
         ) : (
           <>
             <div className={styles.imageHolder}>
@@ -24,7 +24,7 @@ export default function PosttItem({ post }) {
               />
             </div>
             {post.text === "undefined" ? (
-              <div></div>
+              <></>
             ) : (
               <div className={styles.text}>
                 <h6>{post.text}</h6>

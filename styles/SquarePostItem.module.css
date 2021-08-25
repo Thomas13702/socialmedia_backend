@@ -105,4 +105,6 @@
 .bodyText h6 {
   font-size: 1.4rem;
   padding-top: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }

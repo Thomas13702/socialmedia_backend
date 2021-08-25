@@ -13,6 +13,7 @@
 .info {
   flex: 2;
   margin-left: 1rem;
+  width: 75%;
 }
 
 .icons {
@@ -66,4 +67,13 @@
   height: 350px;
   width: 95%;
   cursor: pointer;
+}
+
+.postText {
+  width: 100%;
+}
+
+.postText h4 {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }

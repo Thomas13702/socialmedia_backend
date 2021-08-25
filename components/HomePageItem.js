@@ -58,9 +58,9 @@ export default function HomePageItem({ post, token, user, cookies }) {
           </div>
         </Link>
         {post.url === undefined ? (
-          <>
+          <div className={styles.postText}>
             <p>{post.text}</p>
-          </>
+          </div>
         ) : (
           <>
             <div className={styles.imageHolder}>

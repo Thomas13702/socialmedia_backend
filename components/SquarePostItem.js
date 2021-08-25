@@ -140,7 +140,9 @@ export default function PosttItem({ post, token, user, cookies }) {
     return (
       <div className={styles.body}>
         <div className={styles.bodyText}>
-          <h6>{post.text}</h6>
+          <h6>{`${post.text.slice(0, 85)}${
+            post.text.length >= 85 ? "..." : ""
+          }`}</h6>
         </div>
         <div className={styles.data}>
           <div>

@@ -51,7 +51,9 @@ export default function PostItem({ post, cookies, res }) {
             </Link>
           </div>
         ) : (
-          <h4>{post.text}</h4>
+          <div className={styles.postText}>
+            <h4>{post.text}</h4>
+          </div>
         )}
       </div>
 
