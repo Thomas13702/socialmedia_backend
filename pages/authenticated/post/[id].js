@@ -68,6 +68,7 @@ export default function SlugProfile({ session, post, cookie, token }) {
               name="text"
               cols="30"
               rows="5"
+              maxLength="180"
               placeholder="Comment..."
               value={text}
               onChange={(e) => setText(e.target.value)}

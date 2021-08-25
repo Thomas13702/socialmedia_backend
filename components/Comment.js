@@ -45,8 +45,9 @@ export default function Comment({ comment, token, postID, cookie }) {
             </div>
           </Link>
         </span>
-
-        <p>{comment.text}</p>
+        <div className={styles.text}>
+          <p>{comment.text}</p>
+        </div>
       </div>
 
       {token.uid === comment.firebaseUID && (

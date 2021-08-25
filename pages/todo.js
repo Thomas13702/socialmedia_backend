@@ -8,19 +8,22 @@ export default function Todo() {
         <li>
           Posts
           <ul>
-            <li>Make - image/text, age rating, tier</li>
-            <li>Delete</li>
-            <li>Show on profile</li>
-            <li>When Clicking on image opens page with text and comment</li>
-            <li>long text posts are broken across lines</li>
-            <li>Add scrolling pagination</li>
+            <li>Make - image/text✓, age rating✓ , tier</li>
+            <li>Delete✓</li>
+            <li>Show on profile✓</li>
+            <li>When Clicking on image opens page with text and comment✓</li>
+            <li>long text posts are broken across lines✓</li>
+            <li>
+              Add scrolling pagination - for account page and other peoples
+              account
+            </li>
           </ul>
         </li>
         <li>
           Account{" "}
           <ul>
-            <li>Show account details</li>
-            <li>update username / profile picture</li>
+            <li>Show account details ✓</li>
+            <li>update username / profile picture✓</li>
           </ul>
         </li>
       </ul>
