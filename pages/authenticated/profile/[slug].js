@@ -2,22 +2,50 @@ import Layout from "@/components/Layout";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
-import { API_URL } from "@/config/index";
+import { API_URL, PAGINATION_NUMBER } from "@/config/index";
 import PostItem from "@/components/PostItem";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import styles from "@/styles/SlugProfile.module.css";
 import router from "next/router";
 import ProfilePicture from "@/components/ProfilePicture";
+import InfiniteScroll from "react-infinite-scroll-component";
+import { useEffect, useState } from "react";
 
 export default function SlugProfile({
   session,
-  posts,
+  data,
   cookies,
   slugProfile,
   user,
+  numberOfPosts,
 }) {
   firebaseClient();
+
+  const [posts, setPosts] = useState(data);
+  const [hasMore, setHasMore] = useState(true);
+
+  const getMorePosts = async () => {
+    const res = await fetch(
+      `${API_URL}/posts/getNextPostsBySlug/${slugProfile.slug}/${posts.length}/${PAGINATION_NUMBER}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+
+    const newPosts = await res.json();
+    setPosts((posts) => [...posts, ...newPosts]);
+  };
+
+  useEffect(() => {
+    // console.log(numberOfPosts);
+    // console.log(posts.length);
+    setHasMore(numberOfPosts > posts.length ? true : false);
+  }, [posts]); //everytime posts changes this will trigger
 
   const follow = async () => {
     console.log(user.following);
@@ -104,10 +132,21 @@ export default function SlugProfile({
             )}
           </div>
         </div>
-
-        {posts.map((post, index) => (
-          <PostItem key={index} post={post} />
-        ))}
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={getMorePosts}
+          hasMore={hasMore}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "centre" }}>
+              <strong>You have reached the end!</strong>
+            </p>
+          }
+        >
+          {posts.map((post, index) => (
+            <PostItem key={index} post={post} />
+          ))}
+        </InfiniteScroll>
       </Layout>
     );
   } else {
@@ -120,9 +159,10 @@ export async function getServerSideProps(context) {
     const cookies = nookies.get(context);
     const token = await verifyIdToken(cookies.token);
     const { uid, email } = token;
+    const slug = context.params.slug;
 
     const res = await fetch(
-      `${API_URL}/posts/getTextPostsBySlug/${context.params.slug}`,
+      `${API_URL}/posts/getPostsBySlug/${context.params.slug}/${PAGINATION_NUMBER}`,
       {
         method: "GET",
         headers: {
@@ -132,9 +172,9 @@ export async function getServerSideProps(context) {
       }
     );
 
-    const posts = await res.json();
+    const data = await res.json();
 
-    const res1 = await fetch(`${API_URL}/profile/slug/${context.params.slug}`, {
+    const res1 = await fetch(`${API_URL}/profile/slug/${slug}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -154,13 +194,26 @@ export async function getServerSideProps(context) {
 
     const user = await res2.json();
 
+    const getNumberOfPosts = await fetch(
+      `${API_URL}/posts/countPostsBySlug/${slug}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+    const numberOfPosts = await getNumberOfPosts.json();
+
     return {
       props: {
         session: `Your email is ${email} and your UID is ${uid}.`,
-        posts,
+        data,
         cookies,
         slugProfile,
         user,
+        numberOfPosts,
       },
     };
   } catch (err) {

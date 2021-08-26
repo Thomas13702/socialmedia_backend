@@ -3,15 +3,47 @@ import { useState, useEffect } from "react";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
-import { API_URL } from "@/config/index";
+import { API_URL, PAGINATION_NUMBER } from "@/config/index";
 import AccountItem from "@/components/AccountItem";
 import styles from "@/styles/Account.module.scss";
 import Link from "next/link";
 import ProfilePicture from "@/components/ProfilePicture";
+import InfiniteScroll from "react-infinite-scroll-component";
 
-export default function Account({ session, account, posts, cookies }) {
+export default function Account({
+  session,
+  account,
+  data,
+  cookies,
+  numberOfPosts,
+}) {
   firebaseClient();
-  console.log(account.avatar);
+  // console.log(account.avatar);
+
+  const [posts, setPosts] = useState(data);
+  const [hasMore, setHasMore] = useState(true);
+
+  const getMorePosts = async () => {
+    const res = await fetch(
+      `${API_URL}/posts/getNextLoggedInPosts/${posts.length}/${PAGINATION_NUMBER}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+
+    const newPosts = await res.json();
+    setPosts((posts) => [...posts, ...newPosts]);
+  };
+
+  useEffect(() => {
+    // console.log(numberOfPosts);
+    // console.log(posts.length);
+    setHasMore(numberOfPosts > posts.length ? true : false);
+  }, [posts]); //everytime posts changes this will trigger
 
   if (session) {
     return (
@@ -38,10 +70,21 @@ export default function Account({ session, account, posts, cookies }) {
             </div>
           </div>
         </div>
-
-        {posts.map((post, index) => (
-          <AccountItem key={index} post={post} cookies={cookies} />
-        ))}
+        <InfiniteScroll
+          dataLength={posts.length}
+          next={getMorePosts}
+          hasMore={hasMore}
+          loader={<h4>Loading...</h4>}
+          endMessage={
+            <p style={{ textAlign: "centre" }}>
+              <strong>You have reached the end!</strong>
+            </p>
+          }
+        >
+          {posts.map((post, index) => (
+            <AccountItem key={index} post={post} cookies={cookies} />
+          ))}
+        </InfiniteScroll>
       </Layout>
     );
   } else {
@@ -66,18 +109,40 @@ export async function getServerSideProps(context) {
 
     const account = await res.json();
 
-    const res1 = await fetch(`${API_URL}/posts/getLoggedInTextPosts`, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${cookies.token}`,
-      },
-    });
+    const res1 = await fetch(
+      `${API_URL}/posts/getFirstLoggedInPosts/${PAGINATION_NUMBER}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
 
-    const posts = await res1.json();
+    const data = await res1.json();
+    console.log(data);
+
+    const getNumberOfPosts = await fetch(
+      `${API_URL}/posts/countLoggedInPosts`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${cookies.token}`,
+        },
+      }
+    );
+    const numberOfPosts = await getNumberOfPosts.json();
 
     return {
-      props: { session: "Authenticated", account, posts, cookies },
+      props: {
+        session: "Authenticated",
+        account,
+        data,
+        cookies,
+        numberOfPosts,
+      },
     };
   } catch (err) {
     console.log(err);
