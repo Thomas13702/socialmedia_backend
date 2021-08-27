@@ -58,9 +58,15 @@ export default function Home({
             hasMore={hasMore}
             loader={<h4>Loading...</h4>}
             endMessage={
-              <p style={{ textAlign: "centre" }}>
-                <strong>You have reached the end!</strong>
-              </p>
+              data.length === 0 ? (
+                <p style={{ textAlign: "centre" }}>
+                  <strong>Please follow someone to see posts</strong>
+                </p>
+              ) : (
+                <p style={{ textAlign: "centre" }}>
+                  <strong>You have reached the end!</strong>
+                </p>
+              )
             }
           >
             {posts.map((post, index) => (
