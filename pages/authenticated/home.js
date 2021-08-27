@@ -90,6 +90,21 @@ export async function getServerSideProps(context) {
     console.log(token);
     const { uid, email } = token;
 
+    const setUp = await fetch(`${API_URL}/user/checkUserSetUp`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cookies.token}`,
+      },
+    });
+
+    const hasUserSetUp = await setUp.json(setUp);
+
+    if (!hasUserSetUp) {
+      context.res.writeHead(302, { Location: "/authenticated/profile/setUp" });
+      context.res.end();
+    }
+
     const res = await fetch(
       `${API_URL}/posts/getFirstFollowing/${PAGINATION_NUMBER}`,
       {

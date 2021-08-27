@@ -45,6 +45,14 @@ export default function Account({
     setHasMore(numberOfPosts > posts.length ? true : false);
   }, [posts]); //everytime posts changes this will trigger
 
+  if (account.msg) {
+    return (
+      <Layout>
+        <h1>{account.msg}</h1>
+      </Layout>
+    );
+  }
+
   if (session) {
     return (
       <Layout title="Your Account">
@@ -108,6 +116,7 @@ export async function getServerSideProps(context) {
     });
 
     const account = await res.json();
+    console.log(account);
 
     const res1 = await fetch(
       `${API_URL}/posts/getFirstLoggedInPosts/${PAGINATION_NUMBER}`,

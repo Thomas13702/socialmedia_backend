@@ -60,6 +60,7 @@ export default function SetUp({ token, tokenForUID }) {
       <ToastContainer />
       <div className={styles.auth}>
         <h1>Tell us about yourself</h1>
+        <h4>Please Set up your profile...</h4>
         <div className={styles.card}>
           <form onSubmit={handleSubmit}>
             <div>

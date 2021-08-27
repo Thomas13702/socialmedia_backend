@@ -17,6 +17,10 @@ export default function Todo() {
               Add scrolling pagination - for account page and other peoples
               account✓
             </li>
+            <li>
+              Change is so if not following anyone says follow someone.
+              data.length === 0 ? Follow : End
+            </li>
           </ul>
         </li>
         <li>
@@ -25,6 +29,9 @@ export default function Todo() {
             <li>Show account details ✓</li>
             <li>update username / profile picture✓</li>
             <li>Fix Unfollow Bug ✓</li>
+            <li>Force account set up before posting ect</li>
+            <li>Password/email reset</li>
+            <li>Search accounts</li>
           </ul>
         </li>
         <li>
