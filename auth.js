@@ -3,6 +3,7 @@ import nookies from "nookies";
 import firebaseClient from "./firebaseClient";
 import firebase from "firebase/app";
 import "firebase/auth";
+import Cookies from "js-cookie";
 
 const AuthContext = createContext({});
 
@@ -14,13 +15,24 @@ export const AuthProvider = ({ children }) => {
     return firebase.auth().onIdTokenChanged(async (user) => {
       if (!user) {
         setUser(null);
-        nookies.set(undefined, "token", "", {});
+        Cookies.set("token", "");
         return;
       }
       const token = await user.getIdToken();
       setUser(user);
-      nookies.set(undefined, "token", token, {});
+      Cookies.set("token", token);
     });
+  }, []);
+
+  // force refresh the token every 10 minutes
+  useEffect(() => {
+    const handle = setInterval(async () => {
+      const user = firebaseClient.auth().currentUser;
+      if (user) await user.getIdToken(true);
+    }, 10 * 60 * 1000);
+
+    // clean up setInterval
+    return () => clearInterval(handle);
   }, []);
 
   return (

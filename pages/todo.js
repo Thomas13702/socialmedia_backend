@@ -15,15 +15,22 @@ export default function Todo() {
             <li>long text posts are broken across lines✓</li>
             <li>
               Add scrolling pagination - for account page and other peoples
-              account
+              account✓
             </li>
           </ul>
         </li>
         <li>
-          Account{" "}
+          Account
           <ul>
             <li>Show account details ✓</li>
             <li>update username / profile picture✓</li>
+            <li>Fix Unfollow Bug ✓</li>
+          </ul>
+        </li>
+        <li>
+          Auth
+          <ul>
+            <li>Fix AUTH :( ✓</li>
           </ul>
         </li>
       </ul>
