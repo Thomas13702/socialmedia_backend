@@ -19,7 +19,7 @@ export default function Todo() {
             </li>
             <li>
               Change is so if not following anyone says follow someone.
-              data.length === 0 ? Follow : End
+              data.length === 0 ? Follow : End ✓
             </li>
           </ul>
         </li>
@@ -29,7 +29,7 @@ export default function Todo() {
             <li>Show account details ✓</li>
             <li>update username / profile picture✓</li>
             <li>Fix Unfollow Bug ✓</li>
-            <li>Force account set up before posting ect</li>
+            <li>Force account set up before posting ect ✓</li>
             <li>Password/email reset</li>
             <li>Search accounts</li>
           </ul>

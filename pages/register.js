@@ -6,6 +6,7 @@ import "firebase/auth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/AuthForm.module.css";
+import Link from "next/link";
 
 export default function Login() {
   firebaseClient();
@@ -81,6 +82,9 @@ export default function Login() {
             />
             <input className="btn" type="submit" value="Register" />
           </form>
+          <p>
+            Already Regostered? <Link href={"/login"}>Login Here</Link>
+          </p>
         </div>
       </div>
     </Layout>
