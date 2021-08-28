@@ -116,7 +116,7 @@ export async function getServerSideProps(context) {
     });
 
     const account = await res.json();
-    console.log(account);
+    // console.log(account);
 
     const res1 = await fetch(
       `${API_URL}/posts/getFirstLoggedInPosts/${PAGINATION_NUMBER}`,
@@ -130,7 +130,7 @@ export async function getServerSideProps(context) {
     );
 
     const data = await res1.json();
-    console.log(data);
+    // console.log(data);
 
     const getNumberOfPosts = await fetch(
       `${API_URL}/posts/countLoggedInPosts`,

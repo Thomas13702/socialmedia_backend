@@ -90,10 +90,10 @@ export default function Home({
 export async function getServerSideProps(context) {
   try {
     const cookies = nookies.get(context);
-    console.log("Cookie" + cookies.token);
+    // console.log("Cookie" + cookies.token);
     //nookies isnt getting token
     const token = await verifyIdToken(cookies.token);
-    console.log(token);
+    // console.log(token);
     const { uid, email } = token;
 
     const setUp = await fetch(`${API_URL}/user/checkUserSetUp`, {
