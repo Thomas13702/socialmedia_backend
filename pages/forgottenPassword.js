@@ -8,33 +8,34 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "../styles/AuthForm.module.css";
 import Link from "next/link";
 
-export default function Login() {
-  firebaseClient();
+export default function ForgottenPassword() {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [emailHasBeenSent, setEmailHasBeenSent] = useState(false);
 
-  const userLogin = async (e) => {
+  const sendResetEmail = (e) => {
     e.preventDefault();
-    await firebase
+    firebase
       .auth()
-      .signInWithEmailAndPassword(email, password)
+      .sendPasswordResetEmail(email)
       .then(() => {
-        window.location.href = "/authenticated/home";
+        setEmailHasBeenSent(true);
+        setTimeout(() => {
+          setEmailHasBeenSent(false);
+        }, 3000);
+        toast.success("An Email has been sent to you");
       })
-      .catch((error) => {
-        console.log(error);
-        const message = error.message;
-        toast.error(message);
+      .catch(() => {
+        toast.error("Error resetting password");
       });
   };
 
   return (
-    <Layout title="Login">
+    <div>
       <ToastContainer />
       <div className={styles.auth}>
-        <h1>Login</h1>
+        <h1>Forgotten your password</h1>
         <div className={styles.card}>
-          <form onSubmit={userLogin}>
+          <form onSubmit={sendResetEmail}>
             <label htmlFor="email">Enter email...</label>
             <input
               type="email"
@@ -44,23 +45,17 @@ export default function Login() {
               value={email}
               id="emailAddress"
             />
-            <label htmlFor="password">Enter Password</label>
-            <input
-              type="password"
-              name="password"
-              id=""
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              id="password"
-            />
-            <Link href={"/forgottenPassword"}>Forgotten Your Password?</Link>
-            <input className="btn" type="submit" value="Login" />
+
+            <input className="btn" type="submit" value="Send Email" />
           </form>
           <p>
             Don't have an account? <Link href={"/register"}>Register Here</Link>
           </p>
+          <p>
+            Know your Password? <Link href={"/login"}>Login Here</Link>
+          </p>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
