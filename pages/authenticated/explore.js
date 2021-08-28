@@ -100,6 +100,7 @@ export async function getServerSideProps(context) {
     if (!hasUserSetUp) {
       context.res.writeHead(302, { Location: "/authenticated/profile/setUp" });
       context.res.end();
+      return { props: {} };
     }
 
     const res = await fetch(
