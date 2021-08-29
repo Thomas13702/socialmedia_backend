@@ -83,7 +83,7 @@ export default function Login() {
             <input className="btn" type="submit" value="Register" />
           </form>
           <p>
-            Already Regostered? <Link href={"/login"}>Login Here</Link>
+            Already Registered? <Link href={"/login"}>Login Here</Link>
           </p>
         </div>
       </div>
