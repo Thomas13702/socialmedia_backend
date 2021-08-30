@@ -9,20 +9,7 @@ export default function Layout({ title, keywords, description, children }) {
   //layout will wrap content, what ever is wrapped will be the children
 
   const router = useRouter();
-
-  // const hasLoggedIn = () => {
-  //   if (
-  //     router.pathname !== "/" ||
-  //     router.pathname !== "/login" ||
-  //     router.pathname !== "/register"
-  //   ) {
-  //     return true;
-  //     console.log("true");
-  //   } else {
-  //     return false;
-  //     console.log("fas");
-  //   }
-  // };
+  console.log(router.pathname);
 
   return (
     <div>
@@ -42,7 +29,17 @@ export default function Layout({ title, keywords, description, children }) {
         router.pathname !== "/register" && <Navbar />}
 
       <div className={styles.container}>{children}</div>
-      <Footer />
+      {/* {router.pathname === "/" &&
+        router.pathname === "/login" &&
+        router.pathname === "/register" && <Footer />} */}
+      {router.pathname === "/" ? (
+        <Footer />
+      ) : router.pathname === "/login" ? (
+        <Footer />
+      ) : router.pathname === "/register" ? (
+        <Footer />
+      ) : null}
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useAuth } from "../auth";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 export default function Home({}) {
   const router = useRouter();
@@ -12,6 +13,25 @@ export default function Home({}) {
 
   return (
     <Layout>
+      <CookieConsent
+        enableDeclineButton
+        onDecline={() => {
+          console.log("declined");
+        }}
+        declineButtonText="Reject"
+        location="bottom"
+        buttonText="Accept Cookies"
+        cookieName="CookieConsent"
+        style={{ background: "#548ca8" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+      >
+        This website uses cookies to enhance the user experience.{" "}
+        <Link href={"/cookies"}>
+          <a style={{ fontSize: "10px" }}>Cookie Disclosure</a>
+        </Link>
+      </CookieConsent>
+
       <div className={styles.container}>
         <div className={styles.image}>
           <Image

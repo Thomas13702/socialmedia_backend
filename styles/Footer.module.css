@@ -1,0 +1,22 @@
+.footer {
+  margin: 100px 0 40px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.links {
+  display: flex;
+  margin: 0 auto;
+  padding: 1rem 0 0 5rem;
+  width: 50%;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .links {
+    flex-direction: column;
+  }
+}
