@@ -14,16 +14,22 @@ export default function Home({}) {
   return (
     <Layout>
       <CookieConsent
-        enableDeclineButton
-        onDecline={() => {
-          console.log("declined");
-        }}
+        // debug={true}
+        // enableDeclineButton
+        // onDecline={() => {
+        //   console.log("declined");
+        // }}
         declineButtonText="Reject"
         location="bottom"
         buttonText="Accept Cookies"
         cookieName="CookieConsent"
         style={{ background: "#548ca8" }}
-        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        // declineButtonStyle={{ background: "#548ca8" }}
+        buttonStyle={{
+          color: "black",
+          fontSize: "13px",
+          background: "white",
+        }}
         expires={150}
       >
         This website uses cookies to enhance the user experience.{" "}

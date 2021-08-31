@@ -15,6 +15,9 @@ export default function Footer() {
         <p>
           <Link href="/about">Terms and Conditions</Link>
         </p>
+        <p>
+          <Link href="/cookie">Cookie Policy</Link>
+        </p>
       </div>
     </footer>
   );
