@@ -12,12 +12,13 @@ export default function privacyPolicy() {
         </div>
         <div>
           Thank you for choosing to be part of our community at THOMAS LTD
-          ("`&quot;` <strong>Company</strong> ," "<strong>we</strong>," "
-          <strong>us</strong>," or " <strong>our</strong>"). We are committed to
-          protecting your personal information and your right to privacy. If you
-          have any questions or concerns about this privacy notice or our
-          practices with regard to your personal information, please contact us
-          at thomaspritchard137@btinternet.com .
+          (&quot;
+          <strong>Company</strong> ," &quot;<strong>we</strong>,&quot; "
+          <strong>us</strong>,&quot; or " <strong>our</strong>"). We are
+          committed to protecting your personal information and your right to
+          privacy. If you have any questions or concerns about this privacy
+          notice or our practices with regard to your personal information,
+          please contact us at thomaspritchard137@btinternet.com .
         </div>
         <div>&nbsp;</div>
         <div>
@@ -26,10 +27,9 @@ export default function privacyPolicy() {
         </div>
         <ul>
           <li>
-            Visit our websit e at{" "}
+            Visit our website at
             <a href="http://www.example.com" target="_blank" rel="noreferrer">
-              {" "}
-              http://www.example.com{" "}
+              http://www.example.com
             </a>
           </li>
         </ul>
@@ -44,16 +44,16 @@ export default function privacyPolicy() {
             <div>In this privacy notice, if we refer to:</div>
             <ul>
               <li>
-                "<strong>Website</strong>," we are referring to any website of
-                ours that references or links to this policy
+                &quot;<strong>Website</strong>,&quot; we are referring to any
+                website of ours that references or links to this policy
               </li>
             </ul>
             <div>
               <ul>
                 <li>
-                  "<strong>Services</strong>," we are referring to our Website,{" "}
-                  and other related services, including any sales, marketing, or
-                  events
+                  &quot;<strong>Services</strong>,&quot; we are referring to our
+                  Website, and other related services, including any sales,
+                  marketing, or events
                 </li>
               </ul>
               <div>
@@ -66,9 +66,8 @@ export default function privacyPolicy() {
               <div>&nbsp;</div>
               <div>
                 <strong>
-                  {" "}
                   Please read this privacy notice carefully, as it will help you
-                  understand what we do with the information that we collect.{" "}
+                  understand what we do with the information that we collect.
                 </strong>
               </div>
               <div>&nbsp;</div>
@@ -84,27 +83,21 @@ export default function privacyPolicy() {
               </div>
               <div>
                 <a href="#infoshare">
-                  {" "}
-                  3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?{" "}
+                  3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?
                 </a>
               </div>
               <div>
                 <a href="#cookies">
-                  {" "}
-                  4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?{" "}
+                  4. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
                 </a>
               </div>
               <div>
                 <a href="#inforetain">
-                  {" "}
-                  5. HOW LONG DO WE KEEP YOUR INFORMATION?{" "}
+                  5. HOW LONG DO WE KEEP YOUR INFORMATION?
                 </a>
               </div>
               <div>
-                <a href="#infosafe">
-                  {" "}
-                  6. HOW DO WE KEEP YOUR INFORMATION SAFE?{" "}
-                </a>
+                <a href="#infosafe">6. HOW DO WE KEEP YOUR INFORMATION SAFE?</a>
               </div>
               <div>
                 <a href="#privacyrights"> 7. WHAT ARE YOUR PRIVACY RIGHTS? </a>
@@ -114,27 +107,23 @@ export default function privacyPolicy() {
               </div>
               <div>
                 <a href="#caresidents">
-                  {" "}
-                  9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?{" "}
+                  9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
                 </a>
               </div>
               <div>
                 <a href="#policyupdates">
-                  {" "}
-                  10. DO WE MAKE UPDATES TO THIS NOTICE?{" "}
+                  10. DO WE MAKE UPDATES TO THIS NOTICE?
                 </a>
               </div>
               <div>
                 <a href="#contact">
-                  {" "}
-                  11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?{" "}
+                  11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
                 </a>
               </div>
               <div>
                 <a href="#request">
-                  {" "}
                   12. HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT
-                  FROM YOU?{" "}
+                  FROM YOU?
                 </a>
               </div>
               <div>
@@ -152,10 +141,9 @@ export default function privacyPolicy() {
                 <div>
                   <strong>
                     <em>In Short:&nbsp;</em>
-                  </strong>{" "}
+                  </strong>
                   <em>
-                    {" "}
-                    We collect personal information that you provide to us.{" "}
+                    We collect personal information that you provide to us.
                   </em>
                 </div>
               </div>
@@ -175,9 +163,9 @@ export default function privacyPolicy() {
               </div>
               <div>
                 <strong>Personal Information Provided by You.</strong> We
-                collect names ;&nbsp; email addresses ; usernames ;&nbsp;{" "}
+                collect names ;&nbsp; email addresses ; usernames ;&nbsp;
                 passwords ;&nbsp; contact preferences ; contact or
-                authentication data ; and other similar information.{" "}
+                authentication data ; and other similar information.
               </div>
               <div>
                 All personal information that you provide to us must be true,
@@ -196,13 +184,12 @@ export default function privacyPolicy() {
                 <div>
                   <strong>
                     <em>In Short:&nbsp;</em>
-                  </strong>{" "}
+                  </strong>
                   <em>
-                    {" "}
                     Some information &mdash; such as your Internet Protocol (IP)
                     address and/or br/owser and device characteristics &mdash;
-                    is collected automatically when you visit our{" "}
-                    <em> Websit e </em> .{" "}
+                    is collected automatically when you visit our
+                    <em> Websit e </em> .
                   </em>
                 </div>
               </div>
@@ -213,7 +200,7 @@ export default function privacyPolicy() {
                 may include device and usage information, such as your IP
                 address, br/owser and device characteristics, operating system,
                 language preferences, referring URLs, device name, country,
-                location, information about how and when you use our Websit e{" "}
+                location, information about how and when you use our Websit e
                 and other technical information. This information is primarily
                 needed to maintain the security and operation of our Websit e ,
                 and for our internal analytics and reporting purposes .
@@ -221,15 +208,14 @@ export default function privacyPolicy() {
               <div>
                 Like many businesses, we also collect information through
                 cookies and similar technologies. You can find out more about
-                this in our Cookie Notice:{" "}
+                this in our Cookie Notice:
                 <a
                   href="http://www.example.com/cookies"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {" "}
-                  http://www.example.com/cookies{" "}
-                </a>{" "}
+                  http://www.example.com/cookies
+                </a>
                 .
               </div>
               <div>The information we collect includes :</div>
@@ -237,7 +223,7 @@ export default function privacyPolicy() {
                 <li>
                   <em>Log and Usage Data.</em> Log and usage data is
                   service-related, diagnostic, usage and performance information
-                  our servers automatically collect when you access or use our{" "}
+                  our servers automatically collect when you access or use our
                   Websit e and which we record in log files. Depending on how
                   you interact with us, this log data may include your IP
                   address, device information, br/owser type and settings and
@@ -266,7 +252,7 @@ export default function privacyPolicy() {
                   <em>Location Data.</em> We collect location data such as
                   information about your device's location, which can be either
                   precise or imprecise. How much information we collect depends
-                  on the type and settings of the device you use to access the{" "}
+                  on the type and settings of the device you use to access the
                   Websit e . For example, we may use GPS and other technologies
                   to collect geolocation data that tells us your current
                   location (based on your IP address). You can opt out of
@@ -286,11 +272,10 @@ export default function privacyPolicy() {
                     <em>In Short: </em>
                   </strong>
                   <em>
-                    {" "}
                     We process your information for purposes based on legitimate
                     business interests, the fulfillment of our contract with
                     you, compliance with our legal obligations, and/or your
-                    consent.{" "}
+                    consent.
                   </em>
                 </div>
               </div>
@@ -307,9 +292,8 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>
-                    {" "}
-                    To facilitate account creation and logon process.{" "}
-                  </strong>{" "}
+                    To facilitate account creation and logon process.
+                  </strong>
                   If you choose to link your account with us to a third-party
                   account (such as your Google or Facebook account), we use the
                   information you allowed us to collect from those third parties
@@ -323,7 +307,7 @@ export default function privacyPolicy() {
                   our Websit e that may contain personal information. Prior to
                   posting a testimonial, we will obtain your consent to use your
                   name and the content of the testimonial. If you wish to
-                  update, or delete your testimonial, please contact us at{" "}
+                  update, or delete your testimonial, please contact us at
                   @example.com and be sure to include your name, testimonial
                   location, and contact information.
                 </li>
@@ -351,7 +335,7 @@ export default function privacyPolicy() {
               </ul>
               <ul>
                 <li>
-                  <strong> To send administrative information to you. </strong>{" "}
+                  <strong> To send administrative information to you. </strong>
                   We may use your personal information to send you product,
                   service and new feature information and/or information about
                   changes to our terms, conditions, and policies.
@@ -367,19 +351,17 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>
-                    {" "}
                     To enforce our terms, conditions and policies for business
                     purposes, to comply with legal and regulatory requirements
-                    or in connection with our contract.{" "}
+                    or in connection with our contract.
                   </strong>
                 </li>
               </ul>
               <ul>
                 <li>
                   <strong>
-                    {" "}
-                    To respond to legal requests and prevent harm.{" "}
-                  </strong>{" "}
+                    To respond to legal requests and prevent harm.
+                  </strong>
                   If we receive a subpoena or other legal request, we may need
                   to inspect the data we hold to determine how to respond.
                 </li>
@@ -402,9 +384,8 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>
-                    {" "}
-                    To deliver and facilitate delivery of services to the user.{" "}
-                  </strong>{" "}
+                    To deliver and facilitate delivery of services to the user.
+                  </strong>
                   We may use your information to provide you with the requested
                   service.
                 </li>
@@ -412,9 +393,8 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>
-                    {" "}
-                    To respond to user inquiries/offer support to users.{" "}
-                  </strong>{" "}
+                    To respond to user inquiries/offer support to users.
+                  </strong>
                   We may use your information to respond to your inquiries and
                   solve any potential issues you might have with the use of our
                   Services.
@@ -423,9 +403,8 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>
-                    {" "}
-                    To send you marketing and promotional communications.{" "}
-                  </strong>{" "}
+                    To send you marketing and promotional communications.
+                  </strong>
                   We and/or our third-party marketing partners may use the
                   personal information you send to us for our marketing
                   purposes, if this is in accordance with your marketing
@@ -433,7 +412,7 @@ export default function privacyPolicy() {
                   obtaining information about us or our Websit e , subscribing
                   to marketing or otherwise contacting us, we will collect
                   personal information from you. You can opt-out of our
-                  marketing emails at any time (see the "{" "}
+                  marketing emails at any time (see the "
                   <a href="#privacyrights"> WHAT ARE YOUR PRIVACY RIGHTS? </a> "
                   below).
                 </li>
@@ -444,15 +423,14 @@ export default function privacyPolicy() {
                   use your information to develop and display personalized
                   content and advertising (and work with third parties who do
                   so) tailored to your interests and/or location and to measure
-                  its effectiveness. For more information see our Cookie Notice:{" "}
+                  its effectiveness. For more information see our Cookie Notice:
                   <a
                     href="http://www.example.com/cookies"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {" "}
-                    http://www.example.com/cookies{" "}
-                  </a>{" "}
+                    http://www.example.com/cookies
+                  </a>
                   .
                 </li>
               </ul>
@@ -471,20 +449,16 @@ export default function privacyPolicy() {
                 </li>
               </ul>
               <div>
-                <strong>
-                  {" "}
-                  3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?{" "}
-                </strong>
+                <strong>3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?</strong>
               </div>
               <div>
                 <strong>
                   <em>In Short:</em>
                 </strong>
                 <em>
-                  {" "}
                   We only share information with your consent, to comply with
                   laws, to provide you with services, to protect your rights, or
-                  to fulfill business obligations.{" "}
+                  to fulfill business obligations.
                 </em>
               </div>
               <div>
@@ -562,7 +536,7 @@ export default function privacyPolicy() {
                           <strong>Other Users.&nbsp;</strong>When you share
                           personal information (for example, by posting
                           comments, contributions or other content to the Websit
-                          e ) or otherwise interact with public areas of the{" "}
+                          e ) or otherwise interact with public areas of the
                           Websit e , such personal information may be viewed by
                           all users and may be publicly made available outside
                           the Websit e in perpetuity. Similarly, other users
@@ -574,9 +548,8 @@ export default function privacyPolicy() {
                       <div>
                         <div>
                           <strong>
-                            {" "}
                             4. DO WE USE COOKIES AND OTHER TRACKING
-                            TECHNOLOGIES?{" "}
+                            TECHNOLOGIES?
                           </strong>
                         </div>
                         <div>
@@ -584,9 +557,8 @@ export default function privacyPolicy() {
                             <em>In Short:&nbsp;</em>
                           </strong>
                           <em>
-                            {" "}
                             We may use cookies and other tracking technologies
-                            to collect and store your information.{" "}
+                            to collect and store your information.
                           </em>
                         </div>
                         <div>
@@ -594,21 +566,19 @@ export default function privacyPolicy() {
                           (like web beacons and pixels) to access or store
                           information. Specific information about how we use
                           such technologies and how you can refuse certain
-                          cookies is set out in our Cookie Notice :{" "}
+                          cookies is set out in our Cookie Notice :
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {" "}
-                            http://www.example.com/cookies{" "}
-                          </a>{" "}
+                            http://www.example.com/cookies
+                          </a>
                           .
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            5. HOW LONG DO WE KEEP YOUR INFORMATION?{" "}
+                            5. HOW LONG DO WE KEEP YOUR INFORMATION?
                           </strong>
                         </div>
                         <div>
@@ -616,10 +586,9 @@ export default function privacyPolicy() {
                             <em>In Short:&nbsp;</em>
                           </strong>
                           <em>
-                            {" "}
                             We keep your information for as long as necessary to
                             fulfill the purposes outlined in this privacy notice
-                            unless otherwise required by law.{" "}
+                            unless otherwise required by law.
                           </em>
                         </div>
                         <div>
@@ -644,8 +613,7 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            6. HOW DO WE KEEP YOUR INFORMATION SAFE?{" "}
+                            6. HOW DO WE KEEP YOUR INFORMATION SAFE?
                           </strong>
                         </div>
                         <div>
@@ -653,10 +621,9 @@ export default function privacyPolicy() {
                             <em>In Short:&nbsp;</em>
                           </strong>
                           <em>
-                            {" "}
                             We aim to protect your personal information through
                             a system of organizational and technical security
-                            measures.{" "}
+                            measures.
                           </em>
                         </div>
                         <div>
@@ -672,7 +639,7 @@ export default function privacyPolicy() {
                           our security, and improperly collect, access, steal,
                           or modify your information. Although we will do our
                           best to protect your personal information,
-                          transmission of personal information to and from our{" "}
+                          transmission of personal information to and from our
                           Websit e is at your own risk. You should only access
                           the Websit e within a secure environment.
                         </div>
@@ -684,12 +651,11 @@ export default function privacyPolicy() {
                             <em>In Short:</em>
                           </strong>
                           <em>
-                            {" "}
                             In some regions, such as the European Economic Area
                             (EEA) and United Kingdom (UK), you have rights that
                             allow you greater access to and control over your
                             personal information. You may review, change, or
-                            terminate your account at any time.{" "}
+                            terminate your account at any time.
                           </em>
                         </div>
                         <div>
@@ -702,7 +668,7 @@ export default function privacyPolicy() {
                           if applicable, to data portability. In certain
                           circumstances, you may also have the right to object
                           to the processing of your personal information. To
-                          make such a request, please use the{" "}
+                          make such a request, please use the
                           <a href="#contact"> contact details </a> provided
                           below. We will consider and act upon any request in
                           accordance with applicable data protection laws.
@@ -723,31 +689,29 @@ export default function privacyPolicy() {
                           we are unlawfully processing your personal
                           information, you also have the right to complain to
                           your local data protection supervisory authority. You
-                          can find their contact details here:{" "}
+                          can find their contact details here:
                           <a
                             href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
                             target="_blank"
                             rel="noreferrer"
                             rel="noopener noreferrer"
                           >
-                            {" "}
-                            https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm{" "}
-                          </a>{" "}
+                            https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm
+                          </a>
                           .
                         </div>
                         <div>
                           If you are a resident in Switzerland, the contact
                           details for the data protection authorities are
-                          available here:{" "}
+                          available here:
                           <a
                             href="https://www.edoeb.admin.ch/edoeb/en/home.html"
                             target="_blank"
                             rel="noreferrer"
                             rel="noopener noreferrer"
                           >
-                            {" "}
-                            https://www.edoeb.admin.ch/edoeb/en/home.html{" "}
-                          </a>{" "}
+                            https://www.edoeb.admin.ch/edoeb/en/home.html
+                          </a>
                           .
                         </div>
                         <div>
@@ -786,39 +750,37 @@ export default function privacyPolicy() {
                         <div>
                           <strong>
                             <u>Cookies and similar technologies:</u>
-                          </strong>{" "}
+                          </strong>
                           Most Web br/owsers are set to accept cookies by
                           default. If you prefer, you can usually choose to set
                           your br/owser to remove cookies and to reject cookies.
                           If you choose to remove cookies or reject cookies,
-                          this could affect certain features or services of our{" "}
+                          this could affect certain features or services of our
                           Websit e . To opt-out of interest-based advertising by
-                          advertisers on our Websit e visit{" "}
+                          advertisers on our Websit e visit
                           <a
                             href="http://www.aboutads.info/choices/"
                             target="_blank"
                             rel="noreferrer"
                             rel="noopener noreferrer"
                           >
-                            {" "}
-                            http://www.aboutads.info/choices/{" "}
-                          </a>{" "}
+                            http://www.aboutads.info/choices/
+                          </a>
                           . For further information, please see our Cookie
-                          Notice:{" "}
+                          Notice:
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {" "}
-                            http://www.example.com/cookies{" "}
-                          </a>{" "}
+                            http://www.example.com/cookies
+                          </a>
                           .
                         </div>
                         <div>
                           <strong>
                             <u>Opting out of email marketing:</u>
-                          </strong>{" "}
+                          </strong>
                           You can unsubscribe from our marketing email list at
                           any time by clicking on the unsubscribe link in the
                           emails that we send or by contacting us using the
@@ -836,15 +798,12 @@ export default function privacyPolicy() {
                           </li>
                         </ul>
                         <div>
-                          <strong>
-                            {" "}
-                            8. CONTROLS FOR DO-NOT-TRACK FEATURES{" "}
-                          </strong>
+                          <strong>8. CONTROLS FOR DO-NOT-TRACK FEATURES</strong>
                         </div>
                         <div>
                           Most web br/owsers and some mobile operating systems
                           and mobile applications include a Do-Not-Track
-                          ("`&quot;`DNT") feature or setting you can activate to
+                          (&quot;DNT") feature or setting you can activate to
                           signal your privacy preference not to have data about
                           your online br/owsing activities monitored and
                           collected. At this stage no uniform technology
@@ -855,13 +814,12 @@ export default function privacyPolicy() {
                           tracked online. If a standard for online tracking is
                           adopted that we must follow in the future, we will
                           inform you about that practice in a revised version of
-                          this privacy notice.{" "}
+                          this privacy notice.
                         </div>
                         <div>
                           <strong>
-                            {" "}
                             9. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY
-                            RIGHTS?{" "}
+                            RIGHTS?
                           </strong>
                         </div>
                         <div>
@@ -869,10 +827,9 @@ export default function privacyPolicy() {
                             <em>In Short:&nbsp;</em>
                           </strong>
                           <em>
-                            {" "}
                             Yes, if you are a resident of California, you are
                             granted specific rights regarding access to your
-                            personal information.{" "}
+                            personal information.
                           </em>
                         </div>
                         <div>
@@ -898,7 +855,7 @@ export default function privacyPolicy() {
                           using the contact information provided below, and
                           include the email address associated with your account
                           and a statement that you reside in California. We will
-                          make sure the data is not publicly displayed on the{" "}
+                          make sure the data is not publicly displayed on the
                           Websit e , but please be aware that the data may not
                           be completely or comprehensively removed from all our
                           systems (e.g. backups, etc.).
@@ -936,9 +893,8 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           <strong>
-                            {" "}
                             What categories of personal information do we
-                            collect?{" "}
+                            collect?
                           </strong>
                         </div>
                         <div>
@@ -1162,22 +1118,20 @@ export default function privacyPolicy() {
                         </ul>
                         <div>
                           <strong>
-                            {" "}
-                            How do we use and share your personal information?{" "}
+                            How do we use and share your personal information?
                           </strong>
                         </div>
                         <div>
                           More information about our data collection and sharing
                           practices can be found in this privacy notice and our
-                          Cookie Notice:{" "}
+                          Cookie Notice:
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
                           >
-                            {" "}
-                            http://www.example.com/cookies{" "}
-                          </a>{" "}
+                            http://www.example.com/cookies
+                          </a>
                           .
                         </div>
                         <div>
@@ -1193,8 +1147,7 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            Will your information be shared with anyone else?{" "}
+                            Will your information be shared with anyone else?
                           </strong>
                         </div>
                         <div>
@@ -1217,19 +1170,17 @@ export default function privacyPolicy() {
                           commercial purpose in the preceding 12 months. THOMAS
                           LTD will not sell personal information in the future
                           belonging to website visitors, users and other
-                          consumers.{" "}
+                          consumers.
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            Your rights with respect to your personal data{" "}
+                            Your rights with respect to your personal data
                           </strong>
                         </div>
                         <div>
                           <u>
-                            {" "}
                             Right to request deletion of the data - Request to
-                            delete{" "}
+                            delete
                           </u>
                         </div>
                         <div>
@@ -1303,9 +1254,8 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           <u>
-                            {" "}
                             Right to Non-Discrimination for the Exercise of a
-                            Consumer&rsquo;s Privacy Rights{" "}
+                            Consumer&rsquo;s Privacy Rights
                           </u>
                         </div>
                         <div>
@@ -1384,13 +1334,12 @@ export default function privacyPolicy() {
                           at @example.com , or by referring to the contact
                           details at the bottom of this document. If you have a
                           complaint about how we handle your data, we would like
-                          to hear from you.{" "}
+                          to hear from you.
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            10. DO WE MAKE UPDATES TO THIS NOTICE?{" "}
-                          </strong>{" "}
+                            10. DO WE MAKE UPDATES TO THIS NOTICE?
+                          </strong>
                         </div>
                         <div>
                           <em>&nbsp;</em>
@@ -1399,7 +1348,7 @@ export default function privacyPolicy() {
                           <em>
                             <strong>In Short:&nbsp;</strong> Yes, we will update
                             this notice as necessary to stay compliant with
-                            relevant laws.{" "}
+                            relevant laws.
                           </em>
                         </div>
                         <div>
@@ -1416,9 +1365,8 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           <strong>
-                            {" "}
-                            11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?{" "}
-                          </strong>{" "}
+                            11. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
+                          </strong>
                         </div>
                         <div>
                           If you have questions or comments about this notice,
@@ -1431,10 +1379,9 @@ export default function privacyPolicy() {
                         <div>United Kingdom</div>
                         <div>
                           <strong>
-                            {" "}
                             12. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA
-                            WE COLLECT FROM YOU?{" "}
-                          </strong>{" "}
+                            WE COLLECT FROM YOU?
+                          </strong>
                         </div>
                         <div>
                           Based on the applicable laws of your country, you may
@@ -1443,16 +1390,15 @@ export default function privacyPolicy() {
                           information, or delete it in some circumstances. To
                           request to review, update, or delete your personal
                           information, please visit:
-                          http://localhost:3000/authenticated/profile/editProfile{" "}
+                          http://localhost:3000/authenticated/profile/editProfile
                           .
                         </div>
                       </div>
                       <div>
-                        This privacy policy was created using{" "}
+                        This privacy policy was created using
                         <a href="https://termly.io/products/privacy-policy-generator/?ftseo">
-                          {" "}
-                          Termly&rsquo;s Privacy Policy Generator{" "}
-                        </a>{" "}
+                          Termly&rsquo;s Privacy Policy Generator
+                        </a>
                         .
                       </div>
                     </div>

@@ -48,7 +48,8 @@ export default function ForgottenPassword() {
             <input className="btn" type="submit" value="Send Email" />
           </form>
           <p>
-            Don't have an account? <Link href={"/register"}>Register Here</Link>
+            Don&apos;t have an account?{" "}
+            <Link href={"/register"}>Register Here</Link>
           </p>
           <p>
             Know your Password? <Link href={"/login"}>Login Here</Link>

@@ -55,7 +55,7 @@ export default function Login() {
             <input className="btn" type="submit" value="Login" />
           </form>
           <p>
-            Don'`&quot;`t have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href={"/register"}>Register Here</Link>
           </p>
         </div>
