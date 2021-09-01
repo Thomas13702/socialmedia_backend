@@ -763,7 +763,6 @@ export default function privacyPolicy() {
                           <a
                             href="http://www.aboutads.info/choices/"
                             target="_blank"
-                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             http://www.aboutads.info/choices/
