@@ -26,7 +26,7 @@ export default function TermsAndConditions() {
               These Terms of Use constitute a legally binding agreement made
               between you, whether personally or on behalf of an entity
               (&ldquo;you&rdquo;) and THOMAS LTD (&quot;
-              <strong>Company</strong>,&quot; &ldquo;<strong>we</strong>,"
+              <strong>Company</strong>,&quot; &ldquo;<strong>we</strong>,&quot;
               &ldquo;
               <strong>us</strong>,&quot; or &ldquo;<strong>our</strong>&rdquo;),
               concerning your access to and use of the{" "}

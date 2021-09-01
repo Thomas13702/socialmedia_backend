@@ -251,13 +251,13 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <em>Location Data.</em> We collect location data such as
-                  information about your device's location, which can be either
-                  precise or imprecise. How much information we collect depends
-                  on the type and settings of the device you use to access the
-                  Website . For example, we may use GPS and other technologies
-                  to collect geolocation data that tells us your current
-                  location (based on your IP address). You can opt out of
-                  allowing us to collect this information either by refusing
+                  information about your device&apos;s location, which can be
+                  either precise or imprecise. How much information we collect
+                  depends on the type and settings of the device you use to
+                  access the Website . For example, we may use GPS and other
+                  technologies to collect geolocation data that tells us your
+                  current location (based on your IP address). You can opt out
+                  of allowing us to collect this information either by refusing
                   access to the information or by disabling your Location
                   setting on your device. Note however, if you choose to opt
                   out, you may not be able to use certain aspects of the
@@ -324,7 +324,7 @@ export default function privacyPolicy() {
                 <li>
                   <strong>To enable user-to-user communications.</strong> We may
                   use your information in order to enable user-to-user
-                  communications with each user's consent.
+                  communications with each user&apos;s consent.
                 </li>
               </ul>
               <ul>
@@ -697,7 +697,6 @@ export default function privacyPolicy() {
                           <a
                             href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
                             target="_blank"
-                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm
@@ -711,7 +710,6 @@ export default function privacyPolicy() {
                           <a
                             href="https://www.edoeb.admin.ch/edoeb/en/home.html"
                             target="_blank"
-                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             https://www.edoeb.admin.ch/edoeb/en/home.html
@@ -838,10 +836,10 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           California Civil Code Section 1798.83, also known as
-                          the "Shine The Light" law, permits our users who are
-                          California residents to request and obtain from us,
-                          once a year and free of charge, information about
-                          categories of personal information (if any) we
+                          the &quot;Shine The Light&quot; law, permits our users
+                          who are California residents to request and obtain
+                          from us, once a year and free of charge, information
+                          about categories of personal information (if any) we
                           disclosed to third parties for direct marketing
                           purposes and the names and addresses of all third
                           parties with which we shared personal information in
@@ -1166,8 +1164,8 @@ export default function privacyPolicy() {
                           We may use your personal information for our own
                           business purposes, such as for undertaking internal
                           research for technological development and
-                          demonstration. This is not considered to be "selling"
-                          of your personal data.
+                          demonstration. This is not considered to be
+                          &quot;selling&quot; of your personal data.
                         </div>
                         <div>
                           THOMAS LTD has not disclosed or sold any personal
@@ -1359,8 +1357,8 @@ export default function privacyPolicy() {
                         <div>
                           We may update this privacy notice from time to time.
                           The updated version will be indicated by an updated
-                          "Revised" date and the updated version will be
-                          effective as soon as it is accessible. If we make
+                          &quot;Revised&quot; date and the updated version will
+                          be effective as soon as it is accessible. If we make
                           material changes to this privacy notice, we may notify
                           you either by prominently posting a notice of such
                           changes or by directly sending you a notification. We
