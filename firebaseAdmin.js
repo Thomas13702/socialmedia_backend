@@ -1,5 +1,5 @@
 const admin = require("firebase-admin");
-const serviceAccount = require("./socialmedia-auth-a034e-firebase-adminsdk-oucz7-cadeb08547.json");
+// const serviceAccount = require("./socialmedia-auth-a034e-firebase-adminsdk-oucz7-cadeb08547.json");
 
 export const verifyIdToken = (token) => {
   if (!admin.apps.length) {
