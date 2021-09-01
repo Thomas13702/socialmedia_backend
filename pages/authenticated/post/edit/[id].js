@@ -31,7 +31,7 @@ export default function CreatePost({ cookies, token, post }) {
       body: JSON.stringify({ text }),
     });
 
-    console.log(res);
+    // console.log(res);
 
     if (!res.ok) {
       if (res.status === 403 || res.status === 401) {

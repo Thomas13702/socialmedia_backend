@@ -13,7 +13,7 @@ export default function Footer() {
           <Link href="/about">About This Project</Link>
         </p>
         <p>
-          <Link href="/about">Terms and Conditions</Link>
+          <Link href="/terms-and-conditions">Terms and Conditions</Link>
         </p>
         <p>
           <Link href="/cookie">Cookie Policy</Link>

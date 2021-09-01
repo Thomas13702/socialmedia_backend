@@ -9,7 +9,7 @@ export default function Layout({ title, keywords, description, children }) {
   //layout will wrap content, what ever is wrapped will be the children
 
   const router = useRouter();
-  console.log(router.pathname);
+  // console.log(router.pathname);
 
   return (
     <div>

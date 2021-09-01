@@ -31,7 +31,7 @@ export default function Home({ session, cookies }) {
       toast.error("Please Fill in all Fields");
       return;
     }
-    console.log(text);
+    // console.log(text);
 
     const formData = new FormData(); //backend expects data in form type
     formData.append("image", selectedImage);

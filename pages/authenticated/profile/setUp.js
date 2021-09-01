@@ -34,7 +34,7 @@ export default function SetUp({ token, tokenForUID }) {
 
     if (!res.ok) {
       const errors = await res.json();
-      console.log(errors.message.name);
+      // console.log(errors.message.name);
 
       if (Array.isArray(errors)) {
         errors.errors.map((error) => toast.error(error.msg));
@@ -108,7 +108,7 @@ export async function getServerSideProps(context) {
     //const token = await auth.currentUser.getIdToken();
     //const { uid, email } = tokenForUID;
     const token = cookies.token;
-    console.log(token);
+    // console.log(token);
     return {
       props: { token, tokenForUID },
     };

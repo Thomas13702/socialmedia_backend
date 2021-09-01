@@ -38,7 +38,7 @@ export default function EditProfile({ token, tokenForUID, account }) {
     //console.log(values);
 
     const formData = new FormData(); //backend expects data in form type
-    console.log(avatar);
+    // console.log(avatar);
     formData.append("image", avatar);
     formData.append("name", name);
     formData.append("dob", dob);

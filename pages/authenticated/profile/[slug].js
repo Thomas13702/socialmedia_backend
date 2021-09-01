@@ -48,24 +48,24 @@ export default function SlugProfile({
   }, [posts]); //everytime posts changes this will trigger
 
   const follow = async () => {
-    console.log(user.following);
-    console.log(
-      `${API_URL}/user/${
-        user.following.filter((follows) => {
-          return follows.user.toString() === slugProfile._id.toString();
-        }) === 0
-          ? "follow"
-          : "unfollow"
-      }/${slugProfile.username}`
-    );
+    // console.log(user.following);
+    // console.log(
+    //   `${API_URL}/user/${
+    //     user.following.filter((follows) => {
+    //       return follows.user.toString() === slugProfile._id.toString();
+    //     }) === 0
+    //       ? "follow"
+    //       : "unfollow"
+    //   }/${slugProfile.username}`
+    // );
 
-    console.log(
-      user.following.filter((follows) => {
-        console.log(follows.user.toString());
-        console.log(slugProfile._id.toString());
-        return follows.user.toString() === slugProfile._id.toString();
-      }).length === 0
-    );
+    // console.log(
+    //   user.following.filter((follows) => {
+    //     console.log(follows.user.toString());
+    //     console.log(slugProfile._id.toString());
+    //     return follows.user.toString() === slugProfile._id.toString();
+    //   }).length === 0
+    // );
 
     const res = await fetch(
       `${API_URL}/user/${
