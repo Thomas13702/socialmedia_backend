@@ -17,7 +17,8 @@ export default function Cookie() {
         <div>
           <span data-custom-class="body_text">
             This Cookie Policy explains how THOMAS LTD (&quot;
-            <strong>Company</strong>&quot;, &quot;<strong>we</strong>&quot;, "
+            <strong>Company</strong>&quot;, &quot;<strong>we</strong>&quot;,
+            &quot;
             <strong>us</strong>&quot;, and &quot;<strong>our</strong>&quot;)
             uses cookies and similar technologies to recognize you when you
             visit our websites at
@@ -57,13 +58,13 @@ export default function Cookie() {
         <div>
           <span data-custom-class="body_text">
             Cookies set by the website owner (in this case, THOMAS LTD) are
-            called "first party cookies". Cookies set by parties other than the
-            website owner are called "third party cookies". Third party cookies
-            enable third party features or functionality to be provided on or
-            through the website (e.g. like advertising, interactive content and
-            analytics). The parties that set these third party cookies can
-            recognize your computer both when it visits the website in question
-            and also when it visits certain other websites.
+            called &quot;first party cookies&quot;. Cookies set by parties other
+            than the website owner are called &quot;third party cookies&quot;.
+            Third party cookies enable third party features or functionality to
+            be provided on or through the website (e.g. like advertising,
+            interactive content and analytics). The parties that set these third
+            party cookies can recognize your computer both when it visits the
+            website in question and also when it visits certain other websites.
           </span>
         </div>
         <div>
@@ -75,12 +76,12 @@ export default function Cookie() {
           <span data-custom-class="body_text">
             We use first and third party cookies for several reasons. Some
             cookies are required for technical reasons in order for our Websites
-            to operate, and we refer to these as "essential" or "strictly
-            necessary" cookies. Other cookies also enable us to track and target
-            the interests of our users to enhance the experience on our Online
-            Properties. Third parties serve cookies through our Websites for
-            advertising, analytics and other purposes. This is described in more
-            detail below.
+            to operate, and we refer to these as &quot;essential&quot; or
+            &quot;strictly necessary&quot; cookies. Other cookies also enable us
+            to track and target the interests of our users to enhance the
+            experience on our Online Properties. Third parties serve cookies
+            through our Websites for advertising, analytics and other purposes.
+            This is described in more detail below.
           </span>
         </div>
         <div>
@@ -239,10 +240,10 @@ export default function Cookie() {
           <span data-custom-class="body_text">
             to recognize or track visitors to a website. We may use other,
             similar technologies from time to time, like web beacons (sometimes
-            called "tracking pixels" or "clear gifs"). These are tiny graphics
-            files that contain a unique identifier that enable us to recognize
-            when someone has visited our Websites or opened an e-mail including
-            them. This allows us, for example, to monitor
+            called &quot;tracking pixels&quot; or &quot;clear gifs&quot;). These
+            are tiny graphics files that contain a unique identifier that enable
+            us to recognize when someone has visited our Websites or opened an
+            e-mail including them. This allows us, for example, to monitor
           </span>
           <span data-custom-class="body_text">
             the traffic patterns of users from one page within a website to
@@ -263,10 +264,10 @@ export default function Cookie() {
         </div>
         <div>
           <span data-custom-class="body_text">
-            Websites may also use so-called "Flash Cookies" (also known as Local
-            Shared Objects or "LSOs") to, among other things, collect and store
-            information about your use of our services, fraud prevention and for
-            other site operations.
+            Websites may also use so-called &quot;Flash Cookies&quot; (also
+            known as Local Shared Objects or &quot;LSOs&quot;) to, among other
+            things, collect and store information about your use of our
+            services, fraud prevention and for other site operations.
           </span>
         </div>
         <div>
@@ -298,11 +299,11 @@ export default function Cookie() {
           <span data-custom-class="body_text">
             following the instructions (which may include instructions that
             explain, for example, how to delete existing Flash Cookies (referred
-            to "information" on the Macromedia site), how to prevent Flash LSOs
-            from being placed on your computer without your being asked, and
-            (for Flash Player 8 and later) how to block Flash Cookies that are
-            not being delivered by the operator of the page you are on at the
-            time).
+            to &quot;information&quot; on the Macromedia site), how to prevent
+            Flash LSOs from being placed on your computer without your being
+            asked, and (for Flash Player 8 and later) how to block Flash Cookies
+            that are not being delivered by the operator of the page you are on
+            at the time).
           </span>
         </div>
         <div>
