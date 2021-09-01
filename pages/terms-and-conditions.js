@@ -1,28 +1,28 @@
 export default function TermsAndConditions() {
   return (
     <div>
-      <div data-custom-class="body">
+      <div data-custom-className="body">
         <div>
-          <div class="MsoNormal">
-            <div class="MsoNormal">
-              <div class="MsoNormal">
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="title">
+          <div className="MsoNormal">
+            <div className="MsoNormal">
+              <div className="MsoNormal">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="title">
                     <strong>TERMS AND CONDITIONS</strong>
                   </div>
-                  <div class="MsoNormal">&nbsp;</div>
-                  <div class="MsoNormal" data-custom-class="subtitle">
+                  <div className="MsoNormal">&nbsp;</div>
+                  <div className="MsoNormal" data-custom-className="subtitle">
                     <strong>Last updated August 31, 2021</strong>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="MsoNormal" data-custom-class="heading_1">
+            <div className="MsoNormal" data-custom-className="heading_1">
               <strong>AGREEMENT TO TERMS</strong>
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               These Terms of Use constitute a legally binding agreement made
               between you, whether personally or on behalf of an entity
               (&ldquo;you&rdquo;) and THOMAS LTD ("<strong>Company</strong>,"
@@ -32,8 +32,9 @@ export default function TermsAndConditions() {
               <a
                 href="http://www.example.com"
                 target="_blank"
+                rel="noreferrer"
                 rel="noopener"
-                data-custom-class="link"
+                data-custom-className="link"
               >
                 http://www.example.com
               </a>{" "}
@@ -47,8 +48,8 @@ export default function TermsAndConditions() {
               IMMEDIATELY.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               Supplemental terms and conditions or documents that may be posted
               on the Site from time to time are hereby expressly incorporated
               herein by reference. We reserve the right, in our sole discretion,
@@ -64,8 +65,8 @@ export default function TermsAndConditions() {
               are posted.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               The information provided on the Site is not intended for
               distribution to or use by any person or entity in any jurisdiction
               or country where such distribution or use would be contrary to law
@@ -77,8 +78,8 @@ export default function TermsAndConditions() {
               applicable.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               The Site is not tailored to comply with industry-specific
               regulations (Health Insurance Portability and Accountability Act
               (HIPAA), Federal Information Security Management Act (FISMA),
@@ -87,8 +88,8 @@ export default function TermsAndConditions() {
               would violate the Gramm-Leach-Bliley Act (GLBA).
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               The Site is intended for users who are at least 13 years of age.
               All users who are minors in the jurisdiction in which they reside
               (generally under the age of 18) must have the permission of, and
@@ -97,13 +98,13 @@ export default function TermsAndConditions() {
               read and agree to these Terms of Use prior to you using the Site.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="heading_1">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="heading_1">
               <strong>INTELLECTUAL PROPERTY RIGHTS</strong>
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               Unless otherwise indicated, the Site is our proprietary property
               and all source code, databases, functionality, software, website
               designs, audio, video, text, photographs, and graphics on the Site
@@ -123,8 +124,8 @@ export default function TermsAndConditions() {
               our express prior written permission.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="body_text">
               Provided that you are eligible to use the Site, you are granted a
               limited license to access and use the Site and to download or
               print a copy of any portion of the Content to which you have
@@ -133,14 +134,14 @@ export default function TermsAndConditions() {
               the Site, the Content and the Marks.
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal" data-custom-class="heading_1">
+          <div className="MsoNormal">
+            <div className="MsoNormal" data-custom-className="heading_1">
               <strong>USER REPRESENTATIONS</strong>
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="body_text">
+          <div className="MsoNormal">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="body_text">
                 By using the Site, you represent and warrant that:(1) all
                 registration information you submit will be true, accurate,
                 current, and complete; (2) you will maintain the accuracy of
@@ -156,8 +157,8 @@ export default function TermsAndConditions() {
                 of the Site will not violate any applicable law or regulation.
               </div>
             </div>
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="body_text">
                 If you provide any information that is untrue, inaccurate, not
                 current, or incomplete, we have the right to suspend or
                 terminate your account and refuse any and all current or future
@@ -165,14 +166,14 @@ export default function TermsAndConditions() {
               </div>
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="heading_1">
+          <div className="MsoNormal">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>USER REGISTRATION</strong>
               </div>
             </div>
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="body_text">
                 You may be required to register with the Site. You agree to keep
                 your password confidential and will be responsible for all use
                 of your account and password. We reserve the right to remove,
@@ -182,66 +183,66 @@ export default function TermsAndConditions() {
               </div>
             </div>
           </div>
-          <div class="MsoNormal">
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="heading_1">
+          <div className="MsoNormal">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>PROHIBITED ACTIVITIES</strong>
               </div>
             </div>
-            <div class="MsoNormal">
-              <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal">
+              <div className="MsoNormal" data-custom-className="body_text">
                 You may not access or use the Site for any purpose other than
                 that for which we make the Site available. The Site may not be
                 used in connection with any commercial endeavors except those
                 that are specifically endorsed or approved by us.
               </div>
             </div>
-            <div class="MsoNormal">
-              <div class="MsoNormal">
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal">
+              <div className="MsoNormal">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="body_text">
                     As a user of the Site, you agree not to:
                   </div>
-                  <div class="MsoNormal">&nbsp;</div>
+                  <div className="MsoNormal">&nbsp;</div>
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   1.&nbsp;Systematically retrieve data or other content from the
                   Site to create or compile, directly or indirectly, a
                   collection, compilation, database, or directory without
                   written permission from us.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   2. Trick, defraud, or mislead us and other users, especially
                   in any attempt to learn sensitive account information such as
                   user passwords.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   3. Circumvent, disable, or otherwise interfere with
                   security-related features of the Site, including features that
                   prevent or restrict the use or copying of any Content or
                   enforce limitations on the use of the Site and/or the Content
                   contained therein.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   4. Disparage, tarnish, or otherwise harm, in our opinion, us
                   and/or the Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   5. Use any information obtained from the Site in order to
                   harass, abuse, or harm another person.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   6. Make improper use of our support services or submit false
                   reports of abuse or misconduct.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   7. Use the Site in a manner inconsistent with any applicable
                   laws or regulations.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   8. Engage in unauthorized framing of or linking to the Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   9. Upload or transmit (or attempt to upload or to transmit)
                   viruses, Trojan horses, or other material, including excessive
                   use of capital letters and spamming (continuous posting of
@@ -250,21 +251,21 @@ export default function TermsAndConditions() {
                   impairs, disrupts, alters, or interferes with the use,
                   features, functions, operation, or maintenance of the Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   10. Engage in any automated use of the system, such as using
                   scripts to send comments or messages, or using any data
                   mining, robots, or similar data gathering and extraction
                   tools.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   11. Delete the copyright or other proprietary rights notice
                   from any Content.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   12. Attempt to impersonate another user or person or use the
                   username of another user.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   13. Upload or transmit (or attempt to upload or to transmit)
                   any material that acts as a passive or active information
                   collection or transmission mechanism, including without
@@ -274,31 +275,31 @@ export default function TermsAndConditions() {
                   &ldquo;spyware&rdquo; or &ldquo;passive collection
                   mechanisms&rdquo; or &ldquo;pcms&rdquo;).
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   14. Interfere with, disrupt, or create an undue burden on the
                   Site or the networks or services connected to the Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   15. Harass, annoy, intimidate, or threaten any of our
                   employees or agents engaged in providing any portion of the
                   Site to you.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   16. Attempt to bypass any measures of the Site designed to
                   prevent or restrict access to the Site, or any portion of the
                   Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   17. Copy or adapt the Site&rsquo;s software, including but not
                   limited to Flash, PHP, HTML, JavaScript, or other code.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   18. Except as permitted by applicable law, decipher,
                   decompile, disassemble, or reverse engineer any of the
                   software comprising or in any way making up a part of the
                   Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   19. Except as may be&nbsp;the result of standard search engine
                   or Internet browser usage, use, launch, develop, or distribute
                   any automated system, including without limitation, any
@@ -306,34 +307,34 @@ export default function TermsAndConditions() {
                   accesses the Site, or using or launching any unauthorized
                   script or other software.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   20. Use a buying agent or purchasing agent to make purchases
                   on the Site.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   21. Make any unauthorized use of the Site, including
                   collecting usernames and/or email addresses of users by
                   electronic or other means for the purpose of sending
                   unsolicited email, or creating user accounts by automated
                   means or under false pretenses.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   22. Use the Site as part of any effort to compete with us or
                   otherwise use the Site and/or the Content for any
                   revenue-generating endeavor or commercial enterprise.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   23. Sell or otherwise transfer your profile.
                 </div>
-                <div class="MsoNormal">&nbsp;</div>
+                <div className="MsoNormal">&nbsp;</div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>USER GENERATED CONTRIBUTIONS</strong>&nbsp;
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   The Site may invite you to chat, contribute to, or participate
                   in blogs, message boards, online forums, and other
                   functionality, and may provide you with the opportunity to
@@ -349,10 +350,10 @@ export default function TermsAndConditions() {
                   Contributions, you thereby represent and warrant that:
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="body_text">
-                    <span data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="body_text">
+                    <span data-custom-className="body_text">
                       1. The creation, distribution, transmission, public
                       display, or performance, and the accessing, downloading,
                       or copying of your Contributions do not and will not
@@ -385,7 +386,7 @@ export default function TermsAndConditions() {
                       <br /> 8. Your Contributions are not used to harass or
                       threaten (in the legal sense of those terms) any other
                       person and to promote violence against a specific person
-                      or class of people.
+                      or className of people.
                       <br /> 9. Your Contributions do not violate any applicable
                       law, regulation, or rule.
                       <br /> 10. Your Contributions do not violate the privacy
@@ -402,21 +403,21 @@ export default function TermsAndConditions() {
                     </span>
                   </div>
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   Any use of the Site in violation of the foregoing violates
                   these Terms of Use and may result in, among other things,
                   termination or suspension of your rights to use the Site.
                 </div>
               </div>
             </div>
-            <div class="MsoNormal">
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="heading_1">
+            <div className="MsoNormal">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>CONTRIBUTION LICENSE</strong>
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   By posting your Contributions to any part of the Site, you
                   automatically grant, and you represent and warrant that you
                   have the right to grant, to us an unrestricted, unlimited,
@@ -434,8 +435,8 @@ export default function TermsAndConditions() {
                   formats and through any media channels.
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   This license will apply to any form, media, or technology now
                   known or hereafter developed, and includes our use of your
                   name, company name, and franchise name, as applicable, and any
@@ -445,8 +446,8 @@ export default function TermsAndConditions() {
                   rights have not otherwise been asserted in your Contributions.
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We do not assert any ownership over your Contributions. You
                   retain full ownership of all of your Contributions and any
                   intellectual property rights or other proprietary rights
@@ -458,8 +459,8 @@ export default function TermsAndConditions() {
                   from any legal action against us regarding your Contributions.
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We have the right, in our sole and absolute discretion, (1) to
                   edit, redact, or otherwise change any Contributions; (2) to
                   re-categorize any Contributions to place them in more
@@ -468,12 +469,12 @@ export default function TermsAndConditions() {
                   without notice. We have no obligation to monitor your
                   Contributions.
                 </div>
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="heading_1">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="heading_1">
                     <strong>GUIDELINES FOR REVIEWS</strong>
                   </div>
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We may provide you areas on the Site to leave reviews or
                   ratings. When posting a review, you must comply with the
                   following criteria: (1) you should have firsthand experience
@@ -491,7 +492,7 @@ export default function TermsAndConditions() {
                   encouraging others to post reviews, whether positive or
                   negative.
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We may accept, reject, or remove reviews in our sole
                   discretion. We have absolutely no obligation to screen reviews
                   or to delete reviews, even if anyone considers reviews
@@ -507,12 +508,12 @@ export default function TermsAndConditions() {
                   relating to reviews.
                 </div>
               </div>
-              <div class="MsoNormal">&nbsp;</div>
+              <div className="MsoNormal">&nbsp;</div>
             </div>
-            <div class="MsoNormal" data-custom-class="heading_1">
+            <div className="MsoNormal" data-custom-className="heading_1">
               <strong>SUBMISSIONS</strong>
             </div>
-            <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal" data-custom-className="body_text">
               You acknowledge and agree that any questions, comments,
               suggestions, ideas, feedback, or other information regarding the
               Site ("Submissions") provided by you to us are non-confidential
@@ -527,10 +528,10 @@ export default function TermsAndConditions() {
               against us for any alleged or actual infringement or
               misappropriation of any proprietary right in your Submissions.
             </div>
-            <div class="MsoNormal" data-custom-class="heading_1">
+            <div className="MsoNormal" data-custom-className="heading_1">
               <strong>THIRD-PARTY WEBSITE AND CONTENT</strong>
             </div>
-            <div class="MsoNormal" data-custom-class="body_text">
+            <div className="MsoNormal" data-custom-className="body_text">
               The Site may contain (or you may be sent via the Site) links to
               other websites ("Third-Party Websites") as well as articles,
               photographs, text, graphics, pictures, designs, music, sound,
@@ -566,13 +567,13 @@ export default function TermsAndConditions() {
               Third-Party Websites.
             </div>
             <div>
-              <div class="MsoNormal">&nbsp;</div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal">&nbsp;</div>
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>ADVERTISERS</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 We allow advertisers to display their advertisements and other
                 information in certain areas of the Site, such as sidebar
                 advertisements or banner advertisements. If you are an
@@ -588,12 +589,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>SITE MANAGEMENT</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 We reserve the right, but not the obligation, to: (1) monitor
                 the Site for violations of these Terms of Use; (2) take
                 appropriate legal action against anyone who, in our sole
@@ -612,11 +613,11 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal">&nbsp;</div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal">&nbsp;</div>
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>PRIVACY POLICY</strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 We care about data privacy and security.&nbsp;Please review our
                 Privacy Policy:<strong>&nbsp;__________</strong>.&nbsp;By using
                 the Site, you agree to be bound by our Privacy Policy, which is
@@ -638,12 +639,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal">&nbsp;</div>
-              <div class="MsoNormal">&nbsp;</div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal">&nbsp;</div>
+              <div className="MsoNormal">&nbsp;</div>
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>COPYRIGHT INFRINGEMENTS</strong>
               </div>
-              <div data-custom-class="body_text">
+              <div data-custom-className="body_text">
                 We respect the intellectual property rights of others. If you
                 believe that any material available on or through the Site
                 infringes upon any copyright you own or control, please
@@ -658,12 +659,12 @@ export default function TermsAndConditions() {
                 contacting an attorney.
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="heading_1">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>TERM AND TERMINATION</strong>
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   These Terms of Use shall remain in full force and effect while
                   you use the Site. WITHOUT LIMITING ANY OTHER PROVISION OF
                   THESE TERMS OF USE, WE RESERVE THE RIGHT TO, IN OUR SOLE
@@ -679,7 +680,7 @@ export default function TermsAndConditions() {
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   If we terminate or suspend your account for any reason, you
                   are prohibited from registering and creating a new account
                   under your name, a fake or borrowed name, or the name of any
@@ -691,12 +692,12 @@ export default function TermsAndConditions() {
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="heading_1">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>MODIFICATIONS AND INTERRUPTIONS</strong>
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We reserve the right to change, modify, or remove the contents
                   of the Site at any time or for any reason at our sole
                   discretion without notice. However, we have no obligation to
@@ -708,7 +709,7 @@ export default function TermsAndConditions() {
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   We cannot guarantee the Site will be available at all times.
                   We may experience hardware, software, or other problems or
                   need to perform maintenance related to the Site, resulting in
@@ -724,10 +725,10 @@ export default function TermsAndConditions() {
                 </div>
               </div>
               <div>
-                <div class="MsoNormal" data-custom-class="heading_1">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>GOVERNING LAW</strong>
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   These conditions are governed by and interpreted following the
                   laws of the United Kingdom, and the use of the United Nations
                   Convention of Contracts for the International Sale of Goods is
@@ -741,18 +742,18 @@ export default function TermsAndConditions() {
                   Conditions of Use in the United Kingdom, or in the EU country
                   in which you reside.
                 </div>
-                <div class="MsoNormal" data-custom-class="heading_1">
+                <div className="MsoNormal" data-custom-className="heading_1">
                   <strong>DISPUTE RESOLUTION</strong>
                 </div>
               </div>
               <div>
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="heading_2">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="heading_2">
                     <strong>Informal Negotiations</strong>
                   </div>
                 </div>
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="body_text">
                     To expedite resolution and control the cost of any dispute,
                     controversy, or claim related to these Terms of Use (each
                     "Dispute" and collectively, the &ldquo;Disputes&rdquo;)
@@ -766,12 +767,12 @@ export default function TermsAndConditions() {
                     Party.
                   </div>
                 </div>
-                <div class="MsoNormal">
-                  <div class="MsoNormal" data-custom-class="heading_2">
+                <div className="MsoNormal">
+                  <div className="MsoNormal" data-custom-className="heading_2">
                     <strong>Binding Arbitration</strong>
                   </div>
                 </div>
-                <div class="MsoNormal" data-custom-class="body_text">
+                <div className="MsoNormal" data-custom-className="body_text">
                   Any dispute arising from the relationships between the Parties
                   to this contract shall be determined by one arbitrator who
                   will be chosen in accordance with the Arbitration and Internal
@@ -784,35 +785,35 @@ export default function TermsAndConditions() {
                   shall be English. Applicable rules of substantive law shall be
                   the law of the United Kingdom.
                 </div>
-                <div class="MsoNormal">&nbsp;</div>
+                <div className="MsoNormal">&nbsp;</div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="heading_2">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="heading_2">
                   <strong>Restrictions</strong>
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   The Parties agree that any arbitration shall be limited to the
                   Dispute between the Parties individually. To the full extent
                   permitted by law, (a) no arbitration shall be joined with any
                   other proceeding; (b) there is no right or authority for any
-                  Dispute to be arbitrated on a class-action basis or to utilize
-                  class action procedures; and (c) there is no right or
-                  authority for any Dispute to be brought in a purported
+                  Dispute to be arbitrated on a className-action basis or to
+                  utilize className action procedures; and (c) there is no right
+                  or authority for any Dispute to be brought in a purported
                   representative capacity on behalf of the general public or any
                   other persons.
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="heading_2">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="heading_2">
                   <strong>
                     Exceptions to Informal Negotiations and Arbitration
                   </strong>
                 </div>
               </div>
-              <div class="MsoNormal">
-                <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal">
+                <div className="MsoNormal" data-custom-className="body_text">
                   The Parties agree that the following Disputes are not subject
                   to the above provisions concerning informal negotiations and
                   binding arbitration: (a) any Disputes seeking to enforce or
@@ -832,12 +833,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>CORRECTIONS</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 There may be information on the Site that contains typographical
                 errors, inaccuracies, or omissions, including descriptions,
                 pricing, availability, and various other information. We reserve
@@ -847,12 +848,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>DISCLAIMER</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 THE SITE IS PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU
                 AGREE THAT YOUR USE OF THE SITE AND OUR SERVICES WILL BE AT YOUR
                 SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM
@@ -887,12 +888,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>LIMITATIONS OF LIABILITY</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE
                 LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT,
                 CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE
@@ -911,12 +912,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>INDEMNIFICATION</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 You agree to defend, indemnify, and hold us harmless, including
                 our subsidiaries, affiliates, and all of our respective
                 officers, agents, partners, and employees, from and against any
@@ -938,12 +939,12 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>USER DATA</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 We will maintain certain data that you transmit to the Site for
                 the purpose of managing the performance of the Site, as well as
                 data relating to your use of the Site. Although we perform
@@ -956,14 +957,14 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>
                   ELECTRONIC COMMUNICATIONS, TRANSACTIONS, AND SIGNATURES
                 </strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 Visiting the Site, sending us emails, and completing online
                 forms constitute electronic communications. You consent to
                 receive electronic communications, and you agree that all
@@ -980,12 +981,12 @@ export default function TermsAndConditions() {
                 to payments or the granting of credits by any means other than
                 electronic means.&nbsp;
               </div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>CALIFORNIA USERS AND RESIDENTS</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 If any complaint with us is not satisfactorily resolved, you can
                 contact the Complaint Assistance Unit of the Division of
                 Consumer Services of the California Department of Consumer
@@ -993,12 +994,12 @@ export default function TermsAndConditions() {
                 Sacramento, California 95834 or by telephone at (800) 952-5210
                 or (916) 445-1254.
               </div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>MISCELLANEOUS</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 These Terms of Use and any policies or operating rules posted by
                 us on the Site or in respect to the Site constitute the entire
                 agreement and understanding between you and us. Our failure to
@@ -1023,38 +1024,38 @@ export default function TermsAndConditions() {
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="heading_1">
+              <div className="MsoNormal" data-custom-className="heading_1">
                 <strong>CONTACT US&nbsp;</strong>
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 In order to resolve a complaint regarding the Site or to receive
                 further information regarding use of the Site, please contact us
                 at:&nbsp;
               </div>
             </div>
             <div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>THOMAS LTD</strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>5 Burdock Close</strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>Andover, Hampshire</strong>
                 <strong>SP11 7RS</strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>
                   <strong>England</strong>
                 </strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>Phone:&nbsp;</strong>
                 <strong>07934903945</strong>
               </div>
-              <div class="MsoNormal" data-custom-class="body_text">
+              <div className="MsoNormal" data-custom-className="body_text">
                 <strong>thomaspritchard137@btinternet.com</strong>
               </div>
             </div>

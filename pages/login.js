@@ -39,7 +39,6 @@ export default function Login() {
             <input
               type="email"
               name="email"
-              id=""
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               id="emailAddress"
@@ -48,7 +47,6 @@ export default function Login() {
             <input
               type="password"
               name="password"
-              id=""
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               id="password"

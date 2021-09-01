@@ -27,7 +27,12 @@ export default function privacyPolicy() {
         <ul>
           <li>
             Visit our websit e at{" "}
-            <a href="http://www.example.com" target="_blank" rel="noopener">
+            <a
+              href="http://www.example.com"
+              target="_blank"
+              rel="noreferrer"
+              rel="noopener"
+            >
               {" "}
               http://www.example.com{" "}
             </a>
@@ -225,6 +230,7 @@ export default function privacyPolicy() {
                 <a
                   href="http://www.example.com/cookies"
                   target="_blank"
+                  rel="noreferrer"
                   rel="noopener"
                 >
                   {" "}
@@ -448,6 +454,7 @@ export default function privacyPolicy() {
                   <a
                     href="http://www.example.com/cookies"
                     target="_blank"
+                    rel="noreferrer"
                     rel="noopener"
                   >
                     {" "}
@@ -598,6 +605,7 @@ export default function privacyPolicy() {
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener"
                           >
                             {" "}
@@ -727,6 +735,7 @@ export default function privacyPolicy() {
                           <a
                             href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             {" "}
@@ -741,6 +750,7 @@ export default function privacyPolicy() {
                           <a
                             href="https://www.edoeb.admin.ch/edoeb/en/home.html"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             {" "}
@@ -795,6 +805,7 @@ export default function privacyPolicy() {
                           <a
                             href="http://www.aboutads.info/choices/"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener noreferrer"
                           >
                             {" "}
@@ -805,6 +816,7 @@ export default function privacyPolicy() {
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener"
                           >
                             {" "}
@@ -1169,6 +1181,7 @@ export default function privacyPolicy() {
                           <a
                             href="http://www.example.com/cookies"
                             target="_blank"
+                            rel="noreferrer"
                             rel="noopener"
                           >
                             {" "}

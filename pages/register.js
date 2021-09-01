@@ -48,7 +48,6 @@ export default function Login() {
             <input
               type="email"
               name="email"
-              id=""
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               id="emailAddress"
@@ -57,7 +56,6 @@ export default function Login() {
             <input
               type="email"
               name="email"
-              id=""
               onChange={(e) => setConfirmEmail(e.target.value)}
               value={confirmEmail}
               id="emailAddress"
@@ -66,7 +64,6 @@ export default function Login() {
             <input
               type="password"
               name="password"
-              id=""
               onChange={(e) => setPassword(e.target.value)}
               value={password}
               id="password"
@@ -75,7 +72,6 @@ export default function Login() {
             <input
               type="password"
               name="password"
-              id=""
               onChange={(e) => setConfirmPassword(e.target.value)}
               value={confirmPassword}
               id="password"

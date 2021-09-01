@@ -25,7 +25,9 @@ export default function Cookie() {
             <a
               href="http://www.example.com"
               target="_blank"
+              rel="noreferrer"
               rel="noopener"
+              rel="noreferrer"
               data-custom-class="link"
             >
               {" "}
@@ -142,6 +144,7 @@ export default function Cookie() {
               href="http://www.aboutads.info/choices/"
               target="_blank"
               rel="noopener"
+              rel="noreferrer"
               data-custom-class="link"
             >
               {" "}
@@ -153,6 +156,7 @@ export default function Cookie() {
             <a
               href="http://www.youronlinechoices.com"
               target="_blank"
+              rel="noreferrer"
               rel="noopener"
               data-custom-class="link"
               data-fr-linked="true"
@@ -218,6 +222,7 @@ export default function Cookie() {
                       <a
                         href="https://termly.io/our-privacy-policy/"
                         target="_blank"
+                        rel="noreferrer"
                         rel="noopener"
                       >
                         {" "}
@@ -303,6 +308,7 @@ export default function Cookie() {
             <a
               href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html"
               target="_BLANK"
+              rel="noreferrer"
               data-custom-class="link"
             >
               {" "}
@@ -312,6 +318,7 @@ export default function Cookie() {
             <a
               href="http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager03.html"
               target="_BLANK"
+              rel="noreferrer"
               data-custom-class="link"
             >
               {" "}

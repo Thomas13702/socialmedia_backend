@@ -40,7 +40,6 @@ export default function ForgottenPassword() {
             <input
               type="email"
               name="email"
-              id=""
               onChange={(e) => setEmail(e.target.value)}
               value={email}
               id="emailAddress"
