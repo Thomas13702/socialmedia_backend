@@ -115,10 +115,10 @@ export default function Cookie() {
             and on our website. If you choose to reject cookies, you may still
             use our website though your access to some functionality and areas
             of our website may be restricted. You may also set or amend your web
-            br /owser controls to accept or refuse cookies. As the means by
-            which you can refuse cookies through your web br /owser controls
-            vary from br /owser-to-br /owser, you should visit your br /owser's
-            help menu for more information.
+            browser controls to accept or refuse cookies. As the means by which
+            you can refuse cookies through your web browser controls vary from
+            browser-to-browser, you should visit your browser&apos;s help menu
+            for more information.
           </span>
         </div>
         <div>

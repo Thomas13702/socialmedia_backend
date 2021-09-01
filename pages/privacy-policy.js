@@ -13,10 +13,11 @@ export default function privacyPolicy() {
         <div>
           Thank you for choosing to be part of our community at THOMAS LTD
           (&quot;
-          <strong>Company</strong> ," &quot;<strong>we</strong>,&quot; "
-          <strong>us</strong>,&quot; or " <strong>our</strong>"). We are
-          committed to protecting your personal information and your right to
-          privacy. If you have any questions or concerns about this privacy
+          <strong>Company</strong> ,&quot; &quot;<strong>we</strong>,&quot;
+          &quot;
+          <strong>us</strong>,&quot; or &quot; <strong>our</strong>&quot;). We
+          are committed to protecting your personal information and your right
+          to privacy. If you have any questions or concerns about this privacy
           notice or our practices with regard to your personal information,
           please contact us at thomaspritchard137@btinternet.com .
         </div>
@@ -151,13 +152,13 @@ export default function privacyPolicy() {
                 We collect personal information that you voluntarily provide to
                 us when you register on the Website, express an interest in
                 obtaining information about us or our products and Services,
-                when you participate in activities on the Websit e (such as by
+                when you participate in activities on the Website (such as by
                 posting messages in our online forums or entering competitions,
                 contests or giveaways ) or otherwise when you contact us.
               </div>
               <div>
                 The personal information that we collect depends on the context
-                of your interactions with us and the Websit e , the choices you
+                of your interactions with us and the Website , the choices you
                 make and the products and features you use. The personal
                 information we collect may include the following :
               </div>
@@ -187,22 +188,22 @@ export default function privacyPolicy() {
                   </strong>
                   <em>
                     Some information &mdash; such as your Internet Protocol (IP)
-                    address and/or br/owser and device characteristics &mdash;
-                    is collected automatically when you visit our
-                    <em> Websit e </em> .
+                    address and/or browser and device characteristics &mdash; is
+                    collected automatically when you visit our
+                    <em> Website </em> .
                   </em>
                 </div>
               </div>
               <div>
                 We automatically collect certain information when you visit, use
-                or navigate the Websit e . This information does not reveal your
+                or navigate the Website . This information does not reveal your
                 specific identity (like your name or contact information) but
                 may include device and usage information, such as your IP
-                address, br/owser and device characteristics, operating system,
+                address, browser and device characteristics, operating system,
                 language preferences, referring URLs, device name, country,
-                location, information about how and when you use our Websit e
-                and other technical information. This information is primarily
-                needed to maintain the security and operation of our Websit e ,
+                location, information about how and when you use our Website and
+                other technical information. This information is primarily
+                needed to maintain the security and operation of our Website ,
                 and for our internal analytics and reporting purposes .
               </div>
               <div>
@@ -224,14 +225,14 @@ export default function privacyPolicy() {
                   <em>Log and Usage Data.</em> Log and usage data is
                   service-related, diagnostic, usage and performance information
                   our servers automatically collect when you access or use our
-                  Websit e and which we record in log files. Depending on how
-                  you interact with us, this log data may include your IP
-                  address, device information, br/owser type and settings and
-                  information about your activity in the Websit e (such as the
-                  date/time stamps associated with your usage, pages and files
-                  viewed, searches and other actions you take such as which
-                  features you use), device event information (such as system
-                  activity, error reports (sometimes called 'crash dumps') and
+                  Website and which we record in log files. Depending on how you
+                  interact with us, this log data may include your IP address,
+                  device information, browser type and settings and information
+                  about your activity in the Website (such as the date/time
+                  stamps associated with your usage, pages and files viewed,
+                  searches and other actions you take such as which features you
+                  use), device event information (such as system activity, error
+                  reports (sometimes called &apos;crash dumps&apos;) and
                   hardware settings).
                 </li>
               </ul>
@@ -239,12 +240,12 @@ export default function privacyPolicy() {
                 <li>
                   <em>Device Data.</em> We collect device data such as
                   information about your computer, phone, tablet or other device
-                  you use to access the Websit e . Depending on the device used,
+                  you use to access the Website . Depending on the device used,
                   this device data may include information such as your IP
                   address (or proxy server), device and application
-                  identification numbers, location, br/owser type, hardware
-                  model Internet service provider and/or mobile carrier,
-                  operating system and system configuration information.
+                  identification numbers, location, browser type, hardware model
+                  Internet service provider and/or mobile carrier, operating
+                  system and system configuration information.
                 </li>
               </ul>
               <ul>
@@ -253,7 +254,7 @@ export default function privacyPolicy() {
                   information about your device's location, which can be either
                   precise or imprecise. How much information we collect depends
                   on the type and settings of the device you use to access the
-                  Websit e . For example, we may use GPS and other technologies
+                  Website . For example, we may use GPS and other technologies
                   to collect geolocation data that tells us your current
                   location (based on your IP address). You can opt out of
                   allowing us to collect this information either by refusing
@@ -280,7 +281,7 @@ export default function privacyPolicy() {
                 </div>
               </div>
               <div>
-                We use personal information collected via our Websit e for a
+                We use personal information collected via our Website for a
                 variety of business purposes described below. We process your
                 personal information for these purposes in reliance on our
                 legitimate business interests, in order to enter into or perform
@@ -304,7 +305,7 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>To post testimonials.</strong> We post testimonials on
-                  our Websit e that may contain personal information. Prior to
+                  our Website that may contain personal information. Prior to
                   posting a testimonial, we will obtain your consent to use your
                   name and the content of the testimonial. If you wish to
                   update, or delete your testimonial, please contact us at
@@ -316,7 +317,7 @@ export default function privacyPolicy() {
                 <li>
                   <strong>Request feedback.&nbsp;</strong>We may use your
                   information to request feedback and to contact you about your
-                  use of our Websit e .
+                  use of our Website .
                 </li>
               </ul>
               <ul>
@@ -344,7 +345,7 @@ export default function privacyPolicy() {
               <ul>
                 <li>
                   <strong>To protect our Services.&nbsp;</strong>We may use your
-                  information as part of our efforts to keep our Websit e safe
+                  information as part of our efforts to keep our Website safe
                   and secure (for example, for fraud monitoring and prevention).
                 </li>
               </ul>
@@ -370,7 +371,7 @@ export default function privacyPolicy() {
                 <li>
                   <strong>Fulfill and manage your orders.&nbsp;</strong> We may
                   use your information to fulfill and manage your orders,
-                  payments, returns, and exchanges made through the Websit e .
+                  payments, returns, and exchanges made through the Website .
                 </li>
               </ul>
               <ul>
@@ -409,12 +410,15 @@ export default function privacyPolicy() {
                   personal information you send to us for our marketing
                   purposes, if this is in accordance with your marketing
                   preferences. For example, when expressing an interest in
-                  obtaining information about us or our Websit e , subscribing
-                  to marketing or otherwise contacting us, we will collect
-                  personal information from you. You can opt-out of our
-                  marketing emails at any time (see the "
-                  <a href="#privacyrights"> WHAT ARE YOUR PRIVACY RIGHTS? </a> "
-                  below).
+                  obtaining information about us or our Website , subscribing to
+                  marketing or otherwise contacting us, we will collect personal
+                  information from you. You can opt-out of our marketing emails
+                  at any time (see the &quot;
+                  <a href="#privacyrights">
+                    {" "}
+                    WHAT ARE YOUR PRIVACY RIGHTS?{" "}
+                  </a>{" "}
+                  &quot; below).
                 </li>
               </ul>
               <ul>
@@ -440,12 +444,12 @@ export default function privacyPolicy() {
                   information for other business purposes, such as data
                   analysis, identifying usage trends, determining the
                   effectiveness of our promotional campaigns and to evaluate and
-                  improve our Websit e , products, marketing and your
-                  experience. We may use and store this information in
-                  aggregated and anonymized form so that it is not associated
-                  with individual end users and does not include personal
-                  information. We will not use identifiable personal information
-                  without your consent .
+                  improve our Website , products, marketing and your experience.
+                  We may use and store this information in aggregated and
+                  anonymized form so that it is not associated with individual
+                  end users and does not include personal information. We will
+                  not use identifiable personal information without your consent
+                  .
                 </li>
               </ul>
               <div>
@@ -537,11 +541,11 @@ export default function privacyPolicy() {
                           personal information (for example, by posting
                           comments, contributions or other content to the Websit
                           e ) or otherwise interact with public areas of the
-                          Websit e , such personal information may be viewed by
+                          Website , such personal information may be viewed by
                           all users and may be publicly made available outside
-                          the Websit e in perpetuity. Similarly, other users
-                          will be able to view descriptions of your activity,
-                          communicate with you within our Websit e , and view
+                          the Website in perpetuity. Similarly, other users will
+                          be able to view descriptions of your activity,
+                          communicate with you within our Website , and view
                           your profile.
                         </li>
                       </ul>
@@ -640,8 +644,8 @@ export default function privacyPolicy() {
                           or modify your information. Although we will do our
                           best to protect your personal information,
                           transmission of personal information to and from our
-                          Websit e is at your own risk. You should only access
-                          the Websit e within a secure environment.
+                          Website is at your own risk. You should only access
+                          the Website within a secure environment.
                         </div>
                         <div>
                           <strong> 7. WHAT ARE YOUR PRIVACY RIGHTS? </strong>
@@ -751,13 +755,13 @@ export default function privacyPolicy() {
                           <strong>
                             <u>Cookies and similar technologies:</u>
                           </strong>
-                          Most Web br/owsers are set to accept cookies by
+                          Most Web browsers are set to accept cookies by
                           default. If you prefer, you can usually choose to set
-                          your br/owser to remove cookies and to reject cookies.
+                          your browser to remove cookies and to reject cookies.
                           If you choose to remove cookies or reject cookies,
                           this could affect certain features or services of our
-                          Websit e . To opt-out of interest-based advertising by
-                          advertisers on our Websit e visit
+                          Website . To opt-out of interest-based advertising by
+                          advertisers on our Website visit
                           <a
                             href="http://www.aboutads.info/choices/"
                             target="_blank"
@@ -801,15 +805,15 @@ export default function privacyPolicy() {
                           <strong>8. CONTROLS FOR DO-NOT-TRACK FEATURES</strong>
                         </div>
                         <div>
-                          Most web br/owsers and some mobile operating systems
+                          Most web browsers and some mobile operating systems
                           and mobile applications include a Do-Not-Track
-                          (&quot;DNT") feature or setting you can activate to
-                          signal your privacy preference not to have data about
-                          your online br/owsing activities monitored and
+                          (&quot;DNT&quot;) feature or setting you can activate
+                          to signal your privacy preference not to have data
+                          about your online br/owsing activities monitored and
                           collected. At this stage no uniform technology
                           standard for recognizing and implementing DNT signals
                           has been finalized. As such, we do not currently
-                          respond to DNT br/owser signals or any other mechanism
+                          respond to DNT browser signals or any other mechanism
                           that automatically communicates your choice not to be
                           tracked online. If a standard for online tracking is
                           adopted that we must follow in the future, we will
@@ -849,15 +853,15 @@ export default function privacyPolicy() {
                         <div>
                           If you are under 18 years of age, reside in
                           California, and have a registered account with the
-                          Websit e , you have the right to request removal of
-                          unwanted data that you publicly post on the Websit e .
+                          Website , you have the right to request removal of
+                          unwanted data that you publicly post on the Website .
                           To request removal of such data, please contact us
                           using the contact information provided below, and
                           include the email address associated with your account
                           and a statement that you reside in California. We will
                           make sure the data is not publicly displayed on the
-                          Websit e , but please be aware that the data may not
-                          be completely or comprehensively removed from all our
+                          Website , but please be aware that the data may not be
+                          completely or comprehensively removed from all our
                           systems (e.g. backups, etc.).
                         </div>
                         <div>
@@ -871,7 +875,7 @@ export default function privacyPolicy() {
                         <div>
                           <div>
                             The California Code of Regulations defines a
-                            "resident" as:
+                            &quot;resident&quot; as:
                           </div>
                         </div>
                         <div>
@@ -884,11 +888,12 @@ export default function privacyPolicy() {
                           a temporary or transitory purpose
                         </div>
                         <div>
-                          All other individuals are defined as "non-residents."
+                          All other individuals are defined as
+                          &quot;non-residents.&quot;
                         </div>
                         <div>
-                          If this definition of "resident" applies to you, we
-                          must adhere to certain rights and obligations
+                          If this definition of &quot;resident&quot; applies to
+                          you, we must adhere to certain rights and obligations
                           regarding your personal information.
                         </div>
                         <div>
@@ -999,7 +1004,7 @@ export default function privacyPolicy() {
                               </td>
                               <td>
                                 <div>
-                                  Br/owsing history, search history, online
+                                  Browsing history, search history, online
                                   behavior, interest data, and interactions with
                                   our and other websites, applications, systems
                                   and advertisements

@@ -25,9 +25,10 @@ export default function TermsAndConditions() {
             <div className="MsoNormal" data-custom-className="body_text">
               These Terms of Use constitute a legally binding agreement made
               between you, whether personally or on behalf of an entity
-              (&ldquo;you&rdquo;) and THOMAS LTD ("`&quot;`
-              <strong>Company</strong>," &ldquo;<strong>we</strong>," &ldquo;
-              <strong>us</strong>," or &ldquo;<strong>our</strong>&rdquo;),
+              (&ldquo;you&rdquo;) and THOMAS LTD (&quot;
+              <strong>Company</strong>,&quot; &ldquo;<strong>we</strong>,"
+              &ldquo;
+              <strong>us</strong>,&quot; or &ldquo;<strong>our</strong>&rdquo;),
               concerning your access to and use of the{" "}
               <a
                 href="http://www.example.com"
@@ -342,11 +343,12 @@ export default function TermsAndConditions() {
                   Site, including but not limited to text, writings, video,
                   audio, photographs, graphics, comments, suggestions, or
                   personal information or other material (collectively,
-                  "Contributions"). Contributions may be viewable by other users
-                  of the Site and through third-party websites. As such, any
-                  Contributions you transmit may be treated as non-confidential
-                  and non-proprietary. When you create or make available any
-                  Contributions, you thereby represent and warrant that:
+                  &quot;Contributions&quot;). Contributions may be viewable by
+                  other users of the Site and through third-party websites. As
+                  such, any Contributions you transmit may be treated as
+                  non-confidential and non-proprietary. When you create or make
+                  available any Contributions, you thereby represent and warrant
+                  that:
                 </div>
               </div>
               <div className="MsoNormal">
@@ -515,7 +517,7 @@ export default function TermsAndConditions() {
             <div className="MsoNormal" data-custom-className="body_text">
               You acknowledge and agree that any questions, comments,
               suggestions, ideas, feedback, or other information regarding the
-              Site ("`&quot;`Submissions") provided by you to us are
+              Site (&quot;Submissions&quot;) provided by you to us are
               non-confidential and shall become our sole property. We shall own
               exclusive rights, including all intellectual property rights, and
               shall be entitled to the unrestricted use and dissemination of
@@ -532,11 +534,11 @@ export default function TermsAndConditions() {
             </div>
             <div className="MsoNormal" data-custom-className="body_text">
               The Site may contain (or you may be sent via the Site) links to
-              other websites ("`&quot;`Third-Party Websites") as well as
+              other websites (&quot;Third-Party Websites&quot;) as well as
               articles, photographs, text, graphics, pictures, designs, music,
               sound, video, information, applications, software, and other
               content or items belonging to or originating from third parties
-              ("`&quot;`Third-Party Content"). Such Third-Party Websites and
+              (&quot;Third-Party Content&quot;). Such Third-Party Websites and
               Third-Party Content are not investigated, monitored, or checked
               for accuracy, appropriateness, or completeness by us, and we are
               not responsible for any Third-Party Websites accessed through the
@@ -755,9 +757,9 @@ export default function TermsAndConditions() {
                   <div className="MsoNormal" data-custom-className="body_text">
                     To expedite resolution and control the cost of any dispute,
                     controversy, or claim related to these Terms of Use (each
-                    "Dispute" and collectively, the &ldquo;Disputes&rdquo;)
-                    brought by either you or us (individually, a
-                    &ldquo;Party&rdquo; and collectively, the
+                    &quot;Dispute&quot; and collectively, the
+                    &ldquo;Disputes&rdquo;) brought by either you or us
+                    (individually, a &ldquo;Party&rdquo; and collectively, the
                     &ldquo;Parties&rdquo;), the Parties agree to first attempt
                     to negotiate any Dispute (except those Disputes expressly
                     provided below) informally for at least thirty (30) days
