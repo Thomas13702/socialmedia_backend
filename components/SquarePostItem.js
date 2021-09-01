@@ -145,7 +145,7 @@ export default function PosttItem({ post, token, user, cookies }) {
           }`}</h6>
         </div>
         <div className={styles.data}>
-          <div>
+          <div className={styles.username}>
             <Link
               href={
                 token.uid.toString() !== post.firebaseUID.toString()

@@ -43,6 +43,7 @@ export default function Home({}) {
           <Image
             src={"/images/pexels-oliver-sjöström-1098365.jpg"}
             layout="fill"
+            objectFit="contain"
           />
         </div>
         <div className={styles.action}>
