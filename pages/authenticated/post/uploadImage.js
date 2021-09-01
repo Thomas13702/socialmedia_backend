@@ -1,10 +1,10 @@
-import styles from "../../../styles/UploadImage.module.css";
+import styles from "@/styles/UploadImage.module.css";
 
 import { useState } from "react";
 import axios from "axios";
-import Progress from "@/components/Progress";
-import Layout from "@/components/Layout";
-import { API_URL } from "@/config/index";
+import Progress from "@/components/Progress.js";
+import Layout from "@/components/Layout.js";
+import { API_URL } from "@/config/index.js";
 import nookies from "nookies";
 import { verifyIdToken } from "../../../firebaseAdmin";
 import firebaseClient from "../../../firebaseClient";
