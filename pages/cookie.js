@@ -18,7 +18,7 @@ export default function Cookie() {
         <div>
           <span data-custom-class="body_text">
             {" "}
-            This Cookie Policy explains how THOMAS LTD ("`&quot;`{" "}
+            This Cookie Policy explains how THOMAS LTD ("&quot;{" "}
             <strong>Company</strong>", "<strong>we</strong>", "{" "}
             <strong>us</strong>", and "<strong>our</strong>") uses cookies and
             similar technologies to recognize you when you visit our websites at{" "}
