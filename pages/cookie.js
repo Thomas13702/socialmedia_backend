@@ -18,7 +18,7 @@ export default function Cookie() {
         <div>
           <span data-custom-class="body_text">
             {" "}
-            This Cookie Policy explains how THOMAS LTD ("{" "}
+            This Cookie Policy explains how THOMAS LTD ("`&quot;`{" "}
             <strong>Company</strong>", "<strong>we</strong>", "{" "}
             <strong>us</strong>", and "<strong>our</strong>") uses cookies and
             similar technologies to recognize you when you visit our websites at{" "}
@@ -26,16 +26,15 @@ export default function Cookie() {
               href="http://www.example.com"
               target="_blank"
               rel="noreferrer"
-              rel="noopener"
               rel="noreferrer"
               data-custom-class="link"
             >
               {" "}
               http://www.example.com{" "}
             </a>{" "}
-            , ("<strong>Websites</strong>"). It explains what these technologies
-            are and why we use them, as well as your rights to control our use
-            of them.{" "}
+            , ("`&quot;`<strong>Websites</strong>"). It explains what these
+            technologies are and why we use them, as well as your rights to
+            control our use of them.{" "}
           </span>
         </div>
         <div>
@@ -143,7 +142,6 @@ export default function Cookie() {
             <a
               href="http://www.aboutads.info/choices/"
               target="_blank"
-              rel="noopener"
               rel="noreferrer"
               data-custom-class="link"
             >
@@ -157,7 +155,6 @@ export default function Cookie() {
               href="http://www.youronlinechoices.com"
               target="_blank"
               rel="noreferrer"
-              rel="noopener"
               data-custom-class="link"
               data-fr-linked="true"
             >
@@ -223,7 +220,6 @@ export default function Cookie() {
                         href="https://termly.io/our-privacy-policy/"
                         target="_blank"
                         rel="noreferrer"
-                        rel="noopener"
                       >
                         {" "}
                         View Service Privacy Policy{" "}

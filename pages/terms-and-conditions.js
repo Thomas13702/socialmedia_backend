@@ -25,15 +25,14 @@ export default function TermsAndConditions() {
             <div className="MsoNormal" data-custom-className="body_text">
               These Terms of Use constitute a legally binding agreement made
               between you, whether personally or on behalf of an entity
-              (&ldquo;you&rdquo;) and THOMAS LTD ("<strong>Company</strong>,"
-              &ldquo;<strong>we</strong>," &ldquo;<strong>us</strong>," or
-              &ldquo;<strong>our</strong>&rdquo;), concerning your access to and
-              use of the{" "}
+              (&ldquo;you&rdquo;) and THOMAS LTD ("`&quot;`
+              <strong>Company</strong>," &ldquo;<strong>we</strong>," &ldquo;
+              <strong>us</strong>," or &ldquo;<strong>our</strong>&rdquo;),
+              concerning your access to and use of the{" "}
               <a
                 href="http://www.example.com"
                 target="_blank"
                 rel="noreferrer"
-                rel="noopener"
                 data-custom-className="link"
               >
                 http://www.example.com
@@ -516,16 +515,16 @@ export default function TermsAndConditions() {
             <div className="MsoNormal" data-custom-className="body_text">
               You acknowledge and agree that any questions, comments,
               suggestions, ideas, feedback, or other information regarding the
-              Site ("Submissions") provided by you to us are non-confidential
-              and shall become our sole property. We shall own exclusive rights,
-              including all intellectual property rights, and shall be entitled
-              to the unrestricted use and dissemination of these Submissions for
-              any lawful purpose, commercial or otherwise, without
-              acknowledgment or compensation to you. You hereby waive all moral
-              rights to any such Submissions, and you hereby warrant that any
-              such Submissions are original with you or that you have the right
-              to submit such Submissions. You agree there shall be no recourse
-              against us for any alleged or actual infringement or
+              Site ("`&quot;`Submissions") provided by you to us are
+              non-confidential and shall become our sole property. We shall own
+              exclusive rights, including all intellectual property rights, and
+              shall be entitled to the unrestricted use and dissemination of
+              these Submissions for any lawful purpose, commercial or otherwise,
+              without acknowledgment or compensation to you. You hereby waive
+              all moral rights to any such Submissions, and you hereby warrant
+              that any such Submissions are original with you or that you have
+              the right to submit such Submissions. You agree there shall be no
+              recourse against us for any alleged or actual infringement or
               misappropriation of any proprietary right in your Submissions.
             </div>
             <div className="MsoNormal" data-custom-className="heading_1">
@@ -533,38 +532,38 @@ export default function TermsAndConditions() {
             </div>
             <div className="MsoNormal" data-custom-className="body_text">
               The Site may contain (or you may be sent via the Site) links to
-              other websites ("Third-Party Websites") as well as articles,
-              photographs, text, graphics, pictures, designs, music, sound,
-              video, information, applications, software, and other content or
-              items belonging to or originating from third parties ("Third-Party
-              Content"). Such Third-Party Websites and Third-Party Content are
-              not investigated, monitored, or checked for accuracy,
-              appropriateness, or completeness by us, and we are not responsible
-              for any Third-Party Websites accessed through the Site or any
-              Third-Party Content posted on, available through, or installed
-              from the Site, including the content, accuracy, offensiveness,
-              opinions, reliability, privacy practices, or other policies of or
-              contained in the Third-Party Websites or the Third-Party Content.
-              Inclusion of, linking to, or permitting the use or installation of
-              any Third-Party Websites or any Third-Party Content does not imply
-              approval or endorsement thereof by us. If you decide to leave the
-              Site and access the Third-Party Websites or to use or install any
-              Third-Party Content, you do so at your own risk, and you should be
-              aware these Terms of Use no longer govern. You should review the
-              applicable terms and policies, including privacy and data
-              gathering practices, of any website to which you navigate from the
-              Site or relating to any applications you use or install from the
-              Site. Any purchases you make through Third-Party Websites will be
-              through other websites and from other companies, and we take no
-              responsibility whatsoever in relation to such purchases which are
-              exclusively between you and the applicable third party. You agree
-              and acknowledge that we do not endorse the products or services
-              offered on Third-Party Websites and you shall hold us harmless
-              from any harm caused by your purchase of such products or
-              services. Additionally, you shall hold us harmless from any losses
-              sustained by you or harm caused to you relating to or resulting in
-              any way from any Third-Party Content or any contact with
-              Third-Party Websites.
+              other websites ("`&quot;`Third-Party Websites") as well as
+              articles, photographs, text, graphics, pictures, designs, music,
+              sound, video, information, applications, software, and other
+              content or items belonging to or originating from third parties
+              ("`&quot;`Third-Party Content"). Such Third-Party Websites and
+              Third-Party Content are not investigated, monitored, or checked
+              for accuracy, appropriateness, or completeness by us, and we are
+              not responsible for any Third-Party Websites accessed through the
+              Site or any Third-Party Content posted on, available through, or
+              installed from the Site, including the content, accuracy,
+              offensiveness, opinions, reliability, privacy practices, or other
+              policies of or contained in the Third-Party Websites or the
+              Third-Party Content. Inclusion of, linking to, or permitting the
+              use or installation of any Third-Party Websites or any Third-Party
+              Content does not imply approval or endorsement thereof by us. If
+              you decide to leave the Site and access the Third-Party Websites
+              or to use or install any Third-Party Content, you do so at your
+              own risk, and you should be aware these Terms of Use no longer
+              govern. You should review the applicable terms and policies,
+              including privacy and data gathering practices, of any website to
+              which you navigate from the Site or relating to any applications
+              you use or install from the Site. Any purchases you make through
+              Third-Party Websites will be through other websites and from other
+              companies, and we take no responsibility whatsoever in relation to
+              such purchases which are exclusively between you and the
+              applicable third party. You agree and acknowledge that we do not
+              endorse the products or services offered on Third-Party Websites
+              and you shall hold us harmless from any harm caused by your
+              purchase of such products or services. Additionally, you shall
+              hold us harmless from any losses sustained by you or harm caused
+              to you relating to or resulting in any way from any Third-Party
+              Content or any contact with Third-Party Websites.
             </div>
             <div>
               <div className="MsoNormal">&nbsp;</div>

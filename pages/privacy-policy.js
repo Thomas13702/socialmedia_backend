@@ -11,8 +11,8 @@ export default function privacyPolicy() {
           <strong> Last updated August 29, 2021 </strong>
         </div>
         <div>
-          Thank you for choosing to be part of our community at THOMAS LTD ("{" "}
-          <strong>Company</strong> ," "<strong>we</strong>," "
+          Thank you for choosing to be part of our community at THOMAS LTD
+          ("`&quot;` <strong>Company</strong> ," "<strong>we</strong>," "
           <strong>us</strong>," or " <strong>our</strong>"). We are committed to
           protecting your personal information and your right to privacy. If you
           have any questions or concerns about this privacy notice or our
@@ -27,12 +27,7 @@ export default function privacyPolicy() {
         <ul>
           <li>
             Visit our websit e at{" "}
-            <a
-              href="http://www.example.com"
-              target="_blank"
-              rel="noreferrer"
-              rel="noopener"
-            >
+            <a href="http://www.example.com" target="_blank" rel="noreferrer">
               {" "}
               http://www.example.com{" "}
             </a>
@@ -231,7 +226,6 @@ export default function privacyPolicy() {
                   href="http://www.example.com/cookies"
                   target="_blank"
                   rel="noreferrer"
-                  rel="noopener"
                 >
                   {" "}
                   http://www.example.com/cookies{" "}
@@ -455,7 +449,6 @@ export default function privacyPolicy() {
                     href="http://www.example.com/cookies"
                     target="_blank"
                     rel="noreferrer"
-                    rel="noopener"
                   >
                     {" "}
                     http://www.example.com/cookies{" "}
@@ -606,7 +599,6 @@ export default function privacyPolicy() {
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
-                            rel="noopener"
                           >
                             {" "}
                             http://www.example.com/cookies{" "}
@@ -817,7 +809,6 @@ export default function privacyPolicy() {
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
-                            rel="noopener"
                           >
                             {" "}
                             http://www.example.com/cookies{" "}
@@ -852,18 +843,19 @@ export default function privacyPolicy() {
                         </div>
                         <div>
                           Most web br/owsers and some mobile operating systems
-                          and mobile applications include a Do-Not-Track ("DNT")
-                          feature or setting you can activate to signal your
-                          privacy preference not to have data about your online
-                          br/owsing activities monitored and collected. At this
-                          stage no uniform technology standard for recognizing
-                          and implementing DNT signals has been finalized. As
-                          such, we do not currently respond to DNT br/owser
-                          signals or any other mechanism that automatically
-                          communicates your choice not to be tracked online. If
-                          a standard for online tracking is adopted that we must
-                          follow in the future, we will inform you about that
-                          practice in a revised version of this privacy notice.{" "}
+                          and mobile applications include a Do-Not-Track
+                          ("`&quot;`DNT") feature or setting you can activate to
+                          signal your privacy preference not to have data about
+                          your online br/owsing activities monitored and
+                          collected. At this stage no uniform technology
+                          standard for recognizing and implementing DNT signals
+                          has been finalized. As such, we do not currently
+                          respond to DNT br/owser signals or any other mechanism
+                          that automatically communicates your choice not to be
+                          tracked online. If a standard for online tracking is
+                          adopted that we must follow in the future, we will
+                          inform you about that practice in a revised version of
+                          this privacy notice.{" "}
                         </div>
                         <div>
                           <strong>
@@ -1182,7 +1174,6 @@ export default function privacyPolicy() {
                             href="http://www.example.com/cookies"
                             target="_blank"
                             rel="noreferrer"
-                            rel="noopener"
                           >
                             {" "}
                             http://www.example.com/cookies{" "}
