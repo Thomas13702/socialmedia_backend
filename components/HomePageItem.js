@@ -7,18 +7,20 @@ import { API_URL } from "@/config/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function HomePageItem({ post, token, user, cookies }) {
+  const [likes, setLikes] = useState(post.likes.length);
+  const [liked, setLiked] = useState(
+    post.likes.filter((like) => {
+      return like.user.toString() === user._id.toString();
+    }).length > 0
+  );
+
   const router = useRouter();
   const handleLike = async () => {
     const res = await fetch(
-      `${API_URL}/posts/${
-        post.likes.filter((like) => {
-          return like.user.toString() === user._id.toString();
-        }).length === 0
-          ? "like"
-          : "unlike"
-      }/${post._id}`,
+      `${API_URL}/posts/${!liked ? "like" : "unlike"}/${post._id}`,
       {
         method: "PUT",
         headers: {
@@ -37,7 +39,8 @@ export default function HomePageItem({ post, token, user, cookies }) {
       toast.error("Something Went Wrong");
     } else {
       const like = await res.json(); //get data
-      router.reload();
+      setLiked(!liked);
+      setLikes(liked === false ? likes + 1 : likes - 1);
     }
   };
 
@@ -78,16 +81,16 @@ export default function HomePageItem({ post, token, user, cookies }) {
         )}
 
         <div className={styles.icons}>
-          <FaRegHeart
-            className={
-              post.likes.filter((like) => {
-                return like.user.toString() === user._id.toString();
-              }).length > 0
-                ? styles.heartRed
-                : styles.heartBlack
-            }
-            onClick={handleLike}
-          />
+          <div className={styles.likes}>
+            <Link href={`/authenticated/post/likes/${post._id}`}>
+              <a>{likes}</a>
+            </Link>
+            <FaRegHeart
+              className={liked ? styles.heartRed : styles.heartBlack}
+              onClick={handleLike}
+            />
+          </div>
+
           <Link href={`/authenticated/post/${post._id}`}>
             <div>
               <FaCommentAlt className={styles.comment} />

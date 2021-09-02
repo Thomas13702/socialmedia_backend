@@ -21,6 +21,7 @@ export default function Todo() {
               Change is so if not following anyone says follow someone.
               data.length === 0 ? Follow : End ✓
             </li>
+            <li>show likes</li>
           </ul>
         </li>
         <li>
@@ -30,8 +31,9 @@ export default function Todo() {
             <li>update username / profile picture✓</li>
             <li>Fix Unfollow Bug ✓</li>
             <li>Force account set up before posting ect ✓</li>
-            <li>Password/email reset</li>
+            <li>Password/email reset ✓</li>
             <li>Search accounts</li>
+            <li>See users you follow/following you</li>
           </ul>
         </li>
         <li>

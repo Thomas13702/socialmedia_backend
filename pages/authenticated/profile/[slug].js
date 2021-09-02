@@ -11,6 +11,7 @@ import router from "next/router";
 import ProfilePicture from "@/components/ProfilePicture";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function SlugProfile({
   session,
@@ -115,8 +116,21 @@ export default function SlugProfile({
           <h1>{slugProfile.username}</h1>
           <div className={styles.right}>
             <div className={styles.follow}>
-              <h2>Followers: {slugProfile.followers.length}</h2>
-              <h2>Following: {slugProfile.following.length}</h2>
+              <h2>
+                <Link
+                  href={`/authenticated/profile/followers/${slugProfile._id}`}
+                >
+                  <a>Followers: {slugProfile.followers.length}</a>
+                </Link>
+              </h2>
+              <h2>
+                {" "}
+                <Link
+                  href={`/authenticated/profile/following/${slugProfile._id}`}
+                >
+                  <a>Following: {slugProfile.following.length}</a>
+                </Link>
+              </h2>
             </div>
 
             {user.following.filter((follows) => {

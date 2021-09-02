@@ -62,8 +62,17 @@ export default function Account({
           <h1>{account.username}</h1>
           <div className={styles.right}>
             <div className={styles.follow}>
-              <h2>Followers: {account.followers.length}</h2>
-              <h2>Following: {account.following.length}</h2>
+              <h2>
+                <Link href={`/authenticated/profile/followers/${account._id}`}>
+                  <a>Followers: {account.followers.length}</a>
+                </Link>
+              </h2>
+              <h2>
+                {" "}
+                <Link href={`/authenticated/profile/following/${account._id}`}>
+                  <a>Following: {account.following.length}</a>
+                </Link>
+              </h2>
             </div>
             <div className={styles.button}>
               <Link href="/authenticated/profile/createPost">

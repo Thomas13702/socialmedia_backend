@@ -45,3 +45,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+
+.likes {
+  width: 48px;
+}

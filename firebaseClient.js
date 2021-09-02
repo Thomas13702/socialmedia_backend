@@ -1,4 +1,4 @@
-import firebase from "firebase";
+import firebase from "firebase/app";
 
 const FIREBASE_CONFIG = {
   apiKey: process.env.apiKey,
@@ -9,7 +9,6 @@ const FIREBASE_CONFIG = {
   messagingSenderId: process.env.messagingSenderId,
   appId: process.env.appId,
   measurementId: process.env.measurementId,
-  
 };
 
 export default function firebaseClient() {
