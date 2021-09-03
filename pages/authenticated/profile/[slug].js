@@ -25,6 +25,13 @@ export default function SlugProfile({
 
   const [posts, setPosts] = useState(data);
   const [hasMore, setHasMore] = useState(true);
+  const [followed, setFollowed] = useState(
+    user.following.filter((follows) => {
+      return follows.user.toString() === slugProfile._id.toString();
+    }).length === 0
+  );
+  const [followers, setFollowers] = useState(slugProfile.followers.length);
+  const [following, setFollowing] = useState(slugProfile.following.length);
 
   const getMorePosts = async () => {
     const res = await fetch(
@@ -43,39 +50,14 @@ export default function SlugProfile({
   };
 
   useEffect(() => {
-    // console.log(numberOfPosts);
-    // console.log(posts.length);
     setHasMore(numberOfPosts > posts.length ? true : false);
   }, [posts]); //everytime posts changes this will trigger
 
   const follow = async () => {
-    // console.log(user.following);
-    // console.log(
-    //   `${API_URL}/user/${
-    //     user.following.filter((follows) => {
-    //       return follows.user.toString() === slugProfile._id.toString();
-    //     }) === 0
-    //       ? "follow"
-    //       : "unfollow"
-    //   }/${slugProfile.username}`
-    // );
-
-    // console.log(
-    //   user.following.filter((follows) => {
-    //     console.log(follows.user.toString());
-    //     console.log(slugProfile._id.toString());
-    //     return follows.user.toString() === slugProfile._id.toString();
-    //   }).length === 0
-    // );
-
     const res = await fetch(
-      `${API_URL}/user/${
-        user.following.filter((follows) => {
-          return follows.user.toString() === slugProfile._id.toString();
-        }).length === 0
-          ? "follow"
-          : "unfollow"
-      }/${slugProfile.username}`,
+      `${API_URL}/user/${followed ? "follow" : "unfollow"}/${
+        slugProfile.username
+      }`,
       {
         method: "PUT",
         headers: {
@@ -86,11 +68,15 @@ export default function SlugProfile({
     );
 
     const profile = await res.json();
+    console.log(profile);
 
     if (!res.ok) {
       toast.error(profile.msg);
     } else {
-      router.reload();
+      setFollowed(!followed);
+      setFollowers(profile.profile.followers.length);
+
+      // router.reload();
     }
   };
 
@@ -120,7 +106,7 @@ export default function SlugProfile({
                 <Link
                   href={`/authenticated/profile/followers/${slugProfile._id}`}
                 >
-                  <a>Followers: {slugProfile.followers.length}</a>
+                  <a>Followers: {followers}</a>
                 </Link>
               </h2>
               <h2>
@@ -128,14 +114,12 @@ export default function SlugProfile({
                 <Link
                   href={`/authenticated/profile/following/${slugProfile._id}`}
                 >
-                  <a>Following: {slugProfile.following.length}</a>
+                  <a>Following: {following}</a>
                 </Link>
               </h2>
             </div>
 
-            {user.following.filter((follows) => {
-              return follows.user.toString() === slugProfile._id.toString();
-            }).length === 0 ? (
+            {followed ? (
               <button className="btn" onClick={follow}>
                 Follow
               </button>
