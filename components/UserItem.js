@@ -3,7 +3,7 @@ import ProfilePicture from "@/components/ProfilePicture";
 import Link from "next/link";
 
 export default function UserItem({ user, uid }) {
-  // console.log(uid);
+  console.log(user);
   return (
     <div className={styles.post}>
       <Link

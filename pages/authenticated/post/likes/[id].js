@@ -7,6 +7,8 @@ import { API_URL } from "@/config/index";
 import UserItem from "@/components/UserItem.js";
 
 export default function Likes({ session, likers, uid }) {
+  // console.log(likers);
+
   firebaseClient();
   if (session) {
     return (
@@ -38,6 +40,8 @@ export async function getServerSideProps(context) {
       },
     });
     const likers = await res.json();
+
+    // console.log(likers);
 
     return {
       props: {
