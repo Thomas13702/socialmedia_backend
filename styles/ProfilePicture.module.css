@@ -8,3 +8,10 @@
 .image {
   border-radius: 100%;
 }
+
+@media (max-width: 500px) {
+  .profileImage {
+    height: 60px;
+    width: 60px;
+  }
+}

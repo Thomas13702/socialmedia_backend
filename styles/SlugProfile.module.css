@@ -1,4 +1,4 @@
-.profile {
+/* .profile {
   display: flex;
   justify-content: space-around;
 }
@@ -15,10 +15,107 @@
   margin-right: 1rem;
 }
 
+.left {
+  display: flex;
+}
+
+.left h1 {
+  display: flex;
+  align-items: center;
+}
+
 .right {
   text-align: center;
 }
 
 .right button {
   width: 90%;
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .profile {
+    font-size: 1rem;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .profile h1,
+  .profile h2 {
+    font-size: 1rem;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+} */
+
+.profile {
+  display: grid;
+  grid-template: 50% 50%/ 50% 50%;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.follow {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile button {
+  grid-area: 2/2;
+  height: 50%;
+}
+
+@media screen and (max-width: 850px) {
+  .follow {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+  .profile h1,
+  .profile h2 {
+    font-size: 1rem;
+  }
+
+  .profile button {
+    grid-column: 0 2;
+    grid-row: 2;
+    font-size: 0.7rem;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .profile h1,
+  .profile h2 {
+    font-size: 1rem;
+  }
+  .profile {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .right {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .profile button {
+    grid-column: 1;
+    grid-row: 3;
+  }
 }

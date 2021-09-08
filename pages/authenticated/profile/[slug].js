@@ -7,7 +7,6 @@ import PostItem from "@/components/PostItem";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 import styles from "@/styles/SlugProfile.module.css";
-import router from "next/router";
 import ProfilePicture from "@/components/ProfilePicture";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
@@ -98,37 +97,40 @@ export default function SlugProfile({
       <Layout>
         <ToastContainer />
         <div className={styles.profile}>
-          <ProfilePicture account={slugProfile} />
-          <h1>{slugProfile.username}</h1>
-          <div className={styles.right}>
-            <div className={styles.follow}>
-              <h2>
-                <Link
-                  href={`/authenticated/profile/followers/${slugProfile._id}`}
-                >
-                  <a>Followers: {followers}</a>
-                </Link>
-              </h2>
-              <h2>
-                {" "}
-                <Link
-                  href={`/authenticated/profile/following/${slugProfile._id}`}
-                >
-                  <a>Following: {following}</a>
-                </Link>
-              </h2>
+          <div className={styles.left}>
+            <div className={styles.profilePic}>
+              <ProfilePicture account={slugProfile} />
             </div>
 
-            {followed ? (
-              <button className="btn" onClick={follow}>
-                Follow
-              </button>
-            ) : (
-              <button className="btnRed" onClick={follow}>
-                Unfollow
-              </button>
-            )}
+            <h1>{slugProfile.username}</h1>
           </div>
+
+          <div className={styles.follow}>
+            <h2>
+              <Link
+                href={`/authenticated/profile/followers/${slugProfile._id}`}
+              >
+                <a>Followers: {followers}</a>
+              </Link>
+            </h2>
+            <h2>
+              <Link
+                href={`/authenticated/profile/following/${slugProfile._id}`}
+              >
+                <a>Following: {following}</a>
+              </Link>
+            </h2>
+          </div>
+
+          {followed ? (
+            <button className="btn" onClick={follow}>
+              Follow
+            </button>
+          ) : (
+            <button className="btnRed" onClick={follow}>
+              Unfollow
+            </button>
+          )}
         </div>
         <InfiniteScroll
           dataLength={posts.length}
