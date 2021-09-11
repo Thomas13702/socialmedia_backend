@@ -57,9 +57,12 @@ export default function Account({
     return (
       <Layout title="Your Account">
         <div className={styles.profile}>
-          <ProfilePicture account={account} />
+          <div className={styles.profilePicture}>
+            <ProfilePicture account={account} />
 
-          <h1>{account.username}</h1>
+            <h1>{account.username}</h1>
+          </div>
+
           <div className={styles.right}>
             <div className={styles.follow}>
               <h2>
